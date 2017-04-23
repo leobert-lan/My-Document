@@ -1,0 +1,771 @@
+
+
+ExToast.Java
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.os.Handler;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Toast;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+/**
+ * Created by kj on 16-06-32.
+ */
+public class ExToast {
+    private static final String TAG = "ExToast";
+
+    public static final int LENGTH_ALWAYS = 0;
+    public static final int LENGTH_SHORT = 2;
+    public static final int LENGTH_LONG = 4;
+
+    private Toast toast;
+    private Context mContext;
+    private int mDuration = LENGTH_SHORT;
+    private int animations = -1;
+    private boolean isShow = false;
+
+    private Object mTN;
+    private Method show;
+    private Method hide;
+
+    private Handler handler = new Handler();
+
+    public ExToast(Context context){
+        this.mContext = context;
+        if (toast == null) {
+            toast = new Toast(mContext);
+        }
+    }
+
+    private Runnable hideRunnable = new Runnable() {
+        @Override
+        public void run() {
+            hide();
+        }
+    };
+
+    /**
+     * Show the view for the specified duration.
+     */
+    public void show(){
+        if (isShow) return;
+
+        initTN();
+        try {
+            show.invoke(mTN);
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        isShow = true;
+        //判断duration，如果大于#LENGTH_ALWAYS 则设置消失时间
+        if (mDuration > LENGTH_ALWAYS) {
+            handler.postDelayed(hideRunnable, mDuration * 1000);
+        }
+    }
+
+    /**
+     * Close the view if it's showing, or don't show it if it isn't showing yet.
+     * You do not normally have to call this.  Normally view will disappear on its own
+     * after the appropriate duration.
+     */
+    public void hide(){
+        if(!isShow) return;
+        try {
+            hide.invoke(mTN);
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        isShow = false;
+    }
+
+    public void setView(View view) {
+        toast.setView(view);
+    }
+
+    public View getView() {
+        return toast.getView();
+    }
+
+    /**
+     * Set how long to show the view for.
+     * @see #LENGTH_SHORT
+     * @see #LENGTH_LONG
+     * @see #LENGTH_ALWAYS
+     */
+    public void setDuration(int duration) {
+        mDuration = duration;
+    }
+
+    public int getDuration() {
+        return mDuration;
+    }
+
+    public void setMargin(float horizontalMargin, float verticalMargin) {
+        toast.setMargin(horizontalMargin,verticalMargin);
+    }
+
+    public float getHorizontalMargin() {
+        return toast.getHorizontalMargin();
+    }
+
+    public float getVerticalMargin() {
+        return toast.getVerticalMargin();
+    }
+
+    public void setGravity(int gravity, int xOffset, int yOffset) {
+        toast.setGravity(gravity,xOffset,yOffset);
+    }
+
+    public int getGravity() {
+        return toast.getGravity();
+    }
+
+    public int getXOffset() {
+        return toast.getXOffset();
+    }
+
+    public int getYOffset() {
+        return toast.getYOffset();
+    }
+
+    public static ExToast makeText(Context context, CharSequence text, int duration) {
+        Toast toast = Toast.makeText(context,text,Toast.LENGTH_SHORT);
+        ExToast exToast = new ExToast(context);
+        exToast.toast = toast;
+        exToast.mDuration = duration;
+
+        return exToast;
+    }
+
+    public static ExToast makeText(Context context, int resId, int duration)
+            throws Resources.NotFoundException {
+        return makeText(context, context.getResources().getText(resId), duration);
+    }
+
+    public void setText(int resId) {
+        setText(mContext.getText(resId));
+    }
+
+    public void setText(CharSequence s) {
+        toast.setText(s);
+    }
+
+    public int getAnimations() {
+        return animations;
+    }
+
+    public void setAnimations(int animations) {
+        this.animations = animations;
+    }
+
+    private void initTN() {
+        try {
+            Field tnField = toast.getClass().getDeclaredField("mTN");
+            tnField.setAccessible(true);
+            mTN = tnField.get(toast);
+            show = mTN.getClass().getMethod("show");
+            hide = mTN.getClass().getMethod("hide");
+
+            /**设置动画*/
+            if (animations != -1) {
+                Field tnParamsField = mTN.getClass().getDeclaredField("mParams");
+                tnParamsField.setAccessible(true);
+                WindowManager.LayoutParams params = (WindowManager.LayoutParams) tnParamsField.get(mTN);
+                params.windowAnimations = animations;
+            }
+
+            /**调用tn.show()之前一定要先设置mNextView*/
+            Field tnNextViewField = mTN.getClass().getDeclaredField("mNextView");
+            tnNextViewField.setAccessible(true);
+            tnNextViewField.set(mTN, toast.getView());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+128
+129
+130
+131
+132
+ExToast example
+
+ExToast exToast = ExToast.makeText(context,"message",ExToast.LENGTH_ALWAYS);
+exToast.setAnimations(R.style.anim_view);
+exToast.show();
+//使用LENGTH_ALWAYS注意在合适的时候调用hide()
+exToast.hide();
+1
+2
+3
+4
+5
+1
+2
+3
+4
+5
+//显示5秒的Toast
+ExToast exToast = ExToast.makeText(context,"message",5);
+exToast.show();
+1
+2
+3
+1
+2
+3
+上面的代码可以实现自定义xml窗口动画，以及长时间显示Toast的功能。 
+下面看一下R.style.anim_view的内容，窗口动画可以通过@android:windowEnterAnimation和@android:windowExitAnimation定义窗口进场及退场效果
+
+style.xml(放置在res/values/style.xml文件)
+
+<style name="anim_view">
+    <item name="@android:windowEnterAnimation">@anim/anim_in</item>
+    <item name="@android:windowExitAnimation">@anim/anim_out</item>
+</style>
+1
+2
+3
+4
+1
+2
+3
+4
+anim_in.xml(放置在res/anim目录下)
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:toXDelta="0"
+        android:toYDelta="85"
+        android:duration="1"
+        />
+    <translate
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:toXDelta="0"
+        android:toYDelta="-105"
+        android:duration="350"
+        android:fillAfter="true"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        />
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"
+        android:duration="100"
+        />
+    <translate
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:toXDelta="0"
+        android:toYDelta="20"
+        android:duration="80"
+        android:fillAfter="true"
+        android:startOffset="350"
+        />
+</set>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+1
+2
+32
+anim_out.xml(放置在res/anim目录下)
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha
+        android:fromAlpha="1"
+        android:toAlpha="0"
+        android:duration="800"/>
+</set>
+1
+2
+
+6
+以上动画是模仿小米Toast弹出动画的示例，具体动画可以根据个人喜好自定义。
+
+拓展Toast的工具类及使用方式已经介绍完毕，下面的内容是对于该工具类的设计原理解析，不赶时间并且有兴趣的同学可以继续往下看。
+
+ExToast原理解析
+
+刚才讲到，Toast的使用，有很多限制，其中包括系统原生的Toast是呈队列显示出来的，必须要等到前一条Toast消失才会显示下一条。
+
+相信很多同学都遇到过这个问题，比如我做一个按钮，点击的时候显示一个toast，然后做了个小小的压力测试:狂按保存按钮！于是toast队列排了好长一条，一直在显示，等到一两分钟才结束。
+
+通过阅读Toast源码，可以看到里面的Toast.show()和Toast.cancel()方法:
+
+public void show() {
+    if (mNextView == null) {
+        throw new RuntimeException("setView must have been called");
+    }
+
+    INotificationManager service = getService();
+    String pkg = mContext.getPackageName();
+    TN tn = mTN;
+    tn.mNextView = mNextView;
+
+    try {
+        service.enqueueToast(pkg, tn, mDuration);
+    } catch (RemoteException e) {
+        // Empty
+    }
+}
+
+public void cancel() {
+    mTN.hide();
+
+    try {
+        getService().cancelToast(mContext.getPackageName(), mTN);
+    } catch (RemoteException e) {
+        // Empty
+    }
+}
+1
+
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+可以看到Toast的核心显示和隐藏是封装在INotificationManager的enqueueToast方法中，看到enqueue这个词就知道这是一个队列处理的函数，它的参数分别是packageName，tn对象，持续时间。结合Toast的显示效果我们可以猜测这个方法内部实现是队列显示和隐藏每一个传入的Toast。packageName和持续时间我们都很清楚是什么，剩下的重点就在这个tn对象上了。那tn对象到底是什么？
+
+继续阅读Toast源码，可以知道Toast其实是系统虚浮窗的一种具体表现形式，它的核心在于它的一个私有静态内部类class TN，它处理了Toast的显示以及隐藏。所以，我们可以通过反射获取这个TN对象，主动处理Toast的显示和隐藏，而不经过系统Service
+
+TN类源码:
+
+private static class TN extends ITransientNotification.Stub {
+    final Runnable mShow = new Runnable() {
+        @Override
+        public void run() {
+            handleShow();
+        }
+    };
+    final Runnable mHide = new Runnable() {
+        @Override
+        public void run() {
+            handleHide();
+            // Don't do this in handleHide() because it is also invoked by handleShow()
+            mNextView = null;
+        }
+    };
+    ...
+    final Handler mHandler = new Handler();
+    ...
+    View mView;
+    View mNextView;
+    WindowManager mWM;
+    TN() {
+        final WindowManager.LayoutParams params = mParams;
+            params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+            params.format = PixelFormat.TRANSLUCENT;
+            params.windowAnimations = com.android.internal.R.style.Animation_Toast;
+            params.type = WindowManager.LayoutParams.TYPE_TOAST;
+            params.setTitle("Toast");
+            params.flags = WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                    | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                    | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
+     }
+    /**
+     * schedule handleShow into the right thread
+     */
+    @Override
+    public void show() {
+        if (localLOGV) Log.v(TAG, "SHOW: " + this);
+        mHandler.post(mShow);
+    }
+    /**
+     * schedule handleHide into the right thread
+     */
+    @Override
+    public void hide() {
+        if (localLOGV) Log.v(TAG, "HIDE: " + this);
+        mHandler.post(mHide);
+    }
+    public void handleShow() {
+        ...
+        if (mView != mNextView) {
+            // remove the old view if necessary
+            handleHide();
+            mView = mNextView;
+            Context context = mView.getContext().getApplicationContext();
+            if (context == null) {
+                context = mView.getContext();
+            }
+            mWM = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+            ...
+            if (mView.getParent() != null) {
+                if (localLOGV) Log.v(TAG, "REMOVE! " + mView + " in " + this);
+                mWM.removeView(mView);
+            }
+            ...
+            mWM.addView(mView, mParams);
+            ...
+        }
+    }
+    private void trySendAccessibilityEvent() {...}
+    public void handleHide() {
+        ...
+        if (mView != null) {
+            // note: checking parent() just to make sure the view has
+            // been added...  i have seen cases where we get here when
+            // the view isn't yet added, so let's try not to crash.
+            if (mView.getParent() != null) {
+                ...
+                mWM.removeView(mView);
+            }
+            mView = null;
+        }
+    }
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+好吧，上面的代码太长不想看，那就把核心的代码挑出来
+
+public void show(){
+    ...
+    WindowManager mWM = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+    mWN.addView(mView, mParams);
+}
+
+public void hide(){
+    ...
+    WindowManager mWM = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+    mWN.removeView(mView);
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+核心代码可以明显看出，Toast的机制就是往WindowManager添加以及移除view，那只要获得TN对象，重新封装一次show()和hide()方法就可以实现自定义显示时间。
+
+private void initTN() {
+    try {
+        Field tnField = toast.getClass().getDeclaredField("mTN");
+        tnField.setAccessible(true);
+        mTN = (ITransientNotification) tnField.get(toast);
+
+        /**调用tn.show()之前一定要先设置mNextView*/
+        Field tnNextViewField = mTN.getClass().getDeclaredField("mNextView");
+        tnNextViewField.setAccessible(true);
+        tnNextViewField.set(mTN, toast.getView());
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+public show(){
+    initTN();
+    mTN.show();
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+代码中mTN就是从Toast中利用反射获取的对象，类型是ITransientNotification，这是从android源码中拿出来的aidl接口，匹配TN的类型。主动调用mTN.show()方法后就会神奇的发现，Toast长时间存在屏幕中，即使离开了app它依然存在，直到调用mTN.hide()后才消失。
+
+Toast显示时间拓展的问题已经解决了，剩下一个自定义动画的问题。现在回过头再看TN类的初始化方法代码，里面初始化了一个WindowManager.LayoutParams对象，做过悬浮窗功能的同学应该都接触过它，下面这一句代码就是定义窗口动画的关键，如果能修改params.windowAnimations就能够修改窗口动画。
+
+params.windowAnimations = com.android.internal.R.style.Animation_Toast;
+1
+1
+很不幸的是，params并不是一个公有的属性，那就暴力点继续用反射获取并且修改窗口动画
+
+private void initTN() {
+    try {
+        Field tnField = toast.getClass().getDeclaredField("mTN");
+        tnField.setAccessible(true);
+        mTN = (ITransientNotification) tnField.get(toast);
+
+        /**调用tn.show()之前一定要先设置mNextView*/
+        Field tnNextViewField = mTN.getClass().getDeclaredField("mNextView");
+        tnNextViewField.setAccessible(true);
+        tnNextViewField.set(mTN, toast.getView());
+
+        /**获取params后重新定义窗口动画*/
+        Field tnParamsField = mTN.getClass().getDeclaredField("mParams");
+        tnParamsField.setAccessible(true);
+        WindowManager.LayoutParams params = (WindowManager.LayoutParams) tnParamsField.get(mTN);
+        params.windowAnimations = R.style.anim_view;
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+
+ 
+ 
