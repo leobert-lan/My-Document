@@ -159,27 +159,3 @@
 * void arcTo(RectF ovalRectF, float startAngle, float sweepAngle) 绘制弧线
 
 ---
-
-### 文字绘制
-
-
-
-----
-
-自定义view的核心方法：
-
-
-自定义viewgroup的核心方法
-
-
-
-### invalidate()和requestLayout()
-
-* requestLayout：
-当view确定自身已经不再适合现有的区域时，该view本身调用这个方法要求parent重新调用他的onMeasure onLayout实现重新设置自己位置。
-
-	e.g.当view的layoutparameter发生改变，并且它的值还没能应用到view上，这时候适合调用这个方法。
-
-* invalidate：
-
-View本身调用迫使view重画。
