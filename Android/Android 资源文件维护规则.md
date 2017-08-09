@@ -1,10 +1,5 @@
----
-title: Android 资源文件维护规则
----
-
 # Android 资源文件维护规则 #
-author: leobert.lan<p>
-time: 6/17/2016 8:46:40 AM 
+author: leobert.lan
 
 ## 字符串资源 ##
 
@@ -56,6 +51,7 @@ examples：
 > v100\_toast\_login\_unmatch 用户名密码不匹配
 
 - 页面控件显示文字
+
 > v100\_default\_login\_btntxt\_login 登录  contentAttr属性填写页面信息，subattr填写体现出所属控件类型
 > 
 > v100\_default\_login\_tv\_usr 用户名
@@ -70,14 +66,14 @@ examples：
 产品交付字符串资源时没有管理意识，除特定的文案修改都较为随意，对字符串资源维护造成难度，原则上版本升级新增的文案全部重新定义，与版本号挂钩，不对原有资源造成冲突。
 
 ## 图片资源 ##
-Android发展至今，基本不需要再切 .9 的图了，UI一般交付3套资源：
+UI一般交付4套分辨率切图资源：
 
 - mdpi
+- hdpi
 - xhdpi
 - xxhdpi
 
-同样UI组交付的资源命名风格迥异，我们需要自己维护
-
+UI组交付时，命名规则和本文不同，需要自己维护
 
 
 > v{{version\_code}}\_{{pageDes/widgetDes}}\_{{contentDes}}\_{{state}}
@@ -87,11 +83,10 @@ Android发展至今，基本不需要再切 .9 的图了，UI一般交付3套资
 
 {{state}} 命名图片一般用不到，switcher之类的控件需要使用
 
+## 其他
 
-## 配置相关常量 ##
+Anim资源，同图片资源
 
-一般的全局常量，在接口中进行定义，命名风格沿用常量命名风格
+color资源，dimen（dimension）资源，按照UI规范的用色表和风格样式进行定义。
 
-examples：
-String DB_TABLE_DOWNLOAD = "download";
-全部大写，下划线分割
+

@@ -1,4 +1,7 @@
 ## canvas移动和变换
+
+[详细请见此处](http://blog.csdn.net/harvic880925/article/details/39080931)
+
 常识：
 
 屏幕空间以左上角为原点，X轴正方向向右，Y轴正方向向下
@@ -64,21 +67,22 @@ protected void onDraw(Canvas canvas) {
 五、裁剪画布（clip系列函数）
 裁剪画布是利用Clip系列函数，通过与Rect、Path、Region取交、并、差等集合运算来获得最新的画布形状。除了调用Save、Restore函数以外，这个操作是不可逆的，一但Canvas画布被裁剪，就不能再被恢复！
 Clip系列函数如下：
-boolean	clipPath(Path path)
-boolean	clipPath(Path path, Region.Op op)
-boolean	clipRect(Rect rect, Region.Op op)
-boolean	clipRect(RectF rect, Region.Op op)
-boolean	clipRect(int left, int top, int right, int bottom)
-boolean	clipRect(float left, float top, float right, float bottom)
-boolean	clipRect(RectF rect)
-boolean	clipRect(float left, float top, float right, float bottom, Region.Op op)
-boolean	clipRect(Rect rect)
-boolean	clipRegion(Region region)
-boolean	clipRegion(Region region, Region.Op op)
+
+* boolean	clipPath(Path path)
+* boolean	clipPath(Path path, Region.Op op)
+* boolean	clipRect(Rect rect, Region.Op op)
+* boolean	clipRect(RectF rect, Region.Op op)
+* boolean	clipRect(int left, int top, int right, int bottom)
+* boolean	clipRect(float left, float top, float right, float bottom)
+* boolean	clipRect(RectF rect)
+* boolean	clipRect(float left, float top, float right, float bottom, Region.Op op)
+* boolean	clipRect(Rect rect)
+* boolean	clipRegion(Region region)
+* boolean	clipRegion(Region region, Region.Op op)
 
 以上就是根据Rect、Path、Region来取得最新画布的函数，难度都不大，就不再一一讲述。利用ClipRect（）来稍微一讲。
 
-[java] view plain copy
+```
 protected void onDraw(Canvas canvas) {  
     // TODO Auto-generated method stub  
     super.onDraw(canvas);  
@@ -86,7 +90,9 @@ protected void onDraw(Canvas canvas) {
     canvas.drawColor(Color.RED);  
     canvas.clipRect(new Rect(100, 100, 200, 200));  
     canvas.drawColor(Color.GREEN);  
-}   
+}
+```
+
 先把背景色整个涂成红色。显示在屏幕上
 然后裁切画布，最后最新的画布整个涂成绿色。可见绿色部分，只有一小块，而不再是整个屏幕了。
 关于两个画布与屏幕合成，我就不再画图了，跟上面的合成过程是一样的。
@@ -103,7 +109,7 @@ Save（）：每次调用Save（）函数，都会把当前的画布的状态进
 restore（）：每当调用Restore（）函数，就会把栈中最顶层的画布状态取出来，并按照这个状态恢复当前的画布，并在这个画布上做画。
 为了更清晰的显示这两个函数的作用，下面举个例子：
 
-[java] view plain copy
+```
 protected void onDraw(Canvas canvas) {  
     // TODO Auto-generated method stub  
     super.onDraw(canvas);  
@@ -120,12 +126,14 @@ protected void onDraw(Canvas canvas) {
     canvas.restore();  
       
     canvas.drawColor(Color.BLUE);  
-}   
+}  
+```
+ 
 他图像的合成过程为：（最终显示为全屏幕蓝色）
 
 下面我通过一个多次利用Save（）、Restore（）来讲述有关保存Canvas画布状态的栈的概念：代码如下：
 
-[java] view plain copy
+```
 protected void onDraw(Canvas canvas) {  
     // TODO Auto-generated method stub  
     super.onDraw(canvas);  
@@ -151,7 +159,8 @@ protected void onDraw(Canvas canvas) {
       
     canvas.clipRect(new Rect(400, 400, 500, 500));  
     canvas.drawColor(Color.WHITE);  
-}   
+} 
+``` 
 显示效果为：
 
 
