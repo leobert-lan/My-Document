@@ -1,0 +1,15 @@
+# Android generated
+Code/Pan_Android/.settings
+#Code/Pan_Android/assets
+Code/Pan_Android/bin
+Code/Pan_Android/gen
+
+/Code/Pan_Android/.classpath
+/Code/Pan_Android/.project
+/Code/WeiboSDK
+
+#/Code/ptrLib
+
+
+/.metadata
+/RemoteSystemsTempFiles/*.project
