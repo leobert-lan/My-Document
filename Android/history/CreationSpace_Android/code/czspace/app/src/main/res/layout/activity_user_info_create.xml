@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:riv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_info_create"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/v1000_drawable_beij2"
+    android:paddingTop="@dimen/status_bar_height"
+    tools:context=".module.user.info.ui.ac.UserInfoCreateActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+    <!--<attr name="border_outthickness" format="dimension" />-->
+    <!--<attr name="border_innerthickness" format="dimension" />-->
+    <!--<attr name="border_inside_color" format="color" />-->
+    <!--<attr name="border_outside_color" format="color"></attr>-->
+    <com.lht.creationspace.customview.RoundImageView
+        android:id="@+id/riv_avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:background="@color/transparent"
+        android:src="@drawable/v1000_drawable_shangctx"
+        riv:border_innerthickness="3dp"
+        riv:border_inside_color="@color/cyy_h2_alpha35"
+        riv:border_outside_color="@color/cyy_h2_alpha15"
+        riv:border_outthickness="3dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/riv_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/fullpage_nav_icon_topmargin"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_man"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/cbs_man_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_baomi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/list_item_padding_10dp"
+            android:layout_marginRight="@dimen/list_item_padding_10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/cbs_baomi_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_woman"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/cbs_woman_selector" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_create_sign"
+        style="@style/style_vg_input"
+        android:layout_height="120dp"
+        android:layout_below="@+id/rl_create_nickname"
+        android:layout_marginTop="@dimen/fullpage_nav_icon_topmargin">
+
+        <EditText
+            android:id="@+id/et_create_sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_shejiqm"
+            android:background="@color/transparent"
+            android:gravity="top"
+            android:hint="@string/v1000_default_userinfocreate_hint_create_sign"
+            android:imeOptions="actionUnspecified"
+            android:paddingLeft="5dp"
+            android:paddingTop="12dp"
+            android:textColor="@color/cyy_h13"
+            android:textColorHint="@color/sub_f3_gray"
+            android:textSize="@dimen/fs_content" />
+
+        <ImageView
+            android:id="@+id/iv_shejiqm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:src="@drawable/v1000_drawable_shezhiqm" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/style_button.green"
+        android:layout_below="@+id/rl_create_sign"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/v1000_default_userinfocreate_text_next" />
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_next"
+        android:layout_below="@+id/btn_next"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:background="@color/transparent"
+        android:text="@string/v1000_default_userinfocreate_text_jump"
+        android:textColor="@color/cyy_h10" />
+
+    <RelativeLayout
+        android:id="@+id/rl_create_nickname"
+        style="@style/style_vg_input"
+        android:layout_below="@+id/ll_sex"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/et_create_nickname"
+            style="@style/style_edittext.special1.invg"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/v1000_drawable_shezhinc"
+            android:drawablePadding="@dimen/text_padding_5dp"
+            android:hint="@string/v1000_default_userinfocreate_hint_create_nickname"
+            android:imeOptions="actionUnspecified"
+            android:textColor="@color/cyy_h13"
+            android:textColorHint="@color/sub_f3_gray" />
+
+        <ImageButton
+            android:id="@+id/ibtn_clearnickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/v1000_drawable_guanb" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

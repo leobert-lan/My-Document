@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.TpRegisterActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/content_topmargin" />
+
+    <!--id-->
+    <LinearLayout
+        android:id="@+id/tpregister_ll_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/bg_white">
+
+        <EditText
+            android:id="@+id/tpregister_et_account"
+            style="@style/style_edittext"
+            android:enabled="false"
+            android:text="@string/v1010_default_tpregister_text_id" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tpregister_ll_account" />
+
+    <!--pwd-->
+    <LinearLayout
+        android:id="@+id/tpregister_ll_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tpregister_ll_account"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/tpregister_et_pwd"
+            style="@style/style_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:hint="@string/v1010_default_tpregister_hint_pwd" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tpregister_ll_pwd" />
+
+    <!--密码check-->
+    <LinearLayout
+        android:id="@+id/tpregister_ll_pwd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tpregister_ll_pwd"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white">
+
+        <EditText
+            android:id="@+id/tpregister_et_pwd2"
+            style="@style/style_edittext"
+            android:inputType="textPassword"
+            android:hint="@string/v1010_default_tpregister_hint_pwdcheck" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tpregister_ll_pwd2" />
+
+
+    <Button
+        android:id="@+id/tpregister_btn_register"
+        style="@style/style_button"
+        android:layout_below="@+id/tpregister_ll_pwd2"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginTop="35dp"
+        android:text="@string/v1010_default_tpregister_btn_submit" />
+
+    <include layout="@layout/bar_title_simple" />
+</RelativeLayout>

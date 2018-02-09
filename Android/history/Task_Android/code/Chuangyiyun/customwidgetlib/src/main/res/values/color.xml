@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="pull_refresh_textview">#000000</color>
+    <color name="gold">#000000</color>
+    <color name="black">#000000</color>
+    <color name="labelColor">#0B273D</color>
+    <color name="labelColorChoose">#f44930</color>
+
+    <!--videoplayer start-->
+    <color name="biz_audio_progress_bg">#00b2ff</color>
+    <color name="biz_audio_progress_first">#ffffff</color>
+    <color name="biz_audio_progress_second">#6b6666</color>
+
+    <color name="default_bg">#aa000000</color>
+    <color name="select_color">#00b2ff</color>
+    <color name="normal_color">#ffffffff</color>
+    <color name="divider_color">#55504a</color>
+    <!--special color-->
+    <color name="black_a10_color">#1a000000</color>
+
+    <!--videoplayer end-->
+
+
+    <!--  &lt;!&ndash;<color name="colorPrimary_backup">#3F51B5</color>&ndash;&gt;
+      &lt;!&ndash;<color name="colorPrimaryDark_backup">#303F9F</color>&ndash;&gt;
+      <color name="theme1">@color/main_blue_dark</color>
+      <color name="theme1_dark">@color/main_blue_dark</color>-->
+
+    <!-- copy 了主项目中的资源-->
+
+    <color name="notify_pink">#FF4081</color>
+
+    <color name="bg_black">#000000</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_topbar">#FCFCFC</color>
+    <color name="bg_gray">#00F1F1F1</color>
+
+    <!--主色-->
+
+    <color name="main_blue_light">#ffe2efff</color>
+    <!--用于按钮-->
+
+    <color name="main_blue_dark">#ff2d7ee2</color>
+    <!--基础色-->
+
+    <!--辅色-->
+    <!--主要用于提示的强调色-->
+    <color name="sub_strong_yellow">#ffa200</color>
+
+    <!--主要用于价格的红色-->
+    <color name="sub_strong_red">#fe2e2e</color>
+
+    <!--蓝色背景按压状态-->
+    <color name="sub_blue_pressed">#2172d6</color>
+
+    <!--灰阶-->
+
+    <!-- 白底正文文字颜色-->
+    <color name="h1_text_gray_content">#333333</color>
+
+    <!-- 二级标题正常-->
+    <color name="h2_text_gray_title2_normal">#777777</color>
+
+    <color name="h10_text_gray_title2_pressed">#f8f8f8</color>
+
+    <!-- 输入提示文字用色-->
+    <color name="h3_text_gray_hint">#999999</color>
+
+    <!-- 底部导航背景-->
+    <color name="h4_gray_navigation_bottom">#f9f9f9</color>
+
+    <!-- 底部导航栏分割线-->
+    <color name="h5_gray_divider_bottomnavigation">#b2b2b2</color>
+
+    <!-- 通用分割线-->
+    <color name="h6_divider">#e0e0e0</color>
+
+    <!--底色-->
+    <color name="h7_primary_background">#fff5f5f5</color>
+    <color name="primary_background">@color/h7_primary_background</color>
+
+    <!-- 常用文字色666-->
+    <color name="h8_text_gray_666">#666666</color>
+
+    <!-- 常用文字色ccc-->
+    <color name="h11_text_gray_ccc">#cccccc</color>
+
+    <!-- 滚动条-->
+    <color name="h9_gray_scroll">#aaaaaa</color>
+
+    <!-- 白色文字-->
+    <color name="text_white">#FFFFFFFF</color>
+
+    <!-- 不可用状态文字-->
+    <color name="text_gray_disable">#96bff1</color>
+
+    <!--<color name="text_gray">#8D7A71</color>-->
+    <color name="text_gray_pressed">@color/h11_text_gray_ccc</color>
+    <!--<color name="text_yellow">#FFC800</color>-->
+    <!--<color name="text_topbar">#694E42</color>-->
+
+    <color name="text_link_blue">#4387cc</color>
+
+
+    <color name="div_white">#E5E5E5</color>
+
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="attachment_filename_color">#4387d9</color>
+
+    <!-- copy结束-->
+
+
+</resources>

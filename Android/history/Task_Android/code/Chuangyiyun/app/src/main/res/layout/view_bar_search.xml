@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/main_blue_dark"
+    android:gravity="center">
+
+    <!--<com.andexert.library.RippleView-->
+    <!--android:id="@+id/toolbar_left"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:padding="10dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--app:rv_centered="true"-->
+    <!--app:rv_color="@color/rippelColor"-->
+    <!--app:rv_rippleDuration="150">-->
+
+    <ImageButton
+        android:id="@+id/toolbar_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/v1010_drawable_icon_back"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <!--</com.andexert.library.RippleView>-->
+
+
+    <EditText
+        android:id="@+id/toolbar_et_search"
+        style="@style/style_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_toLeftOf="@+id/toolbar_btn_close"
+        android:layout_toRightOf="@+id/toolbar_left"
+        android:background="@drawable/bg_conner_15dp_white"
+        android:drawableLeft="@drawable/v1010_drawable_icon_search_gray"
+        android:drawablePadding="10dp"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textColor="@color/h1_text_gray_content" />
+
+    <ImageButton
+        android:id="@+id/toolbar_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:background="@drawable/v1010_drawable_icon_close" />
+
+
+</RelativeLayout>

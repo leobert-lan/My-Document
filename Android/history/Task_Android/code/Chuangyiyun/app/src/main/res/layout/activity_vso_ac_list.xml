@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_vso_ac_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.VsoAcListActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.lht.cloudjob.customview.MaskView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:visibility="gone" />
+
+    <com.lht.ptrlib.library.PullToRefreshListView
+        android:id="@+id/vso_activities_list"
+        style="@style/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:divider="@color/primary_background"
+        android:dividerHeight="10dp"
+        app:ptrAnimationStyle="flip"
+        app:ptrHeaderSubTextColor="@color/h3_text_gray_hint"
+        app:ptrHeaderTextColor="@color/h8_text_gray_666"
+        app:ptrListViewExtrasEnabled="true"
+        app:ptrRefreshableViewBackground="@color/transparent" />
+
+    <include layout="@layout/bar_title_simple" />
+</RelativeLayout>

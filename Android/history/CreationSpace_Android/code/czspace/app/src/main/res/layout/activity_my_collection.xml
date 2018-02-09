@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_collection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.user.social.HybridMyCollectionActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/cyy_h9"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rb_project"
+                style="@style/style_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="项目"
+                android:textSize="@dimen/fs_content" />
+
+            <View
+                android:id="@+id/mycollection_indicator1"
+                style="@style/homeindextab" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rb_article"
+                style="@style/style_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="文章"
+                android:textSize="@dimen/fs_content" />
+
+            <View
+                android:id="@+id/mycollection_indicator2"
+                style="@style/homeindextab"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!--<include layout="@layout/bar_title_theme6" />-->
+    <include layout="@layout/toolbar_title_theme5_sync" />
+
+    <FrameLayout
+        android:id="@+id/childfragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

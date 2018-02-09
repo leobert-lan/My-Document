@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fgdr_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        tools:context="com.lht.cloudjob.fragment.FgDemandRequire">
+
+        <TextView
+            android:id="@+id/fgdr_tv_requirement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <TextView
+            android:id="@+id/hint_attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/v1010_default_demandinfo_hint_attachments"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <com.lht.customwidgetlib.list.HorizontalListView
+            android:id="@+id/fgdr_attachments_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp" />
+
+
+        <com.lht.cloudjob.customview.ConflictListView
+            android:id="@+id/fgdr_attachments_files"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/transparent" />
+
+        <include layout="@layout/line_gray_1px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+            <com.lht.cloudjob.customview.RoundImageView
+                android:id="@+id/fgdr_img_publisher_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/v1010_drawable_avatar_default" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/fgdr_img_publisher_avatar"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/fgdr_tv_publisher_name"
+                    style="@style/style_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/fgdr_btn_follow" />
+
+                <TextView
+                    android:id="@+id/fgdr_tv_publisher_registertime"
+                    style="@style/style_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fgdr_tv_publisher_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_toLeftOf="@+id/fgdr_btn_follow"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <CheckBox
+                    android:id="@+id/fgdr_btn_follow"
+                    style="@style/style_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_conner_2dp_blue_border1px"
+                    android:padding="7dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

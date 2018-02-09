@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">创意云盘</string>
+    <string name="no_more_toAdd">已全部加载</string>
+    <string name="cloudbox_on_add">正在加载……</string>
+
+    <!-- Activity -->
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_setting">我的</string>
+    <string name="title_activity_main">创意云盘</string>
+    <string name="title_activity_About">关于我们</string>
+    <string name="title_activity_project">我的项目</string>
+    <string name="title_activity_cloud_box">我的云盘</string>
+    <string name="title_activity_test_cut">TestCut</string>
+    <string name="title_activity_move">选择目录</string>
+    <string name="title_activity_guide">创意云盘-介绍</string>
+    <string name="title_activity_search">搜索</string>
+    <string name="title_activity_transport_manager">传输管理</string>
+    <string name="title_activity_test_up_db">TestUpDbActivity</string>
+    <string name="title_activity_login_activity">登录</string>
+    <string name="title_activity_path_choose">选择目录</string>
+
+    <!-- main底部标签 -->
+    <string name="main_label_setting">我的</string>
+    <string name="main_label_cloudbox">云盘</string>
+    <string name="main_label_project">分享</string>
+    <string name="main_label_transport">传输管理</string>
+
+    <!-- 功能 -->
+    <string name="string_commit">提交</string>
+    <string name="string_title">提示</string>
+    <string name="string_sure">确定</string>
+    <string name="string_cancel">取消</string>
+    <string name="string_delete">删除</string>
+    <string name="string_share">分享</string>
+    <string name="string_move">移动到</string>
+    <string name="string_rename">重命名</string>
+    <string name="string_download">下载</string>
+    <string name="string_search">搜索</string>
+    <string name="string_close">关闭</string>
+    <string name="string_choice_all">全选</string>
+    <string name="string_multiselect">多选</string>
+    <string name="string_complete">完成</string>
+    <string name="string_not_choice">全不选</string>
+    <string name="string_delete_success">删除成功</string>
+
+    <!-- title -->
+    <string name="string_my_share">我的分享</string>
+    <string name="string_sharetome">分享给我的</string>
+    <string name="string_exit">确定退出吗？</string>
+    <string name="string_select_catalog">选择目录</string>
+    <string name="label_string_create_folder">创建新目录</string>
+    <string name="string_delete_title">确定要删除该文件吗？</string>
+    <string name="string_delete_multi">确定要删除吗？</string>
+
+    <!-- http failure -->
+    <string name="no_internet">无可用网络，请检查网络连接</string>
+    <string name="not_found">无法连接到服务器，请检查您的网络或稍后再试</string>
+    <string name="other_error">无法连接到服务器，请检查您的网络或稍后再试</string>
+
+    <!-- login_on_othermobile: 您的账号在其他手机登录，被迫下线\r\n若非您亲自操作，请尽快修改密码 -->
+    <string name="token_overtime">您的登录已过期</string>
+    <string name="dialog_content_openmarket">手机中没有安装能够打开该文件的应用，是否打开应用商店寻找？</string>
+    <string name="dialog_positive_openmarket">打开</string>
+    <string name="dialog_content_marketunavailable">手机中没有安装能够打开该文件的应用,且应用商店服务不可用，无法寻找可打开该文件的应用。</string>
+    <string name="share_sharetothose">分享给以下用户</string>
+    <string name="string_share_invalid">该分享已失效</string>
+
+    <string name="todo">miss</string>
+
+    <!-- 系统提示 -->
+    <string name="no_content">无内容</string>
+    <string name="no_other_memory">暂无外部存储</string>
+    <string name="title_activity_base">创意云盘</string>
+    <string name="press_again_toexit">再次点击退出应用</string>
+    <string name="function_notcomplete">该功能尚未开放，敬请期待</string>
+    <string name="sdcard_not_mounted">外部存储不存在,将影响部分功能</string>
+    <string name="title_activity_image_preview">图片预览</string>
+    <string name="chunkuploadfailure">碎片上传失败</string>
+    <string name="file_not_found">文件不存在</string>
+
+    <!-- 引导页和登录 -->
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_fogetPwd">忘记密码</string>
+    <string name="title_activity_rememberPwd">记住密码</string>
+    <string name="title_activity_viewPager_one">同步工作资料</string>
+    <string name="title_activity_viewPager_two">分享客户文件</string>
+    <string name="title_activity_viewPager_three">存储关键数据</string>
+    <string name="title_activity_start_login">开启我的云盘之旅</string>
+    <string name="copyright">Copyright © 2008 &#8211; 2016 苏州创意云网络科技有限公司 版权所有</string>
+
+    <!-- 登录模块 -->
+    <string name="login_hint_psd">请输入密码</string>
+    <string name="login_input">请输入账号和密码</string>
+    <string name="login_failure">用户名密码错误</string>
+    <string name="login_hint_usr">请输入创意云账号</string>
+
+    <!-- 注册和忘记密码模块 -->
+    <string name="has_account">已有账号？</string>
+    <string name="login_now">立即登录</string>
+    <string name="forget_pwd">找回密码</string>
+    <string name="forget_pwd_pwd">密码</string>
+    <string name="forget_pwd_next">下一步</string>
+    <string name="forget_pwd_pwd_sure">密码确认</string>
+    <string name="forget_pwd_getverificate">获取验证码</string>
+    <string name="forget_pwd_input_verificate">输入验证码</string>
+    <string name="register_now">立即注册</string>
+    <string name="register_account">注册账号</string>
+    <string name="register_read">同意</string>
+    <string name="register_string_verify">获取验证码</string>
+    <string name="register_agreements">《蓝海创意云用户服务协议》</string>
+    <string name="register_input_verify">请输入验证码</string>
+    <string name="register_input_phone_num">请输入您的手机号</string>
+    <string name="register_input_pwd">请设置您的密码（6&#8211;20个英文字母/数字）</string>
+
+    <!-- 预览暂不支持 -->
+    <string name="preview_unsupported_file">该类型文件暂不支持预览</string>
+    <string name="preview_cancel">预览已取消</string>
+    <string name="preview_sdcard_notmounted">存储卡不存在，功能无法使用</string>
+
+    <!-- 我的界面 -->
+    <string name="setting_activity_label">我的</string>
+    <string name="setting_activity_setting">设置</string>
+    <string name="setting_activity_uploading">仅用WIFI上传/下载</string>
+    <string name="setting_activity_backup">是否备份相册</string>
+    <string name="setting_activity_sync">是否同步通讯录</string>
+    <string name="setting_activity_about">关于创意云盘</string>
+    <string name="setting_activity_clearcache">清理空间</string>
+    <string name="setting_activity_advice">用户反馈</string>
+    <string name="setting_share_app">推荐给朋友</string>
+    <string name="setting_check_update">检查更新</string>
+    <string name="setting_activity_exit">退出登录</string>
+    <string name="setting_activity_about_us">关于我们</string>
+    <string name="setting_activity_clean">本地空间清理</string>
+    <string name="setting_activity_message">接受新消息提醒</string>
+    <string name="setting_activity_close">已关闭</string>
+    <string name="setting_activity_preview">PDF横屏预览</string>
+    <string name="setting_activity_username">昵称</string>
+    <string name="setting_activity_about_version">当前版本</string>
+    <string name="setting_activity_advice_phone">您的手机号/QQ号</string>
+    <string name="setting_activity_advice_content">留下您的建议，我们会尽快回复......</string>
+    <!-- 客服电话 -->
+    <string name="setting_activity_about_phone">客服电话：</string>
+    <string name="setting_activity_about_no1">400-164-7979</string>
+    <string name="string_seprator">&#160;&#047;&#160;</string>
+    <string name="setting_activity_about_no2">400-928-7979</string>
+    <string name="setting_activity_about_deal">《创意云盘用户协议》</string>
+    <string name="setting_activity_about_version_number">1.0.1</string>
+    <string name="setting_activity_feedback_submited">感谢您的建议,我们会尽快回复</string>
+    <string name="setting_activity_feedback_null">请填写您宝贵的建议</string>
+
+    <!-- 云盘下拉 -->
+    <string name="pull_all">全部</string>
+    <string name="pull_picture">图片</string>
+    <string name="pull_viedo">视频</string>
+    <string name="pull_docu">文档</string>
+    <string name="pull_music">音乐</string>
+    <string name="pull_upload">最近上传</string>
+    <string name="pull_others">其他</string>
+
+    <!-- 文件夹 -->
+    <string name="string_create_folder">新建文件夹</string>
+    <string name="string_choose_folds">请选择文件</string>
+    <string name="string_folder_rename">请输入文件名字</string>
+    <string name="string_folder_null">文件夹名不能为空</string>
+    <string name="string_folder_create_failure">文件夹创建失败</string>
+    <string name="string_folder_download">无法下载文件夹，请重新选择文件</string>
+
+    <!-- cloudbox multi 未选择 -->
+    <string name="cloudbox_multi_null1">您没有选择任何文件、文件夹，请先选择</string>
+    <string name="cloudbox_multi_null2">您没有选择任何文件，请先选择</string>
+
+    <!-- 重命名、移动、删除、下载 、搜索、分享 -->
+    <string name="share_reset_pwd">修改密码</string>
+    <string name="share_input_pwd">请输入密码</string>
+    <string name="share_modify_pwd_success">密码修改成功</string>
+    <string name="share_dialog_cancle_share">确定要取消分享吗？</string>
+    <string name="share_to_me">分享给我的</string>
+    <string name="share_public_url">公开链接</string>
+    <string name="share_private_url">私密链接</string>
+    <string name="share_customer_share">用户分享</string>
+    <string name="share_copy_url">复制链接成功!</string>
+    <string name="share_setting_pwd">请设置密码</string>
+    <string name="share_copy_copy">复制链接</string>
+    <string name="share_tpshare">分享</string>
+    <string name="share_to_cloudbox">复制到网盘</string>
+    <string name="share_ignore">忽略</string>
+    <string name="share_report">举报</string>
+    <string name="share_pwd_null">您的密码为空</string>
+    <string name="share_file_null">分享的文件不存在</string>
+    <string name="search_hint">请输入搜索内容</string>
+    <string name="cloudbox_activity_title">我的云盘</string>
+    <string name="rename_err_confilt">同名冲突，请换个名字</string>
+    <string name="cloudbox_list_norecord">目录中没有文件，赶快上传吧</string>
+    <string name="share_list_norecord">暂无分享记录</string>
+    <string name="download_start">开始下载</string>
+    <string name="download_pause">下载任务已暂停</string>
+    <string name="move_filter">请选择文件夹</string>
+    <string name="move_illegal">无法移动文件夹到自身或子文件夹中</string>
+    <string name="createnewfolder_name">请输入文件夹名</string>
+
+    <!-- 中间按钮 -->
+    <string name="super_center_picture">上传图片</string>
+    <string name="super_center_vedio">上传视频</string>
+    <string name="super_center_folder">新建文件夹</string>
+    <string name="trans_column_transporting">正在传输中(%d)</string>
+    <string name="trans_column_transported">已完成(%d)</string>
+    <string name="trans_norecord">您还没有传输记录哦!</string>
+    <string name="trans_job_onwait">任务排队中</string>
+
+    <!-- 上传提示 -->
+    <string name="choose_upload_path">选择其他上传路径</string>
+    <string name="select_image_upload">上传</string>
+    <string name="select_image_to">上传至：</string>
+    <string name="upload_queue">后台准备中</string>
+    <string name="upload_choose_catalog">请选择目录</string>
+    <string name="upload_started">开始上传</string>
+    <string name="trans_resumeOnWifi">发现可用wifi，传输任务恢复</string>
+    <string name="trans_warmOn4G">2G/3G/4G网络下载会消耗你的数据流量，是否开启“仅用WiFi上传/下载”功能？</string>
+    <!-- TODO -->
+    <string name="trans_warmOn4G_toast_download">正在使用流量下载！</string>
+    <string name="trans_warmOn4G_toast_upload">正在使用流量上传！</string>
+    <string name="trans_refuseOn4g">等待可用WIFI,或者关闭仅在WiFi下传输</string>
+    <string name="trans_jobadded">任务已添加至传输管理列表</string>
+
+    <!-- 传输管理 -->
+    <string name="trans_control_pause">暂停</string>
+    <string name="trans_control_restart">继续</string>
+    <string name="trans_control_delete">删除</string>
+    <string name="trans_comment_wait">任务排队中</string>
+    <string name="trans_comment_failure">下载失败</string>
+    <string name="trans_label_upload">上传列表</string>
+    <string name="trans_label_download">下载列表</string>
+    <string name="trans_delete_null">请选取任务后执行操作</string>
+
+    <!-- 传输管理-消息提示 -->
+    <string name="trans_toast_pause">任务已暂停</string>
+    <string name="trans_toast_start">任务已启动</string>
+    <string name="trans_toast_wait">任务排队中</string>
+    <string name="trans_toast_complete">任务已完成</string>
+
+    <!-- 传输管理-状态提示 -->
+    <string name="trans_status_waitWifi">等待可用WiFi</string>
+    <string name="trans_status_waitInternet">等待可用网络</string>
+    <string name="trans_status_pause">已暂停</string>
+    <string name="trans_status_started">已开始</string>
+    <string name="trans_status_wait">等待中</string>
+
+    <!-- 传输管理警告dialog -->
+    <string name="trans_guide_to_changesetting_content">等待WiFi，或者你可以去我的菜单中关闭“仅在WiFi上传下载”功能</string>
+    <string name="trans_guide_to_changesetting_negative">等待WIFI</string>
+    <string name="trans_guide_to_changesetting_positive">去设置</string>
+    <string name="trans_warmon4g_negative">直接下载</string>
+    <string name="trans_warmon4g_negative2">直接上传</string>
+    <string name="trans_warmon4g_positive">修改设置</string>
+    <string name="video_warmon4g">正在使用手机流量观看视频</string>
+    <string name="video_onwifi">WiFi已连接</string>
+
+    <!-- 注册 -->
+    <string name="register_notreadpact">请仔细阅读用户协议后并勾选同意遵守协议内容</string>
+    <string name="register_mobilenull">请填写手机号</string>
+    <string name="register_verifynull">请填写验证码</string>
+    <string name="register_verifyfailure">验证码错误</string>
+    <string name="register_resetsuccess">设置密码成功</string>
+    <string name="register_illegalmoble">手机号码无效或已经被注册</string>
+    <string name="register_reset_pwdnull">密码不能为空</string>
+    <string name="register_hint_newpwd">请输入密码</string>
+    <string name="register_hint_checkpwd">请再次输入密码</string>
+    <string name="register_pwdnotequal">两次输入的密码不一致</string>
+    <string name="string_dialog_prompt">提示</string>
+    <string name="download_refuse_folder">无法下载文件夹，请重新选择文件</string>
+
+    <!--  -->
+    <string name="serach_nothing">抱歉，没有搜索到您想要的结果</string>
+    <string name="search_input_null">请输入搜索关键词</string>
+    <string name="search_folder_nothing">文件夹空空如也</string>
+    <string name="title_activity_show_protocol">用户协议</string>
+    <string name="title_activity_web_register">注册</string>
+    <string name="title_activity_web_find_pwd">找回密码</string>
+    <string name="title_activity_view_pager_item">ViewPagerItemActivity</string>
+    <string name="title_activity_share_to_user">搜索用户</string>
+    <string name="title_activity_share_to_user_modify">编辑用户</string>
+    <string name="string_share1">分\n享</string>
+    <string name="string_share_modify1">确\n定</string>
+    <string name="string_share_modify2">确定</string>
+    <string name="search_user_hint">请输入用户ID号/昵称</string>
+    <string name="search_timeout">搜索超时</string>
+
+    <!-- 更新软件 -->
+    <string name="dialog_title_update">是否更新</string>
+    <string name="dialog_content_update">发现新版本 v%s，是否下载并更新？</string>
+    <string name="dialog_positive_update">确定</string>
+    <string name="dialog_negative_update">忽略此版本</string>
+    <string name="dialog_negative_update2">取消</string>
+    <string name="toast_update_latestversion">已经是最新版本</string>
+    <string name="toast_update_servererror">获取安装包失败，请联系我们</string>
+    <string name="title_activity_background">创意云盘</string>
+    <string name="toast_update_timeout">检查超时，请稍后再试</string>
+    <string name="title_activity_third_party_login">ThirdPartyLoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="toast_preview_loadfailure">服务器异常，打开失败</string>
+    <string name="title_activity_virtual_app">VirtualAppActivity</string>
+    <string name="title_activity_share_test">ShareTestActivity</string>
+
+    <!-- 第三方分享 -->
+    <string name="tp_failure_wxnotinstalled">未安装微信，无法分享</string>
+    <string name="tp_appshare_summary">创意云盘，支持多端同步、在线预览、站内外分享，您文化创业路上的专业助手。</string>
+    <string name="tp_share_title">有一条新的创意云盘分享内容</string>
+    <string name="tp_share_from">创意云盘</string>
+    <string name="tp_appshare_title">创意云盘</string>
+
+    <!-- 第三方登录 -->
+
+    <string name="tpl_hint">使用第三方账号直接登录</string>
+    <string name="tpl_name_qq">QQ登录</string>
+    <string name="tpl_name_sina">微博登录</string>
+    <string name="tpl_name_wechat">微信登录</string>
+
+    <!--  -->
+    <string name="string_clean_download">本地下载</string>
+    <string name="string_clean_cache">清理缓存</string>
+    <string name="notify_nointernet">网络开小差了，下拉刷新下试试</string>
+    <string name="title_activity_web">WebActivity</string>
+    <string name="title_activity_share_report">ShareReportActivity</string>
+
+    <!-- 举报 -->
+    <string name="hint_report_contact">请输入您的手机号/邮箱</string>
+    <string name="hint_report_reasons">举报原因</string>
+    <string name="dialog_report_content_success">举报成功，我们将会尽快核实，感谢您的支持与配合！</string>
+    <string name="dialog_report_ok">好的</string>
+    <string name="dialog_report_content_failure">网络连接超时，请重新提交</string>
+    <string name="dialog_report_retry">重新提交</string>
+    <string name="title_activity_web_video">WebVideoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+
+</resources>

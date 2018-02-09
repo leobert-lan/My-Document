@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_article_publish_choose_topic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.topic.ui.ChooseTopicActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.lht.creationspace.customview.MaskView
+        android:id="@+id/maskview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_all_topic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/bg_white"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin" />
+
+    <!--<include layout="@layout/bar_title_theme6" />-->
+    <com.lht.creationspace.customview.toolBar.navigation.ToolbarTheme7
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.lht.creationspace.customview.toolBar.navigation.ToolbarTheme7>
+</RelativeLayout>

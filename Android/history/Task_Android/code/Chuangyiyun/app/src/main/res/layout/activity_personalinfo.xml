@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.PersonalInfoActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <!--头像-->
+            <LinearLayout
+                android:id="@+id/personalinfo_ll_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.lht.cloudjob.customview.RoundImageView
+                    android:id="@+id/personalinfo_img_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/v1010_drawable_avatar_default" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/personalinfo_tv_nickname1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/v1010_default_pinfo_text_modifyavatar"/>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/v1010_drawable_icon_enter" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <include
+                layout="@layout/line_gray_1px_margin5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
+
+            <!--昵称-->
+            <LinearLayout
+                android:id="@+id/personalinfo_ll_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_pinfo_text_nickname" />
+
+                <TextView
+                    android:id="@+id/personalinfo_tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/h9_gray_scroll" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/v1010_drawable_icon_enter" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--性别-->
+            <LinearLayout
+                android:id="@+id/personalinfo_ll_sex"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_pinfo_text_sex" />
+
+                <TextView
+                    android:id="@+id/personalinfo_tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/h9_gray_scroll" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/v1010_drawable_icon_enter" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--编辑行业信息入口-->
+            <LinearLayout
+                android:id="@+id/personalinfo_ll_modifyfield"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_pinfo_text_subscribe" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/v1010_drawable_icon_enter" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--留白  10dp 留白-->
+
+            <include
+                layout="@layout/line_gray_1px_margin5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
+
+            <!--手机-->
+            <LinearLayout
+                android:id="@+id/personalinfo_ll_cellphone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_pinfo_text_phone" />
+
+                <TextView
+                    android:id="@+id/personalinfo_tv_cellphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/h9_gray_scroll" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/v1010_drawable_icon_enter" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--登录密码-->
+            <LinearLayout
+                android:id="@+id/personalinfo_ll_loginpwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_pinfo_text_pwd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/v1010_default_pinfo_hint_pwd"
+                    android:textColor="@color/h9_gray_scroll" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/v1010_drawable_icon_enter" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--&lt;!&ndash;三方账号&ndash;&gt;-->
+            <!--<LinearLayout-->
+            <!--android:id="@+id/personalinfo_ll_tpaccount"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@drawable/setting_item_bg"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:text="清除缓存" />-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<include layout="@layout/line_gray_1px_margin5dp" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bar_title_simple" />
+</RelativeLayout>

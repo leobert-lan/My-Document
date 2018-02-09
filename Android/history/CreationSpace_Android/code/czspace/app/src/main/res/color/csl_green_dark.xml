@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--说明：包含以下可选状态-->
+    <!--<item-->
+    <!--android:color="hex_color"-->
+    <!--android:state_pressed=["true" | "false"]-->
+    <!--android:state_focused=["true" | "false"]-->
+    <!--android:state_selected=["true" | "false"]-->
+    <!--android:state_active=["true" | "false"]-->
+    <!--android:state_checkable=["true" | "false"]-->
+    <!--android:state_checked=["true" | "false"]-->
+    <!--android:state_enabled=["true" | "false"]-->
+    <!--android:state_window_focused=["true" | "false"] />-->
+
+    <item android:color="@color/main_green_dark" android:state_checked="false" />
+    <!-- pressed -->
+    <item android:color="@color/sub_pressed_green" android:state_checked="true" />
+    <!-- default -->
+    <item android:color="@color/main_green_dark" />
+
+</selector>

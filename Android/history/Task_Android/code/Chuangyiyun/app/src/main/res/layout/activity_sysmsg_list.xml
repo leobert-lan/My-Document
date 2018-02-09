@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.SysMsgListActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.lht.cloudjob.customview.MaskView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:visibility="gone" />
+
+    <!--android:layout_above="@+id/buttom_bar"-->
+    <com.lht.ptrlib.library.PullToRefreshListView
+        android:id="@+id/message_list"
+        style="@style/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="@dimen/absbar_height"
+        android:divider="@color/primary_background"
+        android:dividerHeight="10dp"
+        app:ptrAnimationStyle="flip"
+        app:ptrHeaderSubTextColor="@color/h3_text_gray_hint"
+        app:ptrHeaderTextColor="@color/h8_text_gray_666"
+        app:ptrListViewExtrasEnabled="true"
+        app:ptrRefreshableViewBackground="@color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/buttom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_conner_2dp_gray_disable"
+        android:orientation="horizontal"
+        android:paddingTop="1px"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/message_btn_markbread"
+            style="@style/style_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bgselector_rect_white"
+            android:text="@string/v1010_default_message_btn_markasread"
+            android:textColor="@color/main_blue_dark" />
+
+        <Button
+            android:id="@+id/message_btn_delete"
+            style="@style/style_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/v1010_default_message_btn_delete" />
+
+    </LinearLayout>
+
+    <include layout="@layout/bar_type_modify" />
+</RelativeLayout>

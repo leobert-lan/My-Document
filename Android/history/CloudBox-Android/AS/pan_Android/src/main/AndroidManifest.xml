@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lht.pan_android">
+
+    <!--<uses-sdk-->
+        <!--android:minSdkVersion="15"-->
+        <!--android:targetSdkVersion="18" />-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 友盟 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SDK2.1新增获取用户位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 除却预览，都是竖屏 -->
+
+    <application
+        android:name=".util.CloudBoxApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/launch_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="569c7b7767e58e0928000a28" >
+        </meta-data>
+        <!-- 测试android studio 多渠道打包 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <!--
+			VSO_SOFTWARE_CENTER
+			WANDOUJIA
+			TENCENT
+			360
+			ANZHI
+        -->
+
+        <!--图片选择库Android7拍照存储 & 更新apk获取-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths2" />
+        </provider>
+
+        <activity
+            android:name=".activity.others.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleBase" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.others.GuideActivity"
+            android:label="@string/title_activity_guide"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.MainActivity"
+            android:label="@string/title_activity_main"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LazyJump"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.ViewPagerItem.CloudBoxActivity"
+            android:label="@string/title_activity_cloud_box"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.ViewPagerItem.ShareActivity"
+            android:label="@string/title_activity_project"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.ViewPagerItem.TransportManagerActivity"
+            android:label="@string/title_activity_transport_manager"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.ViewPagerItem.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.others.MineAboutUsActivity"
+            android:label="@string/title_activity_About"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <!--<activity-->
+            <!--android:name=".activity.asyncProtected.CleanActivity"-->
+            <!--android:launchMode="singleTask"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/LightNoTitleAppTheme" />-->
+        <activity
+            android:name=".activity.others.FeedbackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" />
+        <activity
+            android:name=".activity.selectItem.SelectImageGroupActivity"
+            android:label="@string/string_select_catalog"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.selectItem.SelectUploadItemsActivity"
+            android:label="@string/string_choose_folds"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!--<activity-->
+            <!--android:name=".activity.BaseActivity"-->
+            <!--android:label="@string/title_activity_base"-->
+            <!--android:screenOrientation="portrait" >-->
+        <!--</activity>-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true" />
+
+        <service android:name=".service.UpLoadService" >
+        </service>
+        <service android:name=".service.DownloadService" >
+        </service>
+
+        <activity
+            android:name=".activity.asyncProtected.ImagePreviewActivity"
+            android:label="@string/title_activity_image_preview"
+            android:launchMode="singleTask"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.selectItem.SelectAudioGroupActivity"
+            android:label="@string/string_select_catalog"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.selectItem.SelectMediaGroupActivity"
+            android:label="@string/string_select_catalog"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.others.RenameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.NewFolderActivity"
+            android:label="@string/label_string_create_folder"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".ForgetPwdActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.MoveActivity"
+            android:label="@string/title_activity_move"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.PathChooseActivity"
+            android:label="@string/title_activity_path_choose"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.innerWeb.ShowProtocolActivity"
+            android:label="@string/title_activity_show_protocol"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <!--<activity-->
+            <!--android:name=".activity.innerWeb.InnerWebActivity"-->
+            <!--android:launchMode="singleInstance"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/LightNoTitleAppTheme" >-->
+        <!--</activity>-->
+        <activity
+            android:name=".activity.innerWeb.WebRegisterActivity"
+            android:label="@string/title_activity_web_register"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.innerWeb.WebFindPwdActivity"
+            android:label="@string/title_activity_web_find_pwd"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <!--<activity android:name=".activity.UMengActivity" />-->
+        <!--<activity android:name=".AsyncProtectedActivity" >-->
+        <!--</activity>-->
+        <!--<activity android:name=".activity.selectItem.SelectActivity" >-->
+        <!--</activity>-->
+        <!--<activity-->
+            <!--android:name=".activity.ViewPagerItem.ViewPagerItemActivity"-->
+            <!--android:label="@string/title_activity_view_pager_item" >-->
+        <!--</activity>-->
+        <activity
+            android:name=".activity.asyncProtected.ShareToUserActivity"
+            android:label="@string/title_activity_share_to_user"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name=".activity.asyncProtected.CopyActivity" />
+
+        <!-- qq 相关 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- tencent+appid -->
+                <data android:scheme="tencent1105135204" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- social media:sina-blog-sdk needed -->
+
+
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- 高大上防穿透背景activity -->
+        <activity
+            android:name=".BackgroundActivity"
+            android:label="@string/title_activity_background"
+            android:launchMode="singleInstance"
+            android:screenOrientation="behind"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <!--<activity-->
+            <!--android:name=".ThirdPartyLoginActivity"-->
+            <!--android:label="@string/title_activity_third_party_login" >-->
+        <!--</activity>-->
+        <activity
+            android:name=".activity.innerWeb.VirtualAppActivity"
+            android:label="@string/title_activity_virtual_app"
+            android:screenOrientation="landscape" >
+        </activity>
+        <!--<activity-->
+            <!--android:name=".ShareTestActivity"-->
+            <!--android:label="@string/title_activity_share_test" >-->
+        <!--</activity>-->
+        <activity
+            android:name=".activity.innerWeb.WebActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.asyncProtected.ShareReportActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightNoTitleAppTheme"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.lht.pan_android.activity.innerWeb.WebVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_web_video"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullNoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>

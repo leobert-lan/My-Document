@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/linear_rename_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:text="@string/string_cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title_large" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/string_rename"
+            android:imeOptions="actionDone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title_very_large" />
+
+        <Button
+            android:id="@+id/linear_rename_ensure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="15dp"
+            android:text="@string/string_sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title_large" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp" >
+
+        <ImageView
+            android:id="@+id/linear_img_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/wenjj" />
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/corners_bg_white_2"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/tableRow_edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/gray_333"
+                android:textColorHighlight="@color/lightblue"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/tableRow_img_cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/shancmm"
+                android:textColor="@color/lightBlue" />
+        </TableRow>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,427 @@
+<resources>
+
+    <!--命名规则：-->
+    <!--v{{version_code}}_{{Type}}_{{ContentAttr}}_{{subAttr}}_{{name}}-->
+    <!--enum Type: {title,dialog,toast,menu,view,default} 该分类不要缺省-->
+    <!--ContentAttr： 文本的内容性质属性，例如dialog type下，
+    title是dialog标题，content是正文内容，button是操作按钮的文本，-->
+    <!--subAttr: 附加额外的属性-->
+    <!--name: 直接和内容相关-->
+    <string name="app_name">FLAG社</string>
+
+
+    <!--activity title-->
+    <string name="title_activity_settings">设置</string>
+    <string name="title_activity_aboutus">关于我们</string>
+    <string name="title_activity_personalinfo">个人资料</string>
+    <string name="title_activity_resetpwdverify">手机验证</string>
+    <string name="title_activity_resetpwd">设置密码</string>
+    <string name="title_activity_modifynickname">修改昵称</string>
+    <string name="title_activity_feedback">意见反馈</string>
+    <string name="title_activity_loaction_picker">选择地区</string>
+    <string name="title_activity_messageinfo">消息详情</string>
+    <string name="title_activity_banner_info">详情</string>
+    <string name="title_activity_user_agreement">蓝海创意云用户服务协议</string>
+    <string name="title_activity_account_combine">关联账号</string>
+
+    <string name="v1000_toast_press_again_exit">再次点击退出应用</string>
+
+    <!--mask-->
+    <string name="v1000_default_mask_load_fail">加载失败</string>
+    <string name="v1000_default_mask_loading">加载中...</string>
+    <string name="v1000_default_mask_unauth">登录开启新世界</string>
+
+    <string name="v1000_default_mask_op_retry">点击重新加载</string>
+    <string name="v1000_default_mask_op_auth">立即登录</string>
+
+    <!--HomeActivity的tab-->
+    <string name="tab_homeactivity_index">首页</string>
+    <string name="tab_homeactivity_project">项目</string>
+    <string name="tab_homeactivity_circle">圈子</string>
+    <string name="tab_homeactivity_activities">活动</string>
+    <string name="tab_homeactivity_mime">我的</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="v1010_toast_error_album_private">无法获取该图片</string>
+
+
+    <string name="v1010_default_about_tv_copyright">苏州创意云网络科技有限公司 版权所有\nCopyright © 2008 &#8211; 2016 </string>
+    <string name="v1000_default_about_tv_protocol"><u>《蓝海创意云用户服务协议》</u></string>
+    <string name="v1000_default_about_tv_protocol2"><u>《入驻申请协议》</u></string>
+
+    <!--登录页面文字-->
+
+    <string name="v1010_dialog_login_unexist">该账号尚未注册</string>
+    <string name="v1010_dialog_login_nagetice_reinput">重新输入</string>
+    <string name="v1010_dialog_login_positive_register">去注册</string>
+
+    <string name="v1010_dialog_register_exist">号码已注册，请重新输入.</string>
+    <string name="v1010_dialog_register_negative_reinput">重新输入</string>
+    <string name="v1010_dialog_register_positive_login">去登录</string>
+
+
+    <!-- 忘记密码 -->
+
+    <string name="cancel">取消</string>
+    <string name="permit">确定</string>
+    <string name="complete">完成</string>
+    <string name="input_overlength">输入文字长度达到上限</string>
+    <string name="no_internet">无可用网络</string>
+
+
+    <!-- 重置密码-->
+
+    <string name="v1000_toast_error_subscribemyself">不能关注自己</string>
+
+    <string name="v1000_toast_error_nullnick">请设置昵称</string>
+    <string name="v1000_toast_error_nullavatar">请选择头像</string>
+
+    <!-- 第三方的注册-->
+
+    <!-- 设置-->
+    <string name="v1010_default_setting_text_clean">清除缓存</string>
+    <string name="v1010_default_setting_text_feedback">意见反馈</string>
+    <string name="v1010_default_setting_text_update">版本检测</string>
+    <string name="v1000_default_setting_text_aboutus">关于我们</string>
+    <string name="v1010_default_setting_text_logout">退出登录</string>
+
+    <string name="v1010_dialog_setting_content_logout">是否退出登录?</string>
+    <string name="v1010_dialog_setting_content_clean">确定清除缓存?</string>
+
+
+    <!-- 意见反馈-->
+    <string name="v1010_default_feedback_hint_content">请输入您的问题/建议</string>
+    <string name="v1010_default_feedback_text_upload">上传图片</string>
+    <string name="v1010_default_feedback_hint_size">(最多5张，每张大小不超过5M)</string>
+    <string name="v1010_default_feedback_hint_contact">请输入您的手机号码</string>
+    <string name="v1010_default_feedback_btn_submit">提 交</string>
+
+    <string name="v1010_toast_feedback_error_images_over_count">最多选择五张图片</string>
+
+    <string name="v1010_toast_feedback_error_content_null">请输入您的问题/建议</string>
+    <string name="v1010_toast_feedback_error_contact_null">请输入您的手机号码</string>
+
+    <string name="v1010_dialog_feedback_content_error_upload">图片上传失败</string>
+    <string name="v1010_dialog_feedback_positive_reupload">重新上传</string>
+
+    <string name="v1010_dialog_feedback_content_success_feedback">意见反馈成功，我们会尽快处理</string>
+    <string name="v1010_dialog_feedback_positive_close">好的</string>
+
+
+    <!-- 我的关注-->
+
+    <!-- 分享-->
+    <string name="v1010_default_tp_failure_wxnotinstalled">未安装微信</string>
+    <string name="v1010_default_tp_failure_QQnotinstalled">未安装QQ,无法分享</string>
+    <string name="v1010_default_tp_failure_qqzonenotinstalled">未安装QQ空间,无法分享</string>
+    <string name="v1010_default_tp_share_exit">分享取消</string>
+    <string name="v1010_default_tp_share_success">分享成功</string>
+    <string name="v1010_default_tp_share_failure">分享失败</string>
+
+
+    <!-- 个人认证-->
+
+    <!-- -->
+    <string name="todo">todo</string>
+
+    <!--account combine-->
+    <string name="v1000_accombine_hint_intent">为了给您更好的服务，请先关联一个平台账号</string>
+    <string name="v1000_accombine_hint_account_has">关联已有平台账号</string>
+    <string name="v1000_accombine_hint_account_donot_has">还没有平台账号?</string>
+    <string name="v1000_accombine_hint_acount">请输入手机号/邮箱/ID号</string>
+    <string name="v1000_accombine_hint_pwd">请输入登录密码</string>
+    <string name="v1000_accombine_text_acount">账 号</string>
+    <string name="v1000_accombine_text_pwd">密 码</string>
+    <string name="v1000_accombine_text_combine">立即关联</string>
+    <string name="v1000_accombine_text_register">快速注册</string>
+
+
+    <!--我的关注-->
+
+    <!-- 搜索-->
+
+    <!-- 网络异常提示-->
+    <string name="v1012_toast_error_text_timeout">网络连接超时，请重试</string>
+
+
+    <string name="v1010_default_resetnick_btn_submit">保 存</string>
+
+    <!--手机绑定-->
+    <string name="v1010_default_bindphone_bindphone">绑定手机</string>
+    <string name="v1010_default_updatephone_updatephone">修改手机号</string>
+    <string name="v1010_default_bindphone_enter_verificationvode">请输入您收到的验证码!</string>
+    <string name="v1010_default_bindphone_phonestyle_error">请输入11位正确的手机号</string>
+
+    <string name="v1010_default_empty_phonenumber">请输入11位正确的手机号</string>
+
+
+    <string name="v1000_toast_net_exception">网络连接超时</string>
+    <string name="v1000_toast_server_error">网络异常、请稍后重试</string>
+    <string name="v1000_toast_net_401">身份认证已过期</string>
+    <string name="v1020_dialog_download_onmobile">当前为2G/3G/4G环境，继续下载将耗费较多流量</string>
+    <string name="v1020_dialog_pbtn_onmobile">继续</string>
+    <string name="v1020_dialog_nbtn_onmobile">取消</string>
+    <string name="v1020_toast_download_onnotfound">文件不存在</string>
+    <string name="v1020_toast_download_cancel">下载已取消</string>
+    <string name="v1020_toast_download_success">保存成功</string>
+    <string name="v1020_toast_download_onnoenoughspace">存储空间不足</string>
+    <string name="v1020_toast_download_failure">保存失败</string>
+    <string name="v1020_dialog_preview_onmobile_toolarge">文件大小为%s，当前为2G/3G/4G环境，继续预览将耗费较多流量</string>
+
+    <string name="v1020_versionupdate_dialog_text_newversion">检测到新版本，版本号为:</string>
+    <string name="v1020_versionupdate_dialog_text_update">是否更新</string>
+    <string name="v1020_versionupdate_dialog_btn_download">免费下载</string>
+    <string name="v1020_versionupdate_dialog_btn_nodownload">暂不下载</string>
+    <string name="v1020_versionupdate_text_already_newversion">当前已是最新版本</string>
+    <string name="v1020_versionupdate_dialog_text_install">新版本下载完成，是否立即安装</string>
+    <string name="v1020_versionupdate_dialog_btn_install">立即安装</string>
+    <string name="v1020_versionupdate_dialog_btn_update">立即更新</string>
+    <string name="v1020_versionupdate_text_download_fuilure">下载失败</string>
+    <string name="v1020_versionupdate_dialog_btn_noupdate">以后再说</string>
+    <string name="v1020_versionupdate_notification_ticker">版本更新通知</string>
+    <string name="v1020_versionupdate_dialog_notification_title">FLAG社</string>
+    <string name="v1020_versionupdate_dialog_notification_description">版本更新提醒！发现新版本啦，更新后享受更多功能。</string>
+    <string name="v1020_versionupdate_dialog_onmobile_remind">当前为2G/3G/4G环境，继续下载可能会耗费较多流量</string>
+    <string name="v1020_versionupdate_dialog_btn_cancel">取消</string>
+
+    <string name="v1022_dialog_permission_camera">暂无相机权限，请在权限管理中允许相机访问权限</string>
+    <string name="v1022_dialog_permission_sd">暂无存储读写权限，请在权限管理中允许存储访问权限</string>
+    <string name="v1022_dialog_permission_pbtn">去设置</string>
+    <string name="v1022_dialog_permission_nbtn">暂不设置</string>
+
+    <string name="v1030_notify_ticker">新通知</string>
+
+    <!--登录-->
+    <string name="v1000_default_login_hint_account">请输入手机号/邮箱/ID号</string>
+    <string name="v1000_default_login_hint_password">密码</string>
+    <string name="v1000_default_login_btn_login">登 录</string>
+    <string name="v1000_default_login_href_forgetpwd">忘记密码?</string>
+    <string name="v1000_default_login_stroll">随便逛逛</string>
+    <string name="v1000_default_login_new_user_register">新用户注册</string>
+    <string name="v1000_default_login_creation_with_the_best_people">来最好的地方和最好的人一起创作</string>
+
+
+    <string name="v1000_default_login_null_account">请输入账号</string>
+    <string name="v1000_default_login_null_pwd">请输入密码</string>
+
+    <!-- 注册-->
+    <string name="v1000_default_register_hint_account">请输入11位手机号</string>
+    <string name="v1000_default_register_hint_verifycode">请输入验证码</string>
+    <string name="v1000_default_register_btn_getverify">获取验证码</string>
+    <string name="v1000_default_register_btn_register">立即注册</string>
+    <string name="v1000_default_register_cb_protocol">阅读并同意</string>
+    <string name="v1000_default_register_href_protocol">《蓝海创意云用户服务协议》</string>
+    <string name="v1000_default_register_toast_read_agreement">请先同意用户协议</string>
+    <string name="v1000_toast_register_error_login_onback">后台登录失败，请手动登录</string>
+    <string name="v1000_toast_error_null_pwd">请输入密码!</string>
+    <string name="v1000_toast_register_text_pwd_illegal">密码为6-20位数字/字母组合</string>
+    <string name="v1000_default_userinfocreate_hint_create_nickname">请设置您的昵称</string>
+    <string name="v1000_default_userinfocreate_hint_create_sign">请设置个人专属签名</string>
+    <string name="v1000_default_userinfocreate_text_next">下一步</string>
+    <string name="v1000_default_userinfocreate_text_jump">跳过</string>
+
+    <string name="v1000_default_register_hint_pwd">请设置6-20位密码!</string>
+
+    <!--账号管理Activity-->
+    <string name="v1000_title_activity_accountmanage">账号管理</string>
+    <string name="v1000_default_accountmanage_text_loginpwd">登录密码</string>
+    <string name="v1000_default_accountmanage_text_to_modify">修改</string>
+    <string name="v1000_default_accountmanage_text_mobile_bind">手机绑定</string>
+    <string name="v1000_default_accountmanage_text_three_account">三方账号</string>
+    <string name="v1000_default_accountmanage_text_realname_authentication">实名认证</string>
+    <string name="v1000_default_accountmanage_text_realname_to_authentication">去认证</string>
+
+    <!--修改密码-->
+    <string name="v1000_default_changepwd_hint_text_currentpwd">请输入当前密码</string>
+    <string name="v1000_default_changepwd_hint_text_newpwd">请输入新密码</string>
+    <string name="v1000_default_changepwd_hint_text_newpwd_again">请重复输入新密码</string>
+    <string name="v1000_default_changepwd_button_text_save">保存</string>
+
+    <!--三方账号-->
+    <string name="v1000_title_activity_thirdaccount">三方账号</string>
+    <string name="wechat">微信</string>
+    <string name="QQ">QQ</string>
+    <string name="sinaweibo">微博</string>
+    <string name="v1000_default_thirdaccount_text_binded">已绑定</string>
+    <string name="v1000_default_thirdaccount_text_to_bind">去绑定</string>
+
+    <!--设置-->
+    <string name="v1000_title_activity_settings">设置</string>
+
+    <!--关联账号-->
+    <string name="v1000_default_accountcontact_hint_account">请输入手机号/邮箱/ID号</string>
+
+    <!--设置密码-->
+
+    <!--发布文章-->
+    <string name="v1000_title_activity_article_publish">发布文章</string>
+    <string name="v1000_default_articlepublish_text_title">标题</string>
+    <string name="v1000_default_articlepublish_hint_title_remind">必填，30字内</string>
+    <string name="v1000_default_articlepublish_hint_article_describe">正文内容（必填）</string>
+    <string name="v1000_default_articlepublish_text_upload_img">上传图片</string>
+    <string name="v1000_default_articlepublish_text_max_imagecount">最多9张</string>
+    <string name="v1000_default_articlepublish_text_publish_article">发布文章</string>
+    <string name="v1000_default_articlepublish_toast_title_too_long">您输入的标题过长</string>
+    <string name="v1000_default_articlepublish_text_publish">发布</string>
+    <string name="v1000_default_articlepublish_toast_article_title_isempty">请输入文章标题</string>
+    <string name="v1000_default_articlepublish_toast_article_content_isempty">请输入文章内容标题</string>
+    <string name="v1000_toast_error_nullcircle">请选择一个圈子</string>
+
+    <string name="v1000_default_articlepublish_toast_error_blanktitle">请填写有效的标题信息哦</string>
+    <string name="v1000_default_articlepublish_toast_error_blankcontent">请填写有效的正文信息哦</string>
+
+
+    <!--我的-->
+    <string name="v1000_default_homepage_text_attention">关注</string>
+    <string name="v1000_default_homepage_text_fans">粉丝</string>
+    <string name="v1000_default_homepage_text_collection">收藏</string>
+    <string name="v1000_default_homepage_text_my_project">我的项目</string>
+    <string name="v1000_default_homepage_text_my_article">我的文章</string>
+    <string name="v1000_default_homepage_text_my_circle">我的圈子</string>
+    <string name="v1000_default_homepage_text_account_manage">账号管理</string>
+    <string name="v1000_default_homepage_text_setting">设置</string>
+    <string name="v1000_default_homepage_text_invite_friend">邀请好友</string>
+    <string name="v1000_default_homepage_text_my_attention">我的关注</string>
+    <string name="v1000_default_homepage_text_my_fans">我的粉丝</string>
+    <string name="v1000_default_homepage_text_my_collection">我的收藏</string>
+
+    <!-- 个人信息-->
+    <string name="v1000_default_pinfo_text_modifyavatar">修改头像</string>
+    <string name="v1000_default_pinfo_text_nickname">昵称</string>
+    <string name="v1000_default_pinfo_text_sex">性别</string>
+    <string name="v1000_default_resetnick_enter_nickname">请输入昵称</string>
+    <string name="v1000_default_resetnick_nicklenth_over20">昵称长度超过20</string>
+
+
+    <!-- 个人资料 -->
+    <string name="v1000_default_feedback_enter_text_toolong">你输入的字数已经超过了限制</string>
+    <string name="v1000_default_personalinfo_enter_text_toolong">你输入的字数已经超过了限制</string>
+    <string name="v1000_toast_warm_enter_text_overlength">你输入的字数已经超过了限制</string>
+    <string name="v1000_default_article_publish_text_next">下一步</string>
+    <string name="v1000_default_personalinfo_introduce">简介（个性签名）</string>
+    <string name="v1000_default_personalinfo_hint_introduce_remind">请用30字让他人了解你吧</string>
+
+    <!--修改昵称-->
+    <string name="v1000_default_modifynickname_hint_nickname_remind">请输入您的昵称</string>
+    <string name="v1000_default_modifynickname_toast_nickname_remind">请输入您的昵称</string>
+    <string name="v1000_default_modifynickname_toast_nickname_illegal_remind">昵称只能是汉字、字母（含大小写）、数字、空格及其组合，最长20个字符</string>
+
+    <!-- 修改密码-->
+    <string name="v1000_title_activity_change_password">修改密码</string>
+    <string name="v1000_default_changepwd_hint_oldpwd">请输入当前密码</string>
+    <string name="v1000_default_changepwd_hint_newpwd">请输入6-20位新密码</string>
+    <string name="v1000_default_changepwd_hint_checkpwd">请再次输入新密码</string>
+    <string name="v1000_default_changepwd_text_newpwd_disaffinity">两次输入的新密码不一致</string>
+    <string name="v1000_default_changepwd_text_pwdissame">新旧密码不能相同!</string>
+    <string name="v1000_default_changepwd_text_changepwd_success">密码修改成功</string>
+    <string name="v1000_default_changepwd_text_resetpwd_success">重置密码成功</string>
+    <string name="v1000_default_changepwd_empty_oldpwd">缺少原登录密码</string>
+
+    <!--手机绑定-->
+    <string name="v1000_default_bindphone_text_commit">提交</string>
+
+    <!--选择身份（引流页）-->
+    <string name="v1000_default_chooserole_choose_complete">完成</string>
+
+    <!--选择圈子-->
+
+    <!--快捷绑定-->
+    <string name="v1000_title_activity_fast_bind">注册绑定</string>
+    <string name="v1000_default_fastbind_text_phone">手机号</string>
+    <string name="v1000_default_fastbind_text_verifycode">验证码</string>
+    <string name="v1000_default_fastbind_text_password">密码</string>
+
+    <string name="v1000_default_fastbind_hint_phone">请输入手机号</string>
+    <string name="v1000_default_fastbind_hint_password">请设置6-20位登录密码</string>
+
+    <string name="v1000_default_fastbind_fast_bind">立即绑定</string>
+    <string name="v1000_default_fastbind_text_toast_phone">请输入您的手机号码</string>
+    <string name="v1000_default_fastbind_text_toast_verifycode">请输入验证码</string>
+    <string name="v1000_default_fastbind_text_toast_password">请输入密码</string>
+    <string name="v1000_default_fastbind_text_toast_phone_max">已输入11位</string>
+    <string name="v1000_default_fastbind_fast_bind_skip">跳过</string>
+    <!-- 发布项目 -->
+    <string name="v1000_title_activity_project_publish">基本信息</string>
+    <string name="v1000_default_projectpublish_text_publish">发布</string>
+    <string name="v1000_default_projectpublish_text_project_name">项目名称</string>
+    <string name="v1000_default_projectpublish_text_project_address">所在地</string>
+    <string name="v1000_default_projectpublish_text_project_qq">QQ号</string>
+    <string name="v1000_default_projectpublish_text_project_mibile">手机号</string>
+    <string name="v1000_default_projectpublish_text_project_type">项目类型</string>
+    <string name="v1000_default_projectpublish_text_project_state">项目状态</string>
+    <string name="v1000_default_projectpublish_hint_project_name_remind">不要超过30个字</string>
+    <string name="v1000_default_projectpublish_hint_project_address">请选择所在地</string>
+    <string name="v1000_default_projectpublish_hint_project_qq">留下QQ号，便于客服联系你</string>
+    <string name="v1000_default_projectpublish_hint_project_mobile">请输入您的手机号</string>
+    <string name="v1000_default_projectpublish_text_choose">请选择</string>
+    <string name="v1000_default_projectpublish_toast_project_too_long">您输入的项目名称过长</string>
+    <string name="v1000_default_projectpublish_text_publish_project">发布项目</string>
+    <string name="v1000_default_projectpublish_text_publish_project_remind">随笔、感想、吐槽...</string>
+    <string name="v1000_default_projectpublish_text_publish_article_remind">原创、IP孵化...</string>
+    <string name="v1000_default_projectpublish_toast_projectname_is_empty">请输入项目名称</string>
+    <string name="v1000_default_projectpublish_toast_address_is_empty">请选择地址</string>
+    <string name="v1000_default_projectpublish_toast_qq_is_empty">请输入您的QQ号</string>
+    <string name="v1000_default_projectpublish_toast_mobile_is_empty">请输入您的手机号</string>
+    <string name="v1000_default_projectpublish_toast_projecttype_is_empty">请选择项目类型</string>
+    <string name="v1000_default_projectpublish_toast_projectstate_is_empty">请选择项目状态</string>
+
+    <!--选择项目类型-->
+    <string name="v1000_title_activity_choose_project_type">选择项目类型</string>
+
+    <!--验证手机号-->
+    <string name="v1000_title_activity_verify_phone">验证手机</string>
+
+    <!--消息-->
+    <string name="v1000_title_activity_message">消息</string>
+    <string name="v1000_default_message_text_comment">评论</string>
+    <string name="v1000_default_message_text_remind">提醒</string>
+    <string name="v1000_default_message_text_notify">通知</string>
+    <string name="v1000_default_message_text_send_message">发消息</string>
+
+    <string name="v1000_default_rolechoose_null_role">至少选择一个身份</string>
+
+    <!--我的项目-->
+
+
+    <!-- 引导页 -->
+    <string name="v1010_default_guide_one_text1">创作交流</string>
+    <string name="v1010_default_guide_one_text2">网文、国漫、独立游戏、直播、影视和不同的圈子\n交流带来更多的创意火花</string>
+    <string name="v1010_default_guide_two_text1">孵化服务</string>
+    <string name="v1010_default_guide_two_text2">平台将定期举办多样的孵化活动与行业论坛\n从资金、技术、资源、平台多方面扶持原创项目</string>
+    <string name="v1010_default_guide_three_text1">项目展示</string>
+    <string name="v1010_default_guide_three_text2">在社区内展示分享自己的作品与创作历程\n吸引投资，聚集粉丝，意见收集，合作洽谈</string>
+    <string name="v1010_default_guide_four_text1">台前幕后</string>
+    <string name="v1010_default_guide_four_text2">独家S级项目将不定期分享设计手稿与创作思路\n第一时间接触和了解优秀创作者的创作过程</string>
+    <string name="v1010_default_guide_start">立即体验</string>
+
+
+    <!--home 圈子-->
+    <string name="v1000_title_activity_all_topic">全部圈子</string>
+    <!--home 项目-->
+    <string name="v1000_title_activity_all_project">全部项目</string>
+
+
+    <string name="v1000_title_fragment_vso_activities">活动</string>
+
+    <!--选择项目状态-->
+    <string name="v1000_title_activity_choose_project_state">选择状态</string>
+
+    <!--圈子详情-->
+    <string name="v1000_default_circle_detail_join_circle_remind">要成为圈子成员才能在此发布文章哦</string>
+    <string name="v1000_default_circle_detail_join_circle_cancle">取消</string>
+    <string name="v1000_default_circle_detail_join_circle_join">加入圈子</string>
+
+    <string name="v1011_default_img_preview_failure"><u>点击此处重新加载</u></string>
+
+    <!--  发布更新  -->
+    <string name="v1013_title_project_publish_update">发布更新</string>
+    <string name="v1013_default_project_update_publish">发布</string>
+    <string name="v1013_default_project_update_toast_title_too_long">您输入的标题过长</string>
+    <string name="v1013_default_project_update_publish_address">分享到“项目状态”圈子</string>
+    <string name="v1013_default_project_update_title_isempty">请输入标题</string>
+    <string name="v1013_default_project_update_content_isempty">请输入更新内容</string>
+    <string name="v1013_default_project_update_success">发布成功</string>
+    <string name="v1013_default_project_update_failure">发布失败</string>
+
+</resources>

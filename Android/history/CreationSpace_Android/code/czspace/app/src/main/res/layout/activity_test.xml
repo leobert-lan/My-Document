@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lht.creationspace.test.TestActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/test_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hybrid_ip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/hybrid_ip_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="手动配置" />
+
+                <Button
+                    android:id="@+id/hybrid_ip_67"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=".67" />
+
+                <Button
+                    android:id="@+id/hybrid_ip_68"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=".68" />
+
+                <Button
+                    android:id="@+id/hybrid_ip_77"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=".77" />
+
+                <Button
+                    android:id="@+id/hybrid_ip_215"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=".215" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/test_bwv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试混合-index" />
+
+            <Button
+                android:id="@+id/test_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试引导页" />
+
+            <Button
+                android:id="@+id/test_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试主框架" />
+
+            <Button
+                android:id="@+id/test_infocreate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="用户信息采集" />
+
+            <Button
+                android:id="@+id/test_articledetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="文章详情" />
+
+            <Button
+                android:id="@+id/test_vsoacdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="活动详情" />
+
+            <Button
+                android:id="@+id/test_projectdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="项目详情" />
+
+            <Button
+                android:id="@+id/test_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试登录" />
+
+            <Button
+                android:id="@+id/test_contact_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试关联账号" />
+
+            <Button
+                android:id="@+id/test_publish_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试发布文章" />
+
+            <Button
+                android:id="@+id/test_mime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试选择身份" />
+
+            <Button
+                android:id="@+id/test_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试消息" />
+
+            <Button
+                android:id="@+id/test_fast_bind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试快捷绑定" />
+
+            <Button
+                android:id="@+id/test_project_publish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试发布项目" />
+
+
+            <Button
+                android:id="@+id/test_input_popup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试输入弹窗" />
+
+            <Button
+                android:id="@+id/test_ptr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试活动评论" />
+
+
+            <Button
+                android:id="@+id/test_anim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试anim" />
+
+
+            <Button
+                android:id="@+id/test_db1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试db query" />
+
+            <Button
+                android:id="@+id/test_db2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试db insert" />
+
+            <Button
+                android:id="@+id/test_headup_toast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试自定义toast" />
+
+            <Button
+                android:id="@+id/test_ptr_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试ptrweb" />
+
+            <Button
+                android:id="@+id/test_ptr_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试ptrrecycle" />
+            <Button
+                android:id="@+id/test_proj_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试发布更新" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

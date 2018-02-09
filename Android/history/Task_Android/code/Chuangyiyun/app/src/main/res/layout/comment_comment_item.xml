@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/comment_ll_resource_deploy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/absbar_height"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/fab_margin">
+
+        <TextView
+            android:id="@+id/commentitem_tv_description"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/v1010_default_comment_resource_deploy"
+            android:textSize="@dimen/fontsize_title_small" />
+
+        <com.lht.customwidgetlib.rating.RatingStar
+            android:id="@+id/commentitem_ratingBar_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:numStars="5"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:stepSize="1" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_1px" />
+</RelativeLayout>

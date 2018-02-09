@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/share_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/share_qq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="qq" />
+
+    <Button
+        android:id="@+id/share_qz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="qz" />
+
+    <Button
+        android:id="@+id/share_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="wechat" />
+
+    <Button
+        android:id="@+id/share_fc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="friend cycle" />
+
+    <Button
+        android:id="@+id/share_sina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sina" />
+    
+      <Button
+        android:id="@+id/test_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test popup win" />
+
+
+</LinearLayout>

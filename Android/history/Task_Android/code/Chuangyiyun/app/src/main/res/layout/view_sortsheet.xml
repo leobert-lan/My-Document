@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/content"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/sort_ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_background"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:text="@string/v1010_default_search_hint_sort" />
+
+        <com.lht.cloudjob.customview.ConflictGridView
+            android:id="@+id/sort_grid_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:numColumns="3" />
+
+        <include layout="@layout/line_gray_1px_margin5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

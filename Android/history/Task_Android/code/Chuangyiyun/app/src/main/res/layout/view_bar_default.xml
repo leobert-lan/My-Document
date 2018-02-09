@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="#ffffff"
+    android:gravity="center">
+
+    <!--<com.andexert.library.RippleView-->
+        <!--android:id="@+id/nav_back"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--app:rv_color="@color/rippelColor"-->
+        <!--app:rv_centered="true"-->
+        <!--app:rv_rippleDuration="150"-->
+        <!--android:padding="10dp"-->
+        <!--android:paddingRight="20dp">-->
+    <!--</com.andexert.library.RippleView>-->
+
+    <ImageButton
+        android:id="@+id/nav_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/v1010_drawable_icon_back" />
+
+
+
+    <TextView
+        android:id="@+id/nav_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontsize_title" />
+
+</RelativeLayout>

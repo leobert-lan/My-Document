@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.ChangePwdActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/section1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_topmargin"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_gray_1px" />
+
+        <EditText
+            android:id="@+id/changepwd_et_oldpwd"
+            style="@style/style_edittext.register"
+            android:inputType="textPassword"
+            android:hint="@string/v1010_default_changepwd_hint_oldpwd" />
+
+        <include layout="@layout/line_gray_1px" />
+
+        <EditText
+            android:id="@+id/changepwd_et_newpwd"
+            style="@style/style_edittext.register"
+            android:inputType="textPassword"
+            android:hint="@string/v1010_default_changepwd_hint_newpwd" />
+
+        <include layout="@layout/line_gray_1px" />
+
+        <EditText
+            android:id="@+id/changepwd_et_checkpwd"
+            style="@style/style_edittext.register"
+            android:inputType="textPassword"
+            android:hint="@string/v1010_default_changepwd_hint_checkpwd" />
+
+        <include layout="@layout/line_gray_1px" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/changepwd_btn_submit"
+        style="@style/style_button.blue"
+        android:layout_below="@+id/section1"
+        android:layout_marginTop="30dp"
+        android:text="@string/v1010_default_changepwd_btn_submit" />
+
+    <include layout="@layout/bar_title_simple" />
+
+</RelativeLayout>

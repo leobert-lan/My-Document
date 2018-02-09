@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.SubscribeActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_vocation_seletion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp"
+            android:text="@string/v1010_default_subscribe_choose_hint"
+            android:textColor="@color/sub_strong_yellow"
+            android:textSize="@dimen/fontsize_content_small"/>
+
+        <include layout="@layout/line_gray_1px"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_vocation_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/subscribe_btn_submit"
+        android:layout_below="@+id/ll_vocation_seletion"
+        android:background="@color/primary_background"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+
+    <Button
+        android:id="@+id/subscribe_btn_submit"
+        style="@style/style_button.rect"
+        android:text="@string/v1010_default_subscribe_btn_submit"
+        android:layout_alignParentBottom="true"/>
+
+    <include layout="@layout/bar_title_simple"/>
+</RelativeLayout>

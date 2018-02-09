@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin">
+
+        <ImageView
+            android:id="@+id/attentionlist_item_img_avatar"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/attentionlist_item_tv_name"
+            style="@style/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/attentionlist_item_img_madel"
+            android:layout_toRightOf="@+id/attentionlist_item_img_avatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <ImageView
+            android:id="@+id/attentionlist_item_img_madel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/v1010_drawable_icon_golden_medal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="@dimen/fab_margin">
+
+        <TextView
+            android:id="@+id/attentionlist_item_tv_summary"
+            style="@style/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/attentionlist_item_btn_cancel"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/h3_text_gray_hint"
+            android:textSize="@dimen/fontsize_content_small" />
+
+        <Button
+            android:id="@+id/attentionlist_item_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_rect_white_border1dp"
+            android:text="@string/v1010_listitem_attention_btn_unfollow"
+            android:textColor="@color/h1_text_gray_content"
+            android:textSize="@dimen/fontsize_content_small" />
+    </RelativeLayout>
+
+</LinearLayout>

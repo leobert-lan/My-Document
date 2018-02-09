@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.innerweb.SignAgreementActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <WebView
+        android:id="@+id/sign_agreement_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:layout_above="@+id/sign_agreement_ll_protocol"
+        android:background="@color/bg_white" />
+
+    <LinearLayout
+        android:id="@+id/sign_agreement_ll_protocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sign_agreement_ll"
+        android:background="@color/primary_background"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <CheckBox
+            android:id="@+id/sign_agreement_cb_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/cbselector_small"
+            android:text="@string/v1010_default_sign_agreement_rb_protocol"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/sign_agreement_tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="@string/v1010_default_register_href_protocol"
+            android:textColor="@color/main_blue_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sign_agreement_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_notagree_sign_agreement"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/signagree_item_bg"
+            android:text="@string/v1010_default_sign_agreement_notAgreement"
+            android:textColor="@color/csl_blue" />
+
+        <com.lht.customwidgetlib.text.DrawableCenterTextView
+            android:id="@+id/dctv_agree_sign_agreement"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bgselector_noconner_blue"
+            android:drawableLeft="@drawable/v1010_drawable_icon_sign_default"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/v1010_default_sign_agreement_agreement"
+            android:textColor="@color/csl_white_gray" />
+    </LinearLayout>
+
+    <include layout="@layout/bar_title_simple" />
+
+</RelativeLayout>

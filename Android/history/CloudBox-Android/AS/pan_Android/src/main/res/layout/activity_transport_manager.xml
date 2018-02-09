@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.lht.pan_android.activity.ViewPagerItem.TransportManagerActivity" >
+
+    <RelativeLayout
+        android:id="@+id/transport_rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#42a2e9"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/trans_toogel_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:button="@null"
+            android:checked="false"
+            android:text="@string/string_choice_all"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/trans_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/main_label_transport"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/trans_cb_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:button="@null"
+            android:checked="false"
+            android:text="@string/string_multiselect"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/transport_rl_label"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/transport_rl_title" >
+
+        <RadioGroup
+            android:id="@+id/trans_rg_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/corners_bg_white_2"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/trans_rb_down"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/transport_label_bg_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingBottom="7dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="15dp"
+                android:paddingTop="7dp"
+                android:text="@string/trans_label_download"
+                android:textColor="@color/transport_label_txtcolor"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/trans_rb_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/transport_label_bg_right"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="7dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="30dp"
+                android:paddingTop="7dp"
+                android:text="@string/trans_label_upload"
+                android:textColor="@color/transport_label_txtcolor"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/trans_view_norecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="35dp"
+        layout="@layout/trans_norecord"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/transport_manager_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transport_rl_label" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/trans_column1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_ed"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="3dp"
+                android:textColor="@color/gray_333"
+                android:textSize="12sp" />
+
+            <com.lht.pan_android.view.LinearListWithAnim
+                android:id="@+id/transport_manager_ll_viewlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="vertical" >
+            </com.lht.pan_android.view.LinearListWithAnim>
+
+            <TextView
+                android:id="@+id/trans_column2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_ed"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="3dp"
+                android:textColor="@color/gray_333"
+                android:textSize="12sp" />
+
+            <com.lht.pan_android.view.LinearListWithAnim
+                android:id="@+id/transport_manager_ll_viewlist2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="vertical" >
+            </com.lht.pan_android.view.LinearListWithAnim>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bgselector_rect_white">
+
+    <CheckBox
+        android:id="@+id/demand_cb_select"
+        style="@style/style_rb"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:button="@drawable/cbselector_listitem"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/demand_cb_select">
+
+
+        <ImageView
+            android:id="@+id/demand_item_img_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/row2"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/row1"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/v1010_drawable_icon_success" />
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/demand_item_tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minWidth="90dp"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:singleLine="true"
+                android:textColor="@color/sub_strong_red"
+                android:textSize="@dimen/fontsize_content_normal" />
+
+            <!--   android:maxWidth="200dp" 需求列表页的显示优化，当前需求名称距离右侧边框有较大位置时就将需求名称隐藏了 -->
+            <TextView
+                android:id="@+id/demand_item_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxWidth="220dp"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:paddingRight="@dimen/text_padding_default"
+                android:singleLine="true"
+                android:textColor="@color/h1_text_gray_content"
+                android:textSize="@dimen/fontsize_content_normal" />
+
+            <TextView
+                android:id="@+id/demand_item_tag_ji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_conner_2dp_red"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/v1010_default_index_text_tagji"
+                android:textColor="@color/text_white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/demand_item_tag_ding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_conner_2dp_blue"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/v1010_default_index_text_tagding"
+                android:textColor="@color/text_white"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+        <!-- 第二行-->
+        <RelativeLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/demand_item_tv_participater"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:textColor="@color/h3_text_gray_hint"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <TextView
+                android:id="@+id/demand_item_tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/demand_item_tv_remaintime"
+                android:layout_toRightOf="@+id/demand_item_tv_participater"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:textColor="@color/h3_text_gray_hint" />
+
+            <TextView
+                android:id="@+id/demand_item_tv_remaintime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/text_padding_default"
+                android:textColor="@color/h3_text_gray_hint" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/line1"
+            layout="@layout/line_gray_1px"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/row2" />
+        <!-- 第三行-->
+        <RelativeLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp">
+
+            <TextView
+                android:id="@+id/demand_item_tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:maxWidth="150dp"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:singleLine="true"
+                android:textColor="@color/sub_strong_orange" />
+
+            <TextView
+                android:id="@+id/demand_item_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/demand_item_op2"
+                android:background="@drawable/bgselector_conner2dp_gray"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:paddingRight="@dimen/text_padding_default"
+                android:paddingTop="3dp"
+                android:singleLine="true"
+                android:textColor="@color/h8_text_gray_666"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/demand_item_op2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/text_padding_default"
+                android:background="@drawable/bgselector_conner2dp_gray"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:paddingRight="@dimen/text_padding_default"
+                android:paddingTop="3dp"
+                android:singleLine="true"
+                android:textColor="@color/h8_text_gray_666" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/line2"
+            layout="@layout/line_gray_1px"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/row3" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

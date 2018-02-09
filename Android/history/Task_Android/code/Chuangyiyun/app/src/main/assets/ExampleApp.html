@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport"
+	content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"
+	charset="utf-8">
+<style type='text/css'>
+html {
+	font-family: Helvetica;
+	color: #222;
+}
+
+h1 {
+	color: steelblue;
+	font-size: 24px;
+	margin-top: 24px;
+}
+
+button {
+	margin: 0 3px 10px;
+	font-size: 14px;
+}
+
+.logLine {
+	border-bottom: 1px solid #ccc;
+	padding: 4px 2px;
+	font-family: courier;
+	font-size: 11px;
+}
+</style>
+<!--    <script type="application/javascript" charset="utf-8" src="H5JSBridge_1_0.js"></script>-->
+
+<!-- 该js文件是桥接的基础之一，请确保注册 js_api前该文件已经加载 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridge_1_0.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery-2.2.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var imgs = [ $("img").attr("src") ];
+
+		//添加属性 
+
+		S("img").each(function() {
+			$(this).attr("md5", MD5($(this).attr()));
+		});
+
+		var data = {
+			'imgs' : imgs
+		};
+		var callback = function(responseData) {
+			Log(responseData);
+		}
+		callNativeDemo(data, callback);
+	});
+</script>
+
+</head>
+<body>
+	<h1>WebViewJavascriptBridge Demo</h1>
+
+	<div id='buttons'></div>
+	<div id='logSection'>
+		<button type="button" class="blue" onclick="clearLog()">清空Log</button>
+		<div id='log'></div>
+	</div>
+	<li>
+		<button type="button" class="blue" onclick="testThirdPartyLogin()">testThirdPartyLogin</button>
+	</li>
+	<li>
+		<button type="button" class="blue" onclick="testThirdPartyLogin()">testThirdPartyLogin</button>
+	</li>
+	<li>
+		<button type="button" class="blue" onclick="testDemo()">演示demo</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testGPS()">测试调用Native的GPS</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testErrorName()">测试非法方法</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testLTRDemo()">测试耗时任务</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testCallDemo()">Call-Call-Call</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testCopyDemo()">Copy-Copy-Copy</button>
+	</li>
+	<li>
+		<button type="button" class="blue" onclick="testClipBoardDemo()">Clip-Board-Clip</button>
+	</li>
+	<li>
+		<button type="button" class="blue" onclick="testSendMessageDemo()">SendMessage-SendMessage</button>
+	</li>
+	<li>
+		<button type="button" class="blue" onclick="testSendEmailDemo()">SendEmail-SendEmail</button>
+	</li>
+	<!-- TO Be Continued -->
+
+	<li>
+		<button type="button" class="blue" onclick="testGetDocument()">获取网页文本</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testScan()">测试扫码</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testDemo()">VirtualApp</button>
+	</li>
+	<li>
+		<button type="button" class="blue" onclick="testDemo()">logout</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testDemo()">share</button>
+	</li>
+
+	<li>
+		<button type="button" class="blue" onclick="testDemo()">pay</button>
+	</li>
+
+	<div>
+		<img id="test" src="/storage/emulated/0/icon.png">
+	</div>
+
+
+</body>
+
+<script type="text/javascript" charset="utf-8">
+	var uniqueId = 1
+	//打印Log到页面 
+	function log(message, data) {
+		var log = document.getElementById('log')
+		var el = document.createElement('div')
+		el.className = 'logLine'
+		el.innerHTML = uniqueId++ + '. ' + message + ':<br/>'
+				+ JSON.stringify(data)
+		if (log.children.length) {
+			log.insertBefore(el, log.children[0])
+		} else {
+			log.appendChild(el)
+		}
+
+		Log(data);
+	}
+
+	function clearLog() {
+		document.getElementById('log').innerHTML = '';
+	}
+
+	function testGPS() {
+		callNativeOpenGPSAndResponseLocation(function(responseData) {
+			log("response form native", responseData);
+		});
+	}
+
+	function testErrorName() {
+		callErrorFunc();
+	}
+
+	function testDemo() {
+		var data = {
+			'jsKeyOne' : 'origen value1',
+			'jsKeyTwo' : 'origen value2'
+		};
+		var callback = function(responseData) {
+			log('demo测试.Native返回结果：', responseData);
+		}
+		callNativeDemo(data, callback);
+	}
+
+	//测试获取网页文本
+	function testGetDocument() {
+		var doc = 'head' + document.getElementsByTagName('html')[0].innerHTML
+				+ '/head';
+		var data = {
+			'doc' : doc
+		};
+		var callback = function(responseData) {
+			log('ok', 'ok');
+		}
+		callNativeDemo(data, callback);
+	}
+
+	function testLTRDemo() {
+		var data = {
+			'jsKeyOne' : 'origen value1',
+			'jsKeyTwo' : 'origen value2'
+		};
+		var callback = function(responseData) {
+			log('demo测试.Native返回结果：', responseData);
+		}
+		callLongTimeDemo(data, callback);
+	}
+
+	function testCallDemo() {
+		var data = {
+			'telphone' : '18332561383'
+		};
+		var callback = function(responseData) {
+			log('telphone number', responseData);
+		}
+		callNativeCallDemo(data, callback);
+	}
+	function testCopyDemo() {
+		var data = {
+			'content' : '18332561383'
+		};
+		var callback = function(responseData) {
+			log('your copy to clipboard', responseData);
+		}
+		callNativeCopyDemo(data, callback);
+	}
+	function testClipBoardDemo() {
+		var data = {
+			'content' : 'this is the content ,which is lastly added to clipboard'
+		}
+		var callback = function(responseData) {
+			log('your copy to clipboard', responseData);
+		}
+		callNativeGetClipBoard(data, callback);
+	}
+	function testSendMessageDemo() {
+		var data = {
+			'contacts' : '10086',
+			'messageContent' : 'this is the content that will send to contacts'
+		}
+		var callback = function(responseData) {
+			log('your send message', responseData);
+		}
+		callNativeSendMessage(data, callback);
+	}
+	function testSendEmailDemo() {
+		var data = {
+			'addressee' : [ '247998690@qq.com' ],
+			'message' : 'Email内容是......'
+		}
+		var callback = function(responseData) {
+			log('your send email', responseData);
+		}
+		callNativeSendEmail(data, callback);
+	}
+
+	//测试扫码 - android added 
+	function testScan() {
+		var callback = function(responseData) {
+			Log2("response scan result:", responseData);
+		};
+		callNativeOpenCameraForScan(callback);
+	}
+
+	//测试调起第三方登录 -android added
+	function testThirdPartyLogin() {
+		var TYPE_QQ = 1;
+		var TYPE_SINABLOG = 2;
+		var TYPE_WECHAT = 3;
+		var data = {
+			'type' : TYPE_SINABLOG
+		};
+		var callback = function(responseData) {
+			log("response third-party login result:", responseData);
+		};
+		callNativeThirdPartyLogin(data, callback);
+	}
+</script>
+
+<!-- 加载API调用“库” -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeCamera.js"></script>
+
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeDemo.js"></script>
+
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeGPS.js"></script>
+
+<script type="application/javascript" charset="utf-8" src="Testtemp.js"></script>
+
+<!-- 拨号 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeCall.js"></script>
+
+<!-- 发送的剪切板 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeCopyToClipboard.js"></script>
+
+<!-- 获取剪切板 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeGetClipBoard.js"></script>
+
+<!-- 扫码 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeScan.js"></script>
+
+<!-- 发邮件 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeSendEmail.js"></script>
+
+<!-- 发信息 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeSendMessage.js"></script>
+
+<!-- 第三方登录，该情景：某网页需要手动第三方登录、直接注入第三方登录校验信息 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeThirdPartyLogin.js"></script>
+
+<!-- VirtualApp控制 -->
+<script type="application/javascript" charset="utf-8"
+	src="H5JSBridgeVirtualAppController.js"></script>
+</html>

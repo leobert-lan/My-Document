@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/switcher_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/video_format_switcher_bg"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/switcher_select"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="3dp"
+            android:singleLine="true"
+            android:drawableRight="@drawable/shipin_shang"
+            android:gravity="right|center_vertical"
+            android:text="视频"
+            android:textColor="@color/switcher_item_text_selector"
+            android:textSize="12sp"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

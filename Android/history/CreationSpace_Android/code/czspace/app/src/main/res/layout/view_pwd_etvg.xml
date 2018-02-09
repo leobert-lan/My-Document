@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--style="@style/style_vg_input"-->
+
+
+    <EditText
+        android:id="@+id/et_pwd"
+        style="@style/style_edittext.special1.invg"
+        android:hint="@string/v1000_default_login_hint_password"
+        android:drawableLeft="@drawable/v1000_drawable_mim"
+        android:drawablePadding="@dimen/text_padding_5dp"
+        android:textColor="@color/cyy_h13"
+        android:textColorHint="@color/sub_f3_gray"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/cb_viewpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:button="@drawable/cbs_toggle_pwd_visible"
+        android:checked="false"
+        android:text="@null" />
+
+
+</RelativeLayout>

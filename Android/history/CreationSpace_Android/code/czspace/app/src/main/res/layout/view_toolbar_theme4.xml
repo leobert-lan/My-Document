@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/transparent">
+
+    <FrameLayout
+        android:id="@+id/nav_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            style="@style/style_icon.clickable.nav"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/v1000_drawable_lingd" />
+
+        <individual.leobert.uilib.numbadge.NumBadge
+            android:id="@+id/nav_msg_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="18dp" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fs_title_big" />
+
+    <ImageView
+        android:id="@+id/nav_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:background="@color/transparent" />
+
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_divider" />
+
+</RelativeLayout>

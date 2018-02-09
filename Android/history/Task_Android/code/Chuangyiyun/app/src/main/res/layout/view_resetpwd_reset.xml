@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--mima-->
+    <LinearLayout
+        android:id="@+id/resetpwd_ll_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/bg_white">
+
+        <EditText
+            android:id="@+id/resetpwd_et_pwd"
+            style="@style/style_edittext"
+            android:hint="@string/v1010_default_resetpwd_hint_pwd"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/resetpwd_ll_pwd" />
+
+
+    <!--check pwd-->
+    <LinearLayout
+        android:id="@+id/resetpwd_ll_checkpwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resetpwd_ll_pwd"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/resetpwd_et_checkpwd"
+            style="@style/style_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="@string/v1010_default_resetpwd_hint_check"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/resetpwd_ll_checkpwd" />
+
+    <Button
+        android:id="@+id/resetpwd_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resetpwd_ll_checkpwd"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bgselector_conner2dp_blue"
+        android:text="@string/v1010_default_resetpwd_btn_submit"
+        android:textColor="@color/text_white" />
+
+
+</RelativeLayout>

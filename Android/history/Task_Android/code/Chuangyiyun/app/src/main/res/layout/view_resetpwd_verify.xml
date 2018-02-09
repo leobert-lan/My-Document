@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--手机号-->
+    <LinearLayout
+        android:id="@+id/resetpwd_ll_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/bg_white">
+
+        <EditText
+            android:id="@+id/resetpwd_et_account"
+            style="@style/style_edittext"
+            android:hint="@string/v1010_default_register_hint_account"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/resetpwd_ll_account" />
+
+
+    <!--验证码-->
+    <LinearLayout
+        android:id="@+id/resetpwd_ll_verifycode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resetpwd_ll_account"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/resetpwd_et_verifycode"
+            style="@style/style_edittext"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:hint="@string/v1010_default_register_hint_verifycode"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/resetpwd_btn_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/resetpwd_ll_protocol"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:background="@drawable/bgselector_conner2dp_blue"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:paddingRight="@dimen/text_padding_default"
+            android:text="@string/v1010_default_register_btn_getverify"
+            android:textColor="@color/text_white" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/resetpwd_ll_verifycode" />
+
+    <Button
+        android:id="@+id/resetpwd_btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resetpwd_ll_verifycode"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bgselector_conner2dp_blue"
+        android:text="@string/v1010_default_resetpwd_verify"
+        android:textColor="@color/text_white" />
+
+    <TextView
+        android:id="@+id/resetpwd_tv_contact_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resetpwd_btn_verify"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="@string/view_bottom_line_call_service"
+        android:textColor="@color/sub_strong_red" />
+
+</RelativeLayout>

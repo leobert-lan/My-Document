@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hybrid_my_article"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.user.social.HybridMyAttentionActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/absbar_height">
+
+        <com.lht.creationspace.customview.MaskView
+            android:id="@+id/mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.lht.ptrlib.library.PtrBridgeWebView
+            android:id="@+id/ptr_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+    </RelativeLayout>
+
+    <!--<include layout="@layout/bar_title_simple" />-->
+    <include layout="@layout/toolbar_title_theme1"/>
+</RelativeLayout>

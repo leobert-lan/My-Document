@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_background"
+                tools:context="com.lht.cloudjob.activity.asyncprotected.FeedbackActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <EditText
+        android:id="@+id/feedback_et_content"
+        style="@style/style_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/content_topmargin"
+        android:gravity="top"
+        android:hint="@string/v1010_default_feedback_hint_content"
+        android:paddingTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/hint_addimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback_et_content"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/v1010_default_feedback_text_upload"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/v1010_default_feedback_hint_size"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/h3_text_gray_hint"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/feedback_fl_addimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hint_addimg"
+        android:background="@color/bg_white"
+        android:padding="15dp">
+
+        <com.lht.cloudjob.customview.AutoArrangeCardLayout
+            android:id="@+id/feedback_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"/>
+    </FrameLayout>
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/feedback_fl_addimg"/>
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/feedback_et_contact"
+        style="@style/style_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:hint="@string/v1010_default_feedback_hint_contact"
+        android:inputType="number"
+        android:padding="@dimen/text_padding_default"/>
+
+    <Button
+        android:id="@+id/feedback_btn_submit"
+        style="@style/style_button.blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback_et_contact"
+        android:layout_marginTop="30dp"
+        android:clickable="false"
+        android:text="@string/v1010_default_feedback_btn_submit"/>
+
+    <include layout="@layout/bar_title_simple"/>
+
+</RelativeLayout>

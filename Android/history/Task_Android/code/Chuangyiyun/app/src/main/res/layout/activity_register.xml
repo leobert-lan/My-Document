@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.RegisterActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/content_topmargin" />
+
+    <!--手机号-->
+    <LinearLayout
+        android:id="@+id/register_ll_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/bg_white">
+
+        <EditText
+            android:id="@+id/register_et_account"
+            style="@style/style_edittext"
+            android:inputType="phone"
+            android:hint="@string/v1010_default_register_hint_account" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/register_ll_account" />
+
+
+    <!--验证码-->
+    <LinearLayout
+        android:id="@+id/register_ll_verifycode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_ll_account"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/register_et_verifycode"
+            style="@style/style_edittext"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:layout_weight="1"
+            android:hint="@string/v1010_default_register_hint_verifycode" />
+
+        <Button
+            android:id="@+id/register_btn_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/register_ll_protocol"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:background="@drawable/bgselector_conner2dp_blue"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:paddingRight="@dimen/text_padding_default"
+            android:text="@string/v1010_default_register_btn_getverify"
+            android:textColor="@color/text_white" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/register_ll_verifycode" />
+
+    <!--密码-->
+    <LinearLayout
+        android:id="@+id/register_ll_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_ll_verifycode"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white">
+
+        <EditText
+            android:id="@+id/register_et_pwd"
+            style="@style/style_edittext"
+            android:inputType="textPassword"
+            android:hint="@string/v1010_default_register_hint_pwd" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/register_ll_verifycode" />
+
+    <LinearLayout
+        android:id="@+id/register_ll_protocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_ll_pwd"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/fab_margin">
+
+        <CheckBox
+            android:id="@+id/register_cb_protocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/v1010_default_register_cb_protocol"
+            android:button="@drawable/cbselector_small"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <TextView
+            android:id="@+id/register_tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="@string/v1010_default_register_href_protocol"
+            android:textColor="@color/main_blue_dark" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn_register"
+        style="@style/style_button.blue"
+        android:layout_below="@+id/register_ll_protocol"
+        android:layout_marginTop="35dp"
+        android:text="@string/v1010_default_register_btn_register"
+        android:textSize="@dimen/fontsize_title_small"/>
+
+    <include layout="@layout/bar_withop" />
+</RelativeLayout>

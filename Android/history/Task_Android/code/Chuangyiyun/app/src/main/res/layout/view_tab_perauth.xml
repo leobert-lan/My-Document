@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabs"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/perauth_tab1"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/v1010_default_pau_tab_ml"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <ImageView
+            android:id="@+id/pau_indicator1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark" />
+
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:src="@color/h6_divider" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/perauth_tab2"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/v1010_default_pau_tab_ga"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <ImageView
+            android:id="@+id/pau_indicator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark" />
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:src="@color/h6_divider" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/perauth_tab3"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/v1010_default_pau_tab_tw"
+            android:textColor="@color/h1_text_gray_content" />
+
+
+        <ImageView
+            android:id="@+id/pau_indicator3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
+

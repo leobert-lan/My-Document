@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:background="@color/h10_text_gray_title2_pressed"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <!--<include-->
+    <!--android:id="@+id/full_line_up"-->
+    <!--layout="@layout/line_gray_1px" />-->
+
+    <!--<include-->
+    <!--android:id="@+id/half_line_up"-->
+    <!--layout="@layout/line_gray_1px_margin5dp" />-->
+
+    <CheckBox
+        android:id="@+id/item_cb"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/h10_text_gray_title2_pressed"
+        android:button="@null"
+        android:ellipsize="marquee"
+        android:paddingLeft="@dimen/text_padding_default"
+        android:singleLine="true"
+        android:textColor="@color/csl_common_red"
+        android:textSize="@dimen/fontsize_content_small"/>
+
+    <ImageView
+        android:id="@+id/half_line_down"
+        android:layout_width="match_parent"
+        android:src="@color/h6_divider"
+        android:background="@color/transparent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"/>
+
+    <!--<include-->
+    <!--android:id="@+id/half_line_down"-->
+    <!--layout="@layout/line_gray_1px_margin5dp" />-->
+
+    <!--<include-->
+    <!--android:id="@+id/full_line_down"-->
+    <!--layout="@layout/line_gray_1px" />-->
+
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_background">
+
+        <include
+            layout="@layout/view_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/absbar_height"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/absbar_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:text="@string/v1010_default_undertake_text_price" />
+
+                <EditText
+                    android:id="@+id/openbid_et_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/undertake_tv_yuan"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/h1_text_gray_content"
+                    android:textColorHint="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <TextView
+                    android:id="@+id/undertake_tv_yuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:text="@string/v1010_default_undertake_text_price_units" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_gray_1dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/absbar_height">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:text="@string/v1010_default_undertake_text_timecycle" />
+
+                <EditText
+                    android:id="@+id/openbid_et_timecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/undertakeopen_tv_tian"
+                    android:layout_toRightOf="@id/tv_time"
+                    android:background="@null"
+                    android:hint="@string/v1010_default_undertake_enter_timecycle"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/h1_text_gray_content"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <TextView
+                    android:id="@+id/undertakeopen_tv_tian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:text="@string/v1010_default_undertake_text_time_units" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_gray_1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin"
+                android:background="@color/h6_divider" />
+
+            <EditText
+                android:id="@+id/openbid_et_letter_describe"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/v1010_default_undertake_letter_describe"
+                android:paddingLeft="@dimen/text_padding_default"
+                android:paddingRight="@dimen/text_padding_default"
+                android:paddingTop="@dimen/toolbar_elevation"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/toolbar_elevation">
+
+                <com.lht.cloudjob.customview.ImageWithDeleteView
+                    android:id="@+id/undertake_img_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_add_accessory"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/undertake_img_work"
+                    android:src="@drawable/v1010_drawable_add_attachment" />
+
+                <TextView
+                    android:id="@+id/undertake_tv_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="53dp"
+                    android:text="@string/v1010_default_undertake_hint_work_bid" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin"
+                android:background="@color/h6_divider" />
+
+            <RadioGroup
+                android:id="@+id/undertake_rg_ishideletter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/undertake_rb_hideletter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:checked="true"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/v1010_default_undertake_hint_letter" />
+
+                <include layout="@layout/line_gray_1dp" />
+
+                <RadioButton
+                    android:id="@+id/undertake_rb_nothideletter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/v1010_default_undertake_not_hint_letter" />
+            </RadioGroup>
+
+            <include layout="@layout/line_gray_1dp" />
+
+            <Button
+                android:id="@+id/openbid_btn_submit"
+                style="@style/style_button.blue"
+                android:layout_marginTop="20dp"
+                android:text="@string/v1010_default_bindphone_commit" />
+        </LinearLayout>
+
+        <include layout="@layout/bar_title_simple" />
+    </RelativeLayout>
+</ScrollView>

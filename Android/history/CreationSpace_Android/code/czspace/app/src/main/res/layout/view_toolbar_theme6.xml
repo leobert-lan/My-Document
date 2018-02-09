@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/cyy_h9"
+    android:gravity="center">
+
+    <FrameLayout
+        android:id="@+id/nav_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            style="@style/style_icon.clickable.nav"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/v1000_drawable_lingd" />
+
+        <individual.leobert.uilib.numbadge.NumBadge
+            android:id="@+id/nav_msg_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="18dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_all"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_all_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:button="@null"
+            android:checked="false"
+            android:drawableRight="@drawable/all_project_cbs_selector"
+            android:paddingLeft="4dp"
+            android:textSize="@dimen/fs_title_big" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_right_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@color/transparent"
+        android:checked="false" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_divider" />
+</RelativeLayout>

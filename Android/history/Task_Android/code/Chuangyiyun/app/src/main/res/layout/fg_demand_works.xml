@@ -1,0 +1,29 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lht.cloudjob.fragment.FgDemandWorks">
+
+
+    <com.lht.cloudjob.customview.MaskView
+        android:id="@+id/fgdw_mask"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"/>
+
+    <com.lht.ptrlib.library.PullToRefreshListView
+        android:id="@+id/fgdw_list_works"
+        style="@style/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:ptrAnimationStyle="flip"
+        app:ptrHeaderSubTextColor="@color/h3_text_gray_hint"
+        app:ptrHeaderTextColor="@color/h8_text_gray_666"
+        app:ptrListViewExtrasEnabled="true"/>
+
+
+</FrameLayout>

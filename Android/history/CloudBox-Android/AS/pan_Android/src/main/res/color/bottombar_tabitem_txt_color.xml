@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to set the color of textview when it changes state -->
+<!-- TODO 改变颜色 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true" android:color="#ff8ebc31"/>
+    <!-- selected  淡绿 -->
+    <item android:state_focused="true" android:color="#ff8ebc31"/>
+    <!-- focused  淡绿 -->
+    <item android:color="#ff969696"/>
+    <!-- default  gray -->
+
+</selector>

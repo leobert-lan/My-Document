@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/bg_rect_white_border1dp"
+    android:paddingTop="1px"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/btn_share"
+        style="@style/style_rb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bgselector_rect_white"
+        android:drawablePadding="2dp"
+        android:drawableTop="@drawable/selector_share"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:text="@string/v1010_default_demandinfo_text_share"
+        android:textSize="@dimen/fontsize_content_slim"
+        android:visibility="gone"/>
+
+    <CheckBox
+        android:id="@+id/cb_collect"
+        style="@style/style_rb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bgselector_rect_white"
+        android:drawablePadding="2dp"
+        android:drawableTop="@drawable/rbselector_collect"
+        android:paddingTop="3dp"
+        android:text="@string/v1010_default_demandinfo_rb_collect"
+        android:textSize="@dimen/fontsize_content_slim"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="@color/sub_strong_yellow"
+        android:background="@drawable/bgselector_rect_white"
+        android:visibility="gone"/>
+
+    <com.lht.customwidgetlib.text.DrawableCenterTextView
+        android:id="@+id/btn_op1"
+        style="@style/style_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:background="@drawable/bgselector_rect_white"
+        android:drawableLeft="@drawable/selector_drawable_contact"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:padding="0dp"
+        android:text="@string/v1010_default_demandinfo_btn_call"
+        android:textColor="@color/main_blue_dark"
+        android:visibility="gone"/>
+
+    <com.lht.customwidgetlib.text.DrawableCenterTextView
+        android:id="@+id/btn_op2"
+        style="@style/style_button.rect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:drawableLeft="@drawable/v1010_drawable_icon_contribute_default"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:padding="0dp"
+        android:text="@string/v1010_default_demandinfo_btn_contribute"
+        android:visibility="gone"/>
+
+</LinearLayout>

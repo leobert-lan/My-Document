@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary_backup">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark_backup">#303F9F</color>-->
+    <color name="theme1">@color/main_blue_dark</color>
+    <color name="theme1_dark">@color/main_blue_dark</color>
+
+    <color name="notify_pink">#FF4081</color>
+
+    <color name="bg_black">#000000</color>
+    <color name="bg_black_90alpha">#DC000000</color>
+    <color name="bg_dark">#0c0c0c</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_topbar">#FCFCFC</color>
+    <color name="bg_gray">#ff999999</color>
+
+    <!--主色-->
+
+    <color name="main_blue_light">#ffe2efff</color>
+    <!--用于按钮-->
+
+    <color name="main_blue_dark">#ff2d7ee2</color>
+    <!--基础色-->
+
+    <!--辅色-->
+    <!--主要用于提示的强调色-->
+    <color name="sub_strong_yellow">#ffa200</color>
+
+    <!--辅色-->
+    <!--主要用于提示的强调色-->
+    <color name="sub_strong_orange">#ff6600</color>
+
+    <!--辅色-->
+    <!--主要用于背景的强调色-->
+    <color name="sub_strong_orange2">#fff8f2</color>
+
+    <!--主要用于价格的红色-->
+    <color name="sub_strong_red">#fe2e2e</color>
+
+    <!--蓝色背景按压状态-->
+    <color name="sub_blue_pressed">#2172d6</color>
+
+
+    <!--灰阶-->
+
+    <!-- 白底正文文字颜色-->
+    <color name="h1_text_gray_content">#333333</color>
+
+    <!-- 二级标题正常-->
+    <color name="h2_text_gray_title2_normal">#777777</color>
+
+    <color name="h10_text_gray_title2_pressed">#f8f8f8</color>
+
+    <!-- 输入提示文字用色-->
+    <color name="h3_text_gray_hint">#999999</color>
+
+    <!-- 底部导航背景-->
+    <color name="h4_gray_navigation_bottom">#f9f9f9</color>
+
+    <!-- 底部导航栏分割线-->
+    <color name="h5_gray_divider_bottomnavigation">#b2b2b2</color>
+
+    <!-- 通用分割线-->
+    <color name="h6_divider">#e0e0e0</color>
+
+    <!--底色-->
+    <color name="h7_primary_background">#fff5f5f5</color>
+    <color name="primary_background">@color/h7_primary_background</color>
+    <color name="sub_background">#fff8f8f8</color>
+
+    <!-- 常用文字色666-->
+    <color name="h8_text_gray_666">#666666</color>
+
+    <!-- 常用文字色ccc-->
+    <color name="h11_text_gray_ccc">#cccccc</color>
+
+    <!-- 滚动条-->
+    <color name="h9_gray_scroll">#aaaaaa</color>
+
+    <!-- 白色文字-->
+    <color name="text_white">#FFFFFFFF</color>
+
+    <!-- 不可用状态文字-->
+    <color name="text_gray_disable">#96bff1</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <!--<color name="text_gray">#8D7A71</color>-->
+    <color name="text_gray_pressed">@color/h11_text_gray_ccc</color>
+    <!--<color name="text_yellow">#FFC800</color>-->
+    <!--<color name="text_topbar">#694E42</color>-->
+
+    <color name="text_link_blue">#4387cc</color>
+
+
+    <color name="div_white">#E5E5E5</color>
+
+
+    <!--
+       Check Android Theme colors for color reference:
+       https://developer.android.com/training/material/images/ThemeColors.png
+
+       Refer also to Color palette for the UI colors you should use:
+       http://www.google.com/design/spec/style/color.html#color-ui-color-palette
+   -->
+
+    <!--<color name="myPrimaryColor">#3F51B5</color>-->
+    <!--<color name="myPrimaryDarkColor">#3F51B5</color>-->
+    <color name="myPrimaryColor">@color/theme1</color>
+    <color name="myPrimaryDarkColor">@color/theme1_dark</color>
+    <color name="myAccentColor">@color/theme1_dark</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#DEDEDE</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="myNavigationColor">#000000</color>
+    <color name="base_color_text_black">#3e3e39</color>
+    <color name="base_color_text_gray">#DADADA</color>
+    <color name="selected_gray">#ffdbdbdb</color>
+    <color name="gray">#999999</color>
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ff00ddff</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+
+    <!--<color name="midnight_blue">#141d26</color>-->
+    <!--<color name="clouds">#ecf0f1</color>-->
+    <color name="black_alpha">#33000000</color>
+    <!--<color name="white">#ffffff</color>-->
+</resources>

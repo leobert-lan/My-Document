@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/content_topmargin"
+    android:background="@color/bg_white"
+    android:orientation="horizontal">
+
+    <com.lht.cloudjob.customview.RoundImageView
+        android:id="@+id/attentionlist_item_img_avatar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/attentionlist_item_img_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/attentionlist_item_tv_name"
+            style="@style/style_textview"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <TextView
+            android:id="@+id/attentionlist_item_tv_summary"
+            style="@style/style_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/h3_text_gray_hint"
+            android:textSize="@dimen/fontsize_content_small" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/attentionlist_item_btn_cancel"
+        android:layout_width="76dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/bg_rect_white_border1dp"
+        android:text="@string/v1010_listitem_attention_btn_unfollow"
+        android:textColor="@color/h1_text_gray_content"
+        android:textSize="@dimen/fontsize_content_normal" />
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/report_title_ll"
+        android:background="@color/line_gray_b2" />
+
+    <LinearLayout
+        android:id="@+id/report_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/report_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/fanh" />
+
+        <TextView
+            android:id="@+id/report_txt_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="@string/share_report"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title_very_large" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/report_rl_contactsec"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@color/background" >
+
+        <EditText
+            android:id="@+id/report_et_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/corners_bg_white_2"
+            android:hint="@string/hint_report_contact"
+            android:imeOptions="actionSearch"
+            android:padding="7dp"
+            android:singleLine="true"
+            android:textColor="@color/gray_999"
+            android:textSize="13sp" >
+        </EditText>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/report_reason_hint"
+        android:layout_below="@+id/report_rl_contactsec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_report_reasons"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="@dimen/ts11"
+        android:background="@color/gray" />
+
+    <ListView
+        android:id="@+id/report_list_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/report_btn_report"
+        android:layout_below="@+id/report_reason_hint"
+        android:divider="@color/line_gray_b2"
+        android:dividerHeight="1px" >
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/report_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:indeterminateDrawable="@anim/progress_rotate"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/report_btn_report"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/blue_btn_bg_conner5dp"
+        android:enabled="false"
+        android:text="@string/share_report"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

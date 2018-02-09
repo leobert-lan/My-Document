@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".activity.others.ShowPhoneActivity">
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/content_topmargin" />
+
+    <!--手机号-->
+    <LinearLayout
+        android:id="@+id/showphone_ll_oldphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/bg_white">
+
+        <TextView
+            android:id="@+id/showphone_tv_oldphone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/h3_text_gray_hint"
+            android:paddingLeft="@dimen/text_padding_default" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/showphone_btn_rebind"
+        style="@style/style_button.blue"
+        android:layout_below="@+id/showphone_ll_oldphone"
+        android:layout_marginTop="35dp"
+        android:text="@string/v1010_default_updatephone_updatephone"
+        android:textSize="@dimen/fontsize_title_small" />
+
+    <include layout="@layout/bar_title_simple" />
+
+</RelativeLayout>

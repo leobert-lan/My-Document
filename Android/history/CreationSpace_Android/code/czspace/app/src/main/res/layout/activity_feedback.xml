@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".module.setting.ui.FeedbackActivity">
+
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_above="@+id/hint_addimg" />
+
+    <LinearLayout
+        android:id="@+id/hint_addimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback_et_content"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/v1010_default_feedback_text_upload"
+            android:textColor="@color/cyy_h4"
+            android:textSize="@dimen/fs_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/v1010_default_feedback_hint_size"
+            android:paddingLeft="10dp"
+            android:textColor="@color/cyy_h3"
+            android:textSize="@dimen/fs_hint_special" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/feedback_rv_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hint_addimg"
+        android:background="@color/bg_white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/feedback_rv_images" />
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/feedback_btn_submit"
+        style="@style/style_button.green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback_et_mobile"
+        android:layout_marginTop="30dp"
+        android:clickable="false"
+        android:text="@string/v1010_default_feedback_btn_submit" />
+
+    <EditText
+        android:id="@+id/feedback_et_content"
+        style="@style/style_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:gravity="top"
+        android:hint="@string/v1010_default_feedback_hint_content"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:textColor="@color/text_gray_content"
+        android:textColorHint="@color/text_gray_hint"
+        android:textSize="@dimen/fs_content" />
+
+    <EditText
+        android:id="@+id/feedback_et_mobile"
+        style="@style/style_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/line2"
+        android:hint="@string/v1010_default_feedback_hint_contact"
+        android:inputType="number"
+        android:maxLength="@integer/max_phone_length"
+        android:padding="@dimen/text_padding_default"
+        android:textColor="@color/text_gray_content"
+        android:textColorHint="@color/text_gray_hint"
+        android:textSize="@dimen/fs_content" />
+
+
+    <!--<include layout="@layout/bar_title_simple" />-->
+    <include layout="@layout/toolbar_title_theme1" />
+</RelativeLayout>

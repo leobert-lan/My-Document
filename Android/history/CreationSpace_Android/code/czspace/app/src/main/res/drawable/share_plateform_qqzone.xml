@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- err:资源引用错误，不同状态使用同一图片？显然是个粗心带来的错误 -->
+
+    <item android:drawable="@drawable/v1000_drawable_kongjfx" />
+    <!--<item android:drawable="@drawable/v1010_drawable_icon_share_qzone2" android:state_pressed="true"/>-->
+
+</selector>

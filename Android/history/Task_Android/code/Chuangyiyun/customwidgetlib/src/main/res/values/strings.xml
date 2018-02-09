@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CustomWidgetLib</string>
+
+    <string name="p2refresh_release_refresh">松开刷新</string>
+    <string name="p2refresh_pull_to_refresh">下拉刷新</string>
+    <string name="p2refresh_doing_head_refresh">正在刷新</string>
+    <string name="p2refresh_refresh_lasttime">最近更新</string>
+
+    <string name="dlna_device_title">"%s"正在播放中</string>
+</resources>

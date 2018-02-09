@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/v1000_drawable_qqfx" />
+    <!--<item android:drawable="@drawable/v1010_drawable_icon_share_qq2" android:state_pressed="true"/>-->
+
+</selector>

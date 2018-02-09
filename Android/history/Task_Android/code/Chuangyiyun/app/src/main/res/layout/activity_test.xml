@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lht.cloudjob.TestActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/test_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/test_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试主框架" />
+
+            <Button
+                android:id="@+id/test_image_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试图片预览" />
+
+            <Button
+                android:id="@+id/test_file_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试文件预览" />
+
+            <Button
+                android:id="@+id/test_bwv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试bridgewebview" />
+
+            <Button
+                android:id="@+id/test_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试listview" />
+
+            <!--<Button-->
+                <!--android:id="@+id/test_ptr"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="测试活动评论" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/test_banner"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="测试banner" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/test_i18n"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="测试i18n" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/test_anim"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="测试anim" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/test_scan"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="测试scan" />-->
+
+            <Button
+                android:id="@+id/test_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试video" />
+
+            <Button
+                android:id="@+id/test_pb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试进度" />
+
+            <Button
+                android:id="@+id/test_promote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试活动页" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

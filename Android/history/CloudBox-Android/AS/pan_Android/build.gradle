@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "27.0.0"
+
+    defaultConfig {
+        applicationId "com.lht.pan_android"
+        minSdkVersion 15
+        targetSdkVersion 18
+        versionCode 292
+        versionName "2.9.2"
+        flavorDimensions "cloudbox292"
+    }
+
+    //配置keystore签名
+    signingConfigs {
+        //使用发布签名
+        debug {
+            storeFile file("key")
+            storePassword 'lanjun'
+            keyAlias "lanjun"
+            keyPassword 'lanjun'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':library')
+    compile project(':weiboSDK')
+    compile 'com.android.support:support-v4:18.0.0'
+    compile files('libs/Picasso2.jar')
+    compile files('libs/android-async-http-1.4.8.jar')
+    compile files('libs/eventbus-v3.0.1.jar')
+    compile files('libs/fastjson-1.2.5.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/lite-orm-1.7.0.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/qq_open_sdk_r5509.jar')
+    compile files('libs/umeng-analytics-v5.6.1.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+
+    android {
+        productFlavors {
+            fortest {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "test"]
+            }
+            VSO_SOFTWARE_CENTER {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "VSO_SOFTWARE_CENTER"]
+            }
+//            HUAWEI {
+//                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "HUAWEI"]
+//            }
+//            XIAOMI {
+//                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "XIAOMI"]
+//            }
+            qh360 {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360"]
+            }
+//            BAIDU {
+//                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "BAIDU"]
+//            }
+            WANDOUJIA {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "WANDOUJIA"]
+            }
+            TENCENT {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "TENCENT"]
+            }
+            ANZHI {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "ANZHI"]
+            }
+        }
+    }
+}

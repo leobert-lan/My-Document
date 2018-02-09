@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_anim_content"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_gravity="bottom"
+        android:background="@color/primary_background">
+
+        <RelativeLayout
+            android:id="@+id/popup_input_operations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_background">
+
+            <TextView
+                android:id="@+id/popup_input_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/cancel"
+                android:textColor="@color/text_gray_content"
+                android:textSize="@dimen/fs_content" />
+
+
+            <TextView
+                android:id="@+id/popup_input_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_gray_content"
+                android:textSize="@dimen/fs_content" />
+
+            <TextView
+                android:id="@+id/popup_input_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/complete"
+                android:textColor="@color/main_green_dark"
+                android:textSize="@dimen/fs_content" />
+
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/popup_input_et"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/popup_input_operations"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_conner_2dp_gray"
+            android:gravity="top"
+            android:paddingLeft="@dimen/text_padding_5dp"
+            android:paddingRight="@dimen/text_padding_5dp"
+            android:textColor="@color/text_gray_content"
+            android:textColorHint="@color/text_gray_hint"
+            android:textSize="@dimen/fs_content" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

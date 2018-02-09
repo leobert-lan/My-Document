@@ -1,0 +1,17 @@
+¿∂∫£¥¥“‚‘∆
+
+# sina weibo open develop platform 
+App Key£∫2614300090
+App Secret£∫29a875e9029a0f5a6dfe57164319fdd0
+
+# QQ open develop platform
+APP ID£∫1106004258
+APP KEY£∫aeDFrxXZRbfF1TSp
+
+# wechat open develop platform
+AppID£∫wx20e48d1ff83570f4
+AppSecret£∫87bbadce67f21a0df41b9fc984aa1416
+
+#UMeng analysis platform
+APPsecret£∫58abfa2a1061d214630001f3
+

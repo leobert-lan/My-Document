@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_identity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/v1000_drawable_beij2"
+    tools:context=".module.user.register.ui.ac.RoleChooseActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:orientation="vertical">
+
+
+
+        <CheckBox
+            android:id="@+id/cb_role_4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:checked="false"
+            android:button="@drawable/cbs_role4_selector" />
+
+        <CheckBox
+            android:id="@+id/cb_role_3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:background="@color/transparent"
+            android:button="@drawable/cbs_role3_selector" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_choose_complete"
+        style="@style/style_button.green"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/v1000_default_chooserole_choose_complete"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/fs_title_big" />
+</RelativeLayout>

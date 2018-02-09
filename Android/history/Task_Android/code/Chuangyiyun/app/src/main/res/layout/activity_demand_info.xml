@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.DemandInfoActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.lht.customwidgetlib.nestedscroll.NestedScrollLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/demandinfo_nsl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_marginTop="@dimen/absbar_height"
+        app:nslCaptureTop="false"
+        app:nslOpen="true"
+        app:nslOverDrag="false">
+
+        <!-- 头部可拖拽区域-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/demandinfo_tv_demandname"
+                style="@style/style_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/h1_text_gray_content"
+                android:textSize="@dimen/fontsize_title" />
+
+            <!-- 状态区域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/demandinfo_tv_price"
+                    style="@style/style_textview.left"
+                    android:layout_weight="1"
+                    android:paddingRight="@dimen/text_padding_5dp"
+                    android:textColor="@color/sub_strong_red"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <TextView
+                    android:id="@+id/demandinfo_tv_type"
+                    style="@style/style_textview.left.padding5dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <TextView
+                    android:id="@+id/demandinfo_tv_delegate"
+                    style="@style/style_textview.left.padding5dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <TextView
+                    android:id="@+id/demandinfo_tv_promiss"
+                    style="@style/style_textview.left.padding5dp"
+                    android:layout_weight="1"
+                    android:text="@string/v1010_default_demandinfo_text_promiss"
+                    android:textColor="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_small"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/demandinfo_tv_status"
+                    style="@style/style_textview.left.padding5dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/demandinfo_tv_knockdownprice"
+                    style="@style/style_textview"
+                    android:layout_marginRight="30dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/sub_strong_red"
+                    android:textSize="@dimen/fontsize_content_normal" />
+
+                <TextView
+                    android:id="@+id/demandinfo_tv_remaintime"
+                    style="@style/style_textview"
+                    android:layout_toRightOf="@+id/demandinfo_tv_knockdownprice"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_small" />
+            </RelativeLayout>
+
+
+            <!-- 进度样式-->
+            <com.lht.cloudjob.customview.DemandProgress
+                android:id="@+id/demandinfo_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp" />
+
+            <include layout="@layout/line_gray_1px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/primary_background" />
+
+            <include layout="@layout/line_gray_1px" />
+
+        </LinearLayout>
+
+        <!-- 内容区域，tab+内容-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_background"
+            android:orientation="vertical">
+
+            <!-- tab 区域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/demandnfo_tab_require"
+                        style="@style/style_rb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/v1010_default_demandinfo_rb_require"
+                        android:textColor="@color/csl_blue_gray_cb" />
+
+
+                    <ImageView
+                        android:id="@+id/indicator1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:src="@color/main_blue_dark" />
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp"
+                    android:src="@color/h6_divider" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/demandnfo_tab_bid"
+                        style="@style/style_rb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/v1010_default_demandinfo_rb_bid"
+                        android:textColor="@color/csl_blue_gray_cb" />
+
+                    <ImageView
+                        android:id="@+id/indicator2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:src="@color/main_blue_dark" />
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp"
+                    android:src="@color/h6_divider" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px" />
+
+            <FrameLayout
+                android:id="@+id/demandinfo_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </com.lht.customwidgetlib.nestedscroll.NestedScrollLayout>
+
+    <com.lht.cloudjob.customview.DemandInfoOperateBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="1px" />
+
+
+    <include layout="@layout/bar_title_simple" />
+
+</RelativeLayout>

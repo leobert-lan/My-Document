@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    android:orientation="vertical">
+
+    <!--app:defaultImage="@mipmap/ic_launcher"-->
+    <com.lht.customwidgetlib.banner.AutoLooperBanner
+        android:id="@+id/index_banner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:autoPlayDuration="5000"
+        app:defaultImage="@color/h7_primary_background"
+        app:indicatorMargin="10dp"
+        app:indicatorPosition="centerBottom"
+        app:indicatorShape="oval"
+        app:indicatorSpace="3dp"
+        app:scrollDuration="900"
+        app:selectedIndicatorColor="?attr/colorPrimary"
+        app:selectedIndicatorHeight="6dp"
+        app:selectedIndicatorWidth="6dp"
+        app:unSelectedIndicatorColor="#99ffffff"
+        app:unSelectedIndicatorHeight="6dp"
+        app:unSelectedIndicatorWidth="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/index_hottask"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawableTop="@drawable/v1010_drawable_icon_zhrw"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/v1010_default_index_text_hottask"
+            android:textColor="@color/h8_text_gray_666" />
+
+        <include
+            layout="@layout/line_gray_1px"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/index_richtask"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawableTop="@drawable/v1010_drawable_icon_zhrwh"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/v1010_default_index_text_richtask"
+            android:textColor="@color/h8_text_gray_666" />
+
+        <include
+            layout="@layout/line_gray_1px"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/index_taskcenter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawableTop="@drawable/v1010_drawable_icon_rwdt"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/v1010_default_index_text_taskcenter"
+            android:textColor="@color/h8_text_gray_666" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_background"
+        android:gravity="center"
+        android:minHeight="25dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/text_padding_default">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/v1010_drawable_icon_notice" />
+
+        <com.lht.customwidgetlib.text.MarqueeLayout
+            android:id="@+id/index_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/primary_background"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_demand_publish"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_demand_publish_selector"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/v1042_drawable_demand_pulish_yijfxq" />
+
+    <include layout="@layout/line_gray_1dp" />
+    <!-- 猜你喜欢-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/v1010_default_index_text_recommend"
+            android:textColor="@color/bg_black"
+            android:textSize="@dimen/fontsize_title_small" />
+
+        <TextView
+            android:id="@+id/index_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_conner_2dp_blue_border1px"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:paddingRight="@dimen/text_padding_default"
+            android:paddingTop="5dp"
+            android:text="@string/v1010_default_index_text_subscribe"
+            android:textColor="@color/main_blue_dark" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_gray_1px" />
+
+</LinearLayout>

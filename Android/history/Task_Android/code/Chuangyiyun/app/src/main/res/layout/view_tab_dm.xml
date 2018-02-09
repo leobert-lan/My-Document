@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/bg_white"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/dmordered_tab1"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/v1010_default_demandmanager_tab_all"
+            android:textColor="@color/h1_text_gray_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_notify_number2"
+            android:minWidth="10dp"
+            android:text="12"
+            android:textColor="@color/text_white"
+            android:textSize="8sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/dmo_indicator1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark"/>
+
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:src="@color/h6_divider"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/dmordered_tab2"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/v1010_default_demandmanager_tab_ontendering"
+            android:textColor="@color/h1_text_gray_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="right|top"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/bg_notify_number2"
+            android:minWidth="10dp"
+            android:text="12"
+            android:textColor="@color/text_white"
+            android:textSize="8sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/dmo_indicator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark"/>
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:src="@color/h6_divider"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/dmordered_tab3"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/v1010_default_demandmanager_tab_ontendered"
+            android:textColor="@color/h1_text_gray_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_notify_number2"
+            android:minWidth="10dp"
+            android:text="12"
+            android:textColor="@color/text_white"
+            android:textSize="8sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/dmo_indicator3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark"/>
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:src="@color/h6_divider"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/dmordered_tab4"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/v1010_default_demandmanager_tab_ondeliver"
+            android:textColor="@color/h1_text_gray_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_notify_number2"
+            android:minWidth="10dp"
+            android:text="12"
+            android:textColor="@color/text_white"
+            android:textSize="8sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/dmo_indicator4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark"/>
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:src="@color/h6_divider"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/dmordered_tab5"
+            style="@style/style_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/v1010_default_demandmanager_tab_onevaluate"
+            android:textColor="@color/h1_text_gray_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_notify_number2"
+            android:minWidth="10dp"
+            android:text="12"
+            android:textColor="@color/text_white"
+            android:textSize="8sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/dmo_indicator5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@color/main_blue_dark"/>
+    </FrameLayout>
+</LinearLayout>
+

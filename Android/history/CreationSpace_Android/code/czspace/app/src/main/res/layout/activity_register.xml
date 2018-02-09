@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/v1000_drawable_beij2"
+    tools:context=".module.user.register.ui.ac.RegisterActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:id="@+id/regist_iv_back"
+        style="@style/style_icon.clickable.nav"
+        android:background="@color/transparent"
+        android:src="@drawable/v1000_drawable_toubfhb" />
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:background="@color/transparent"
+        android:src="@drawable/v1000_drawable_logo" />
+
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/v1000_default_login_creation_with_the_best_people"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/fs_hint_special"
+        android:textStyle="normal" />
+
+    <!--手机号-->
+    <RelativeLayout
+        android:id="@+id/register_ll_account"
+        style="@style/style_vg_input"
+        android:layout_below="@+id/sub_title"
+        android:layout_marginTop="48dp">
+
+        <EditText
+            android:id="@+id/register_et_account"
+            style="@style/style_edittext.special1.invg"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/v1000_drawable_shouj"
+            android:drawablePadding="@dimen/text_padding_5dp"
+            android:hint="@string/v1000_default_register_hint_account"
+            android:inputType="number"
+            android:textColor="@color/cyy_h13"
+            android:textColorHint="@color/sub_f3_gray" />
+
+        <ImageButton
+            android:id="@+id/register_ibtn_clearaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/v1000_drawable_guanb" />
+
+    </RelativeLayout>
+
+
+    <!--验证码-->
+    <LinearLayout
+        android:id="@+id/register_ll_verifycode"
+        style="@style/style_vg_input"
+        android:layout_below="@+id/register_ll_account"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/register_et_verifycode"
+            style="@style/style_edittext"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/v1000_drawable_dunp"
+            android:drawablePadding="@dimen/text_padding_5dp"
+            android:hint="@string/v1000_default_register_hint_verifycode"
+            android:inputType="number"
+            android:textColor="@color/cyy_h13" />
+
+        <Button
+            android:id="@+id/register_btn_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:paddingRight="@dimen/text_padding_default"
+            android:text="@string/v1000_default_register_btn_getverify"
+            android:textColor="@color/main_green_dark" />
+    </LinearLayout>
+
+    <!--密码-->
+    <com.lht.creationspace.customview.PwdEditTextViewGroup
+        android:id="@+id/register_rl_pwd"
+        style="@style/style_vg_input"
+        app:override_hint="@string/v1000_default_register_hint_pwd"
+        android:layout_below="@+id/register_ll_verifycode"
+        android:layout_marginTop="18dp" />
+
+    <LinearLayout
+        android:id="@+id/register_ll_protocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/register_rl_pwd"
+        android:layout_alignParentEnd="true">
+
+        <CheckBox
+            android:id="@+id/register_cb_protocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/cbselector_small"
+            android:text="@string/v1000_default_register_cb_protocol"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/fs_content" />
+
+        <TextView
+            android:id="@+id/register_tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/v1000_default_register_href_protocol"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/fs_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register_btn_register"
+        style="@style/style_button.rect"
+        android:layout_below="@+id/register_ll_protocol"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/v1000_default_register_btn_register"
+        android:textSize="@dimen/fs_content" />
+
+</RelativeLayout>

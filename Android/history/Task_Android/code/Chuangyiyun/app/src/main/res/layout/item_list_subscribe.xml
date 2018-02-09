@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--订阅列表组视图 gridview-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp">
+
+    <TextView
+        android:id="@+id/subscribe_listgroup_tv_field"
+        style="@style/style_textview"
+        android:textColor="@color/h1_text_gray_content"
+        android:textSize="@dimen/fontsize_content_normal"/>
+
+    <com.lht.cloudjob.customview.ConflictGridView
+        android:id="@+id/subscribe_listgroup_gv_labels"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:divider="@null"
+        android:dividerHeight="0px"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"/>
+
+</LinearLayout>

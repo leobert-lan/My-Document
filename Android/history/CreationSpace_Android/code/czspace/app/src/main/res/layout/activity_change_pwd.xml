@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_modify_pwd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".module.user.security.ui.ChangePwdActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_old_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/text_padding_default">
+
+            <EditText
+                android:id="@+id/et_old_pwd"
+                style="@style/style_edittext"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="@string/v1000_default_changepwd_hint_text_currentpwd"
+                android:maxLength="@integer/max_pwd_length"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:password="true" />
+
+            <CheckBox
+                android:id="@+id/cb_see_current_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/cbs_toggle_pwd_visible" />
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/text_padding_default">
+
+            <EditText
+                android:id="@+id/et_new_pwd"
+                style="@style/style_edittext"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="@string/v1000_default_changepwd_hint_text_newpwd"
+                android:maxLength="@integer/max_pwd_length"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:password="true" />
+
+            <CheckBox
+                android:id="@+id/cb_see_newpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/cbs_toggle_pwd_visible" />
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/text_padding_default">
+
+            <EditText
+                android:id="@+id/et_newpwd_again"
+                style="@style/style_edittext"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="@string/v1000_default_changepwd_hint_text_newpwd_again"
+                android:maxLength="@integer/max_pwd_length"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:password="true" />
+
+            <CheckBox
+                android:id="@+id/cb_see_newpwd_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/cbs_toggle_pwd_visible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/changepwd_btn_submit"
+            style="@style/style_button.green"
+            android:layout_marginTop="30dp"
+            android:text="@string/v1000_default_changepwd_button_text_save" />
+    </LinearLayout>
+
+    <!--<include layout="@layout/bar_title_simple" />-->
+    <include layout="@layout/toolbar_title_theme1" />
+</RelativeLayout>

@@ -1,0 +1,610 @@
+<resources>
+
+    <!--命名规则：-->
+    <!--v{{version_code}}_{{Type}}_{{ContentAttr}}_{{subAttr}}_{{name}}-->
+    <!--enum Type: {title,dialog,toast,menu,view,default} 该分类不要缺省-->
+    <!--ContentAttr： 文本的内容性质属性，例如dialog type下，
+    title是dialog标题，content是正文内容，button是操作按钮的文本，-->
+    <!--subAttr: 附加额外的属性-->
+    <!--name: 直接和内容相关-->
+    <string name="app_name">云差事</string>
+
+
+    <!--activity title-->
+    <string name="title_activity_settings">设置</string>
+    <string name="title_activity_aboutus">关于我们</string>
+    <string name="title_activity_personalinfo">个人资料</string>
+    <string name="title_activity_attention">我的关注</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_tpregister">设置密码</string>
+    <string name="title_activity_personalauthenticate">实名认证</string>
+    <string name="title_activity_enterpriseauthenticate">企业认证</string>
+    <string name="title_activity_resetpwdverify">验证手机号</string>
+    <string name="title_activity_resetpwd">设置密码</string>
+    <string name="title_activity_resetnick">设置昵称</string>
+    <string name="title_activity_changepwd">修改密码</string>
+    <string name="title_activity_hottask">最火任务</string>
+    <string name="title_activity_richtask">最壕任务</string>
+    <string name="title_activity_notifylist">通知</string>
+    <string name="title_activity_demandnotifymessage">需求通知</string>
+    <string name="title_activity_demandnotifylist">需求通知</string>
+    <string name="title_activity_wonderfulactivitieslist">精彩活动</string>
+    <string name="title_activity_demandinfo">任务详情</string>
+    <string name="title_fragment_message">消 息</string>
+    <string name="title_activity_bindfield">设置订阅标签</string>
+    <string name="title_activity_feedback">意见反馈</string>
+    <string name="title_activity_loaction_picker">选择地区</string>
+    <string name="title_activity_subscribe">订阅设置</string>
+    <string name="title_activity_messageinfo">消息详情</string>
+    <string name="title_activity_sign_agreement">蓝海创意云交付协议</string>
+    <string name="title_activity_banner_info">详情</string>
+    <string name="title_activity_user_agreement">蓝海创意云用户服务协议</string>
+
+
+    <string name="v1010_toast_press_again_exit">再次点击返回桌面</string>
+
+    <!--homeactivity的tab-->
+    <string name="tab_homeactivity_index">首页</string>
+    <string name="tab_homeactivity_demandmaganer">需求管理</string>
+    <string name="tab_homeactivity_message">消息</string>
+
+    <string name="test">默认</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_example">Example</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="v1010_toast_error_album_private">无法获取该图片</string>
+
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+
+    <string name="v1010_default_about_tv_copyright">苏州创意云网络科技有限公司 版权所有\nCopyright © 2008 &#8211; 2016 </string>
+    <string name="v1010_default_about_tv_protocol">《蓝海创意云用户服务协议》</string>
+    <string name="v1010_default_sidebar_tv_phone">400-164-7979</string>
+
+    <!--登录页面文字-->
+    <string name="v1010_default_login_hint_account">手机号/邮箱/ID号</string>
+    <string name="v1010_default_login_hint_pwd">登录密码</string>
+    <string name="v1010_default_login_btn_login">登 录</string>
+    <string name="v1010_default_login_href_forgetpwd">忘记密码?</string>
+    <string name="v1010_default_login_hint_tplogin">使用第三方账号直接登录</string>
+    <string name="v1010_default_login_btn_sinalogin">微博登录</string>
+    <string name="v1010_default_login_btn_qqlogin">QQ登录</string>
+    <string name="v1010_default_login_btn_wechatlogin">微信登录</string>
+    <string name="v1010_default_login_href_register">注册</string>
+
+    <string name="v1010_dialog_login_unexist">该账号尚未注册</string>
+    <string name="v1010_dialog_login_nagetice_reinput">重新输入</string>
+    <string name="v1010_dialog_login_positive_register">去注册</string>
+
+    <string name="v1010_dialog_register_exist">该账号已注册</string>
+    <string name="v1010_dialog_register_negative_reinput">重新输入</string>
+    <string name="v1010_dialog_register_positive_login">去登录</string>
+    <string name="todo">todo</string>
+
+    <!-- 忘记密码 -->
+    <string name="v1010_default_resetpwd_verify">验证</string>
+
+    <string name="cancel">取消</string>
+    <string name="permit">确定</string>
+
+    <string name="share_title">云差事，让赚钱更简单</string>
+    <string name="task_share_title">赚钱神器来也！让赚钱更简单</string>
+    <string name="share_app_content">一款为文创工作者精心打造的赚钱神器，海量需求，智能搜索，一键管理，让赚钱更简单!</string>
+
+    <!-- 重置密码-->
+    <string name="v1010_default_resetpwd_hint_pwd">请输入6-20位新密码</string>
+    <string name="v1010_default_resetpwd_hint_check">请再次输入密码</string>
+    <string name="v1010_default_resetpwd_btn_submit">确 定</string>
+
+    <!-- 注册-->
+    <string name="v1010_default_register_href_login">登录</string>
+    <string name="v1010_default_register_hint_account">请输入11位手机号</string>
+    <string name="v1010_default_register_hint_verifycode">请输入验证码</string>
+    <string name="v1010_default_register_hint_pwd">请设置6-20位密码</string>
+    <string name="v1010_default_register_btn_getverify">获取验证码</string>
+    <string name="v1010_default_register_btn_register">注 册</string>
+    <string name="v1010_default_register_cb_protocol">阅读并同意</string>
+    <string name="v1010_default_register_href_protocol">《蓝海创意云用户服务协议》</string>
+    <string name="v1010_default_register_toast_read_agreement">请仔细阅读用户协议</string>
+    <string name="v1010_toast_register_error_login_onback">后台登录失败，请手动登录</string>
+    <string name="v1010_toast_register_text_pwd_minlength">密码长度至少 6 位</string>
+    <string name="v1010_toast_register_text_pwd_maxlength">密码长度至多 20 位</string>
+    <string name="v1010_toast_register_text_pwd_illegal">格式错误，仅限字母数字及字符</string>
+
+    <!-- 第三方的注册-->
+    <string name="v1010_default_tpregister_hint_pwd">请设置6-20位密码</string>
+    <string name="v1010_default_tpregister_hint_pwdcheck">请再次输入密码</string>
+    <string name="v1010_default_tpregister_btn_submit">确 认</string>
+    <string name="v1010_default_tpregister_text_id">ID: </string>
+
+    <!-- 设置-->
+    <string name="v1010_default_setting_text_clean">清除缓存</string>
+    <string name="v1010_default_setting_text_feedback">意见反馈</string>
+    <string name="v1010_default_setting_text_update">版本检测</string>
+    <string name="v1010_default_setting_text_aboutus">关于我们</string>
+    <string name="v1010_default_setting_text_logout">退出登录</string>
+
+    <string name="v1010_dialog_setting_content_logout">确定退出登录?</string>
+    <string name="v1010_dialog_setting_content_clean">确定清除缓存?</string>
+
+
+    <!-- 个人信息-->
+    <string name="v1010_default_pinfo_text_modifyavatar">修改头像</string>
+    <string name="v1010_default_pinfo_text_nickname">昵称</string>
+    <string name="v1010_default_pinfo_text_sex">性别</string>
+    <string name="v1010_default_pinfo_text_industry">行业选择</string>
+    <string name="v1010_default_pinfo_text_field">擅长领域</string>
+    <string name="v1010_default_pinfo_text_phone">手机</string>
+    <string name="v1010_default_pinfo_text_pwd">修改密码</string>
+    <string name="v1010_default_pinfo_text_subscribe">订阅</string>
+    <string name="v1010_default_pinfo_hint_pwd">********</string>
+    <string name="v1010_default_resetnick_enter_nickname">请输入昵称</string>
+    <string name="v1010_default_resetnick_nicklenth_over20">昵称长度超过20</string>
+
+    <!-- 意见反馈-->
+    <string name="v1010_default_feedback_hint_content">请输入您的问题/建议</string>
+    <string name="v1010_default_feedback_text_upload">上传图片</string>
+    <string name="v1010_default_feedback_hint_size">(最多5张，每张大小不超过5M)</string>
+    <string name="v1010_default_feedback_hint_contact">请输入您的手机号码</string>
+    <string name="v1010_default_feedback_btn_submit">提 交</string>
+
+    <string name="v1010_toast_feedback_error_images_over_count">最多选择五张图片</string>
+    <string name="v1010_toast_feedback_error_image_selected_ever">该图片已选择</string>
+
+    <string name="v1010_toast_feedback_error_content_null">请输入您的问题/建议</string>
+    <string name="v1010_toast_feedback_error_contact_null">请输入您的手机号码</string>
+
+    <string name="v1010_dialog_feedback_content_error_upload">图片上传失败</string>
+    <string name="v1010_dialog_feedback_positive_reupload">重新上传</string>
+
+    <string name="v1010_dialog_feedback_content_error_feedback">提交反馈失败</string>
+    <string name="v1010_dialog_feedback_positive_resubmit">重新提交</string>
+
+    <string name="v1010_dialog_feedback_content_success_feedback">意见反馈成功，我们会尽快处理</string>
+    <string name="v1010_dialog_feedback_positive_close">好的</string>
+
+    <!-- 需求管理-->
+    <string name="v1010_default_demandmanager_rb_ordered">已接需求</string>
+    <string name="v1010_default_demandmanager_rb_collected">我的收藏</string>
+    <string name="v1010_default_demandmanager_tab_all">全部</string>
+    <string name="v1010_default_demandmanager_tab_ontendering">已投标</string>
+    <string name="v1010_default_demandmanager_tab_ontendered">已中标</string>
+    <string name="v1010_default_demandmanager_tab_ondeliver">交付中</string>
+    <string name="v1010_default_demandmanager_tab_onevaluate">待评价</string>
+    <string name="v1010_default_demandmanager_text_modify">编辑</string>
+    <string name="v1010_default_demandmanager_text_delete">删 除</string>
+    <string name="v1010_default_demandmanager_text_complete">取消</string>
+    <string name="v1010_default_demandmanager_recommend_foryou">为您推荐</string>
+
+    <string name="v1010_default_demandmanager_text_selectall">全选</string>
+    <string name="v1010_default_demandmanager_text_deselectall">全不选</string>
+    <string name="v1010_default_demandmanager_hint_empty">暂无需求，赶紧去添加吧~</string>
+
+    <!-- 我的关注-->
+    <string name="v1010_default_attention_text_null">还未关注任何雇主</string>
+
+    <!-- 分享-->
+    <string name="v1010_default_tp_failure_wxnotinstalled">未安装微信</string>
+    <string name="v1010_default_tp_failure_QQnotinstalled">未安装QQ,无法分享</string>
+    <string name="v1010_default_tp_failure_qqzonenotinstalled">未安装QQ空间,无法分享</string>
+    <string name="v1010_default_tp_share_exit">分享取消</string>
+    <string name="v1010_default_tp_share_success">分享成功</string>
+    <string name="v1010_default_tp_share_failure">分享失败</string>
+
+    <!-- 首页-->
+    <string name="v1010_default_index_text_hottask">最火需求</string>
+    <string name="v1010_default_index_text_richtask">最壕需求</string>
+    <string name="v1010_default_index_text_taskcenter">需求大厅</string>
+
+    <string name="v1010_default_index_text_recommend">猜你喜欢</string>
+    <string name="v1010_default_index_text_subscribe">+ 订阅</string>
+
+    <string name="v1010_default_index_text_tagji">急</string>
+    <string name="v1010_default_index_text_tagding">顶</string>
+
+    <string name="v1010_default_sidebar_text_login">点击登录</string>
+
+    <!-- 搜索历史-->
+    <string name="v1010_default_searchh_hint_history">搜索历史：</string>
+    <string name="v1010_default_searchh_hint_hot">热门搜索：</string>
+    <string name="v1010_default_searchh_btn_clean">清空搜索历史</string>
+    <string name="v1010_default_searchh_hint_nullhistory">暂无搜索历史</string>
+    <string name="v1010_default_searchh_gethotsearch_success">获取最热搜索失败</string>
+
+    <!-- 个人认证-->
+    <string name="v1010_default_pau_tab_ml">大陆地区</string>
+    <string name="v1010_default_pau_tab_ga">港澳地区</string>
+    <string name="v1010_default_pau_tab_tw">台湾地区</string>
+    <string name="v1010_default_pau_hint_name">请输入姓名</string>
+    <string name="v1010_default_pau_hint_region">请选择您的所属地区</string>
+    <string name="v1010_default_pau_hint_identifycard">请输入身份证号</string>
+    <string name="v1010_default_pau_text_validity">身份证有效期</string>
+    <string name="v1010_default_pau_text_unset">&#160;______&#160;</string>
+    <string name="v1010_default_pau_text_to">至</string>
+    <string name="v1010_default_pau_text_upload">请上传身份证件</string>
+    <string name="v1010_default_pau_btn_submit">提 交</string>
+    <string name="v1010_default_pau_text_wait">等待审核...</string>
+    <string name="v1010_default_pau_text_pass">认证成功</string>
+    <string name="v1010_default_pau_text_refuse">认证不通过</string>
+    <string name="v1010_default_pau_text_authentic_again">重新认证</string>
+    <string name="v1010_default_pau_text_update_to_eau">升级为企业认证</string>
+    <string name="v1010_default_pau_text_area">所属地区：</string>
+    <string name="v1010_default_pau_text_name">姓名：</string>
+    <string name="v1010_default_pau_id_card">身份证：</string>
+    <string name="v1010_default_pau_to_authenticate">去认证</string>
+    <string name="v1010_default_pau_to_pauthenticate">个人认证</string>
+    <string name="v1010_default_pau_to_authenticate_success">提交认证成功</string>
+    <string name="v1010_default_pau_to_query_authenticate_success">查询认证成功</string>
+    <string name="v1010_default_pau_realname_isempty">请输入真实姓名</string>
+    <string name="v1010_default_pau_idcard_isempty">请输入身份证号</string>
+    <string name="v1010_default_pau_idcard_error">请输入正确的身份证号</string>
+    <string name="v1010_default_pau_select_certificate_pic">请选择证件图片</string>
+    <string name="v1010_default_pau_select_location">请选择所在地区</string>
+    <string name="v1010_default_pau_getpic_failure">获取图片失败</string>
+
+    <!-- 企业认证-->
+    <string name="v1010_default_eau_hint_inc">请输入企业名称</string>
+    <string name="v1010_default_eau_hint_name">请输入企业法人姓名</string>
+    <string name="v1010_default_eau_hint_code">请输入企业注册号码</string>
+    <string name="v1010_default_eau_hint_field">请输入企业经营范围</string>
+    <string name="v1010_default_eau_hint_region">请选择企业注册所在地区</string>
+    <string name="v1010_default_eau_hint_destination">请填写企业详细注册地址</string>
+    <string name="v1010_default_eau_hint_validity">请选择有效期限</string>
+    <string name="v1010_toast_eau_error_validity">请选择起止日期</string>
+    <string name="v1010_default_eau_text_validity">企业有效期</string>
+    <string name="v1010_default_eau_text_validity2">证件有效期</string>
+    <string name="v1010_default_eau_text_to">至</string>
+    <string name="v1010_default_eau_text_upload">请上传相关证件</string>
+    <string name="v1010_default_eau_btn_submit">提 交</string>
+    <string name="v1010_default_eau_long_validity">长期</string>
+    <string name="v1010_default_eau_short_validity">短期</string>
+    <string name="v1010_default_eau_username_isempty">用户名为空</string>
+    <string name="v1010_default_eau_license_pic">请上传营业执照图片</string>
+    <string name="v1010_default_eau_text_Hongkong">香港</string>
+    <string name="v1010_default_eau_text_Macao">澳门</string>
+    <string name="v1010_default_eau_text_company_name">企业名称：</string>
+    <string name="v1010_default_eau_text_legalperson_name">企业法人：</string>
+    <string name="v1010_default_eau_text_register_code">注册号：</string>
+    <string name="v1010_default_eau_text_main_turnover">主营范围：</string>
+    <string name="v1010_default_eau_text_register_area">注册地址：</string>
+    <string name="v1010_default_eau_text_file_upload_success">文件上传成功</string>
+
+
+    <!-- -->
+    <!--<string name="todo2"><u>todo</u></string>-->
+
+
+    <!-- 修改密码-->
+    <string name="v1010_default_changepwd_hint_oldpwd">请输入当前密码</string>
+    <string name="v1010_default_changepwd_hint_newpwd">请输入6-20位新密码</string>
+    <string name="v1010_default_changepwd_hint_checkpwd">请再次输入新密码</string>
+    <string name="v1010_default_changepwd_btn_submit">保 存</string>
+    <string name="v1010_default_changepwd_text_newpwd_disaffinity">两次输入的新密码不一致</string>
+    <string name="v1010_default_changepwd_text_pwdissame">新旧密码一致</string>
+    <string name="v1010_default_changepwd_text_changepwd_success">密码修改成功</string>
+    <string name="v1010_default_changepwd_text_changepwd_failure">密码修改失败</string>
+    <string name="v1010_default_changepwd_text_resetpwd_success">重置密码成功</string>
+
+
+    <!--我的关注-->
+    <string name="v1010_listitem_attention_btn_unfollow">取消关注</string>
+
+    <!-- 搜索-->
+    <string name="v1010_default_search_cb_type">所有分类</string>
+    <string name="v1010_default_search_cb_filter">筛选</string>
+    <string name="v1010_default_search_cb_sort">排序</string>
+    <string name="v1010_default_search_enter_search_word">请填写搜索关键词</string>
+    <string name="v1010_default_search_no_content">暂无搜索结果，换个词试试?</string>
+    <!-- 搜索.操作盘内容-->
+    <array name="v1010_search_sort_contents">
+        <item>临近截稿</item>
+        <item>价格最高</item>
+        <item>投稿最多</item>
+        <item>最近发布</item>
+    </array>
+
+    <array name="v1010_search_ftype_contents">
+        <item>全部</item>
+        <item>单人悬赏</item>
+        <item>项目招标</item>
+    </array>
+
+    <array name="v1010_search_fdelegate_contents">
+        <item>全部</item>
+        <item>已托管</item>
+    </array>
+
+    <array name="v1010_search_fauth_contents">
+        <item>全部</item>
+        <item>个人认证</item>
+        <item>企业认证</item>
+    </array>
+
+    <array name="v1010_demand_steps">
+        <item>发布</item>
+        <item>投稿</item>
+        <item>选稿</item>
+        <item>公示</item>
+        <item>交付</item>
+        <item>结束</item>
+    </array>
+
+
+    <string name="v1010_default_search_hint_ftype">需求类型</string>
+    <string name="v1010_default_search_hint_fdelegate">资金托管</string>
+    <string name="v1010_default_search_hint_fauth">身份认证</string>
+    <string name="v1010_default_search_hint_sort">排序</string>
+
+    <string name="v1010_default_search_btn_reset">重置</string>
+    <string name="v1010_default_search_btn_complete">完成</string>
+
+
+    <!-- 网络异常提示-->
+    <string name="v1010_default_error_text_netnr">网络开小差了、点击重试</string>
+    <string name="v1010_default_error_text_netnr2">网络开小差了</string>
+    <string name="v1012_toast_error_text_timeout">网络连接超时，请重试</string>
+
+
+    <string name="v1010_default_resetnick_btn_submit">保 存</string>
+
+    <!-- 需求详情-->
+    <string name="v1010_default_demandinfo_rb_require">具体要求</string>
+    <string name="v1010_default_demandinfo_rb_bid">所有投稿</string>
+    <string name="v1010_default_demandinfo_text_share">分享</string>
+    <string name="v1010_default_demandinfo_rb_collect">收藏</string>
+    <string name="v1010_default_demandinfo_hint_attachments">任务附件:</string>
+    <string name="v1010_default_demandinfo_text_promiss">承诺选稿</string>
+    <string name="v1020_default_demandinfo_worksitem_text_hintaccachment">附件：</string>
+
+    <string name="v1010_default_demandinfo_btn_contribute">我要投稿</string>
+    <string name="v1010_default_demandinfo_btn_call">联系TA</string>
+    <string name="v1010_default_demandinfo_btn_sign">签署协议</string>
+    <string name="v1010_default_demandinfo_btn_evaluate">评价</string>
+    <!--<string name="v1010_default_demandinfo_text_wait1">等待雇主选稿......</string>-->
+    <!--<string name="v1010_default_demandinfo_text_wait2">等待签署协议......</string>-->
+    <!--<string name="v1010_default_demandinfo_text_wait3">等待签署协议</string>-->
+    <string name="v1010_default_demandinfo_text_ophint2">等待雇主选稿</string>
+    <string name="v1010_default_demandinfo_text_ophint5"> 等待对方签署协议</string>
+    <string name="v1010_default_demandinfo_text_ophint6">请至web端上传源文件</string>
+    <string name="v1010_default_demandinfo_text_ophint7">等待对方确认</string>
+    <string name="v1010_default_demandinfo_text_ophint8">请至web端重新上传</string>
+    <string name="v1010_default_demandinfo_text_ophint9">等待签署协议</string>
+    <string name="v1010_default_demandinfo_text_ophint10">等待对方托管资金</string>
+    <string name="v1010_default_demandinfo_text_ophint11">等待托管下期资金</string>
+    <string name="v1010_default_demandinfo_text_ophint_bug"> </string>
+
+
+    <string name="v1010_default_demandinfo_hint_empty">暂无投稿</string>
+    <string name="v1010_default_demandinfo_text_follow">+ 加关注</string>
+    <string name="v1010_default_demandinfo_text_unfollow">取消关注</string>
+    <string name="v1010_default_demandinfo_text_bindpemail">投稿需先绑定邮箱/银行卡，请到电脑上绑定</string>
+    <string name="v1010_default_demandinfo_text_countout">投稿次数达到上限，请稍后再试</string>
+    <string name="v1010_default_demandinfo_text_pauthenticate">投稿需是个人认证的用户，请先认证</string>
+    <string name="v1010_default_demandinfo_text_eauthenticate">投稿需是企业认证的用户，请先认证</string>
+    <string name="v1010_default_demandinfo_text_teamauthenticate">投稿需是团队认证的用户，请先认证</string>
+    <string name="v1010_default_demandinfo_text_authenticateinfo">投稿需先认证信息，请先认证</string>
+    <string name="v1010_default_demandinfo_text_bindphone">投稿需先绑定手机号，请先绑定</string>
+
+    <string name="v1050_default_demandinfo_text_nopermission">您为非认证用户，请至官网进行认证</string>
+
+
+
+    <string name="v1010_default_demandinfo_cb_more">展开</string>
+    <string name="v1010_default_demandinfo_cb_less">收起</string>
+    <string name="v1010_default_demandinfo_cover_hidden">稿件已隐藏</string>
+
+    <string name="v1010_default_message_more">查看详情&gt;&gt;</string>
+    <string name="v1010_default_message_btn_markasread">标记为已读</string>
+    <string name="v1010_default_message_btn_delete">删 除</string>
+
+    <string name="v1010_dialog_message_content_delete">确定删除选中消息?</string>
+    <string name="v1010_dialog_message_select_message">请先选择消息</string>
+
+    <!-- 订阅页面-->
+    <string name="v1010_default_subscribe_choose_hint">根据设置的订阅内容为您推荐精准需求</string>
+    <string name="v1010_default_subscribe_btn_submit">确 定</string>
+    <string name="v1010_default_subscribe_no_select_table">您还没有选择标签</string>
+    <string name="v1010_default_subscribe_subscribe_success">用户订阅成功</string>
+
+    <!--选择行业-->
+    <string name="v1010_default_bindfield_choose_vocation">请选择您所在的行业</string>
+
+    <!-- 选择标签-->
+    <string name="v1010_default_bindlabel_text_guide">根据选择的标签为您推荐相关需求</string>
+    <string name="v1010_default_bindlabel_btn_submit">完 成</string>
+    <string name="v1010_default_bindlabel_text_skip"><u>暂不完善</u></string>
+    <string name="v1010_default_bindlabel_hint_selectcount"> (最多3个标签，确认后不可修改)</string>
+    <string name="v1010_toast_bindlabel_maxcount">最多选择3个标签</string>
+    <string name="v1010_toast_bindlabel_errnull">请选择标签</string>
+
+
+    <!--投稿-->
+    <string name="v1010_default_undertake_letter_describe">请填写稿件说明，说明的越具体越清晰，中标的机率就越高哦。（50字内）</string>
+    <string name="v1010_default_undertake_hint_work_bid">添加附件（附件可选，仅限1张）</string>
+    <string name="v1010_default_undertake_hint_work_reward">添加附件（附件必选，仅限1张）</string>
+    <string name="v1010_default_undertake_undertake">投  稿</string>
+    <string name="v1010_default_undertake_hint_letter">隐藏稿件，仅雇主和自己可见</string>
+    <string name="v1010_default_undertake_not_hint_letter">不隐藏稿件</string>
+    <string name="v1010_default_undertake_enter_price">请输入您的报价</string>
+    <string name="v1010_default_undertake_text_price">项目报价：</string>
+    <string name="v1010_default_undertake_text_price_units">元</string>
+    <string name="v1010_default_undertake_text_time_units">天</string>
+    <string name="v1010_default_undertake_enter_timecycle">请输入您的周期</string>
+    <string name="v1010_default_undertake_text_timecycle">工作周期：</string>
+    <string name="v1010_default_undertake_success">投稿成功</string>
+    <string name="v1010_default_undertake_task_bn_isempty">需求编号为空</string>
+    <string name="v1010_default_undertake_username_isempty">用户名为空</string>
+    <string name="v1010_default_undertake_description_isempty">投稿描述为空</string>
+    <string name="v1010_default_undertake_attachments_isempty">附件为空</string>
+    <string name="v1010_default_undertake_attachment_name_isempty">附件原始文件名为空</string>
+    <string name="v1010_default_undertake_price_isempty">请输入您的项目报价</string>
+    <string name="v1010_default_undertake_timecycle_isempty">请输入您的项目周期</string>
+    <string name="v1010_default_undertake_again">再次投稿</string>
+    <string name="v1010_default_undertake_wait_select_letter">等待雇主选稿</string>
+
+
+    <!--手机绑定-->
+    <string name="v1010_default_bindphone_commit">提交</string>
+    <string name="v1010_default_bindphone_verify">验证</string>
+    <string name="v1010_default_bindphone_bindphone">绑定手机</string>
+    <string name="v1010_default_verifyphone_verifyphone">验证手机号</string>
+    <string name="v1010_default_updatephone_updatephone">修改手机号</string>
+    <string name="v1010_default_bindphone_enter_phonenumber">请输入手机号码</string>
+    <string name="v1010_default_bindphone_enter_verificationvode">请输入您收到的验证码</string>
+    <string name="v1010_default_bindphone_to_bindphone">去绑定</string>
+    <string name="v1010_default_bindphone_phonestyle_error">手机号码格式不正确</string>
+    <string name="view_bottom_line_call_service"><u>联系客服</u></string>
+
+    <!-- 评论 -->
+    <string name="v1010_default_comment_commont">评  价</string>
+    <string name="v1010_default_comment_company">上海深深影视文化传播有限公司</string>
+    <string name="v1010_default_comment_type">评价类型：</string>
+    <string name="v1010_default_comment_good">好评</string>
+    <string name="v1010_default_comment_general">中评</string>
+    <string name="v1010_default_comment_bad">差评</string>
+    <string name="v1010_default_comment_demand_clear">需求明确：</string>
+    <string name="v1010_default_comment_resource_deploy">资源调配：</string>
+    <string name="v1010_default_comment_pay_speed">付款速度：</string>
+    <string name="v1010_default_comment_to_comment">去评价</string>
+    <string name="v1010_default_comment_task_bn_isEmpty">缺少需求编号</string>
+    <string name="v1010_default_comment_username_isEmpty">缺少用户名</string>
+    <string name="v1010_default_comment_no_username">用户名不存在</string>
+    <string name="v1010_default_comment_cannot_comment">当前需求无法进行评价</string>
+    <string name="v1010_default_comment_commented">您已经评价过该需求，无法再次评价</string>
+    <string name="v1010_default_comment_no_zhongbiao">当前需求无人中标，无法进行评价</string>
+    <string name="v1010_default_comment_no_authority">您无权进行此操作</string>
+    <string name="v1010_default_comment_undertake_violate">您在当前需求中存在违约现象，无法进行评价</string>
+    <string name="v1010_default_comment_data_isEmpty">数据不存在</string>
+
+    <!-- 引导页 -->
+    <string name="v1010_default_guide_one_text1">海量需求，智能搜索</string>
+    <string name="v1010_default_guide_one_text2">八大行业，百种类型，总能找到适合你的</string>
+    <string name="v1010_default_guide_two_text1">个性订阅，专人专事</string>
+    <string name="v1010_default_guide_two_text2">数据匹配，精准推送，专属于你的需求推荐</string>
+    <string name="v1010_default_guide_three_text1">一键管理，尽在掌握</string>
+    <string name="v1010_default_guide_three_text2">一目了然，实时监管，随时随地进行管理</string>
+
+    <!-- 评价 -->
+    <string name="v1010_default_comment_comment_hintcontent">对于这次合作说点什么吧......</string>
+    <string name="v1010_default_comment_content_isempty">请输入评论内容</string>
+    <string name="v1010_default_comment_star_score">请点击星星等级</string>
+
+    <!-- 签署协议 -->
+    <string name="v1010_default_sign_agreement_success">操作成功</string>
+    <string name="v1010_default_sign_agreement_failure">操作失败</string>
+    <string name="v1010_default_sign_agreement_notAgreement">不同意</string>
+    <string name="v1010_default_sign_agreement_rb_protocol">我已仔细阅读以上协议内容</string>
+    <string name="v1010_default_sign_agreement_toast_read_agreement">请先勾选你已阅读协议内容</string>
+
+    <string name="v1010_default_sign_agreement_agreement">同意签署协议</string>
+    <string name="v1010_default_sign_agreement_wait_other_sign">等待对方签署协议</string>
+
+    <!-- 个人资料 -->
+    <string name="v1010_default_personalinfo_privary">保密</string>
+    <string name="v1010_default_personalinfo_man">男</string>
+    <string name="v1010_default_personalinfo_woman">女</string>
+
+    <string name="v1010_default_feedback_enter_text_toolong">你输入的字数已经超过了限制</string>
+
+    <string name="v1010_default_text_select_task">请先选择任务</string>
+    <string name="v1010_default_text_upload_resouce_file">请至web端上传源文件</string>
+    <string name="v1010_default_text_reupload">请至web端重新上传</string>
+    <string name="v1010_default_text_wait_other_sure">等待对方确认</string>
+    <string name="v1010_default_text_wait_other_trusteeship_money">等待对方托管资金</string>
+    <string name="v1010_default_text_wait_trusteeship_next_money">等待托管下期资金</string>
+    <string name="v1010_default_text_select_bidded_letter">选择中标稿件（请至电脑上选择中标稿件）</string>
+    <string name="v1010_default_text_check_accept_letter">验收稿件（请至电脑上验收稿件）</string>
+    <string name="v1010_default_text_to_pay">去支付</string>
+    <string name="v1010_default_fgdemandrequire_no_attachment">无附件</string>
+    <string name="v1010_default_fgdemandrequire_contact">"联系人："</string>
+    <string name="v1010_toast_list_all_data_added">已经到底了</string>
+    <string name="v1010_default_sinaauth_success">授权成功</string>
+    <string name="v1010_default_notification">版本低于Andriod5.0，无法体验HeadUp样式通知</string>
+    <string name="v1010_toast_warm_enter_text_overlength">你输入的字数已经超过了限制</string>
+
+    <!-- mask-->
+    <string name="v1010_view_mask_text_unlogin">您还未登录，去登录</string>
+    <string name="v1010_mask_neterror_retry">网络异常、点击重试</string>
+    <string name="v1010_mask_empty_msg">暂无消息内容</string>
+    <string name="v1010_mask_empty">暂无内容</string>
+    <string name="v1020_mask_load_error">加载失败，点击重新加载</string>
+
+
+    <string name="v1010_toast_net_exception">网络异常、请检查网络设置</string>
+    <string name="v1020_dialog_download_onmobile">当前为2G/3G/4G环境，继续下载将耗费较多流量</string>
+    <string name="v1020_dialog_pbtn_onmobile">继续</string>
+    <string name="v1020_dialog_nbtn_onmobile">取消</string>
+    <string name="v1020_toast_download_onnotfound">文件不存在</string>
+    <string name="v1020_toast_download_cancel">下载已取消</string>
+    <string name="v1020_toast_download_success">保存成功</string>
+    <string name="v1020_toast_preview_unsupportbyus">暂不支持该类型文件预览</string>
+    <string name="v1020_toast_download_onnoenoughspace">存储空间不足</string>
+    <string name="v1020_toast_download_failure">保存失败</string>
+    <string name="v1020_toast_preview_failure">加载失败，请重新加载</string>
+    <string name="v1020_toast_preview_cancel">预览取消</string>
+    <string name="v1020_toast_no_app_can_open">暂无可打开该类型文件的应用</string>
+    <string name="v1020_dialog_preview_onmobile_toolarge">文件大小为%s，当前为2G/3G/4G环境，继续预览将耗费较多流量</string>
+    <string name="v1020_toast_preview_noauthrity">仅限雇主和威客自己预览</string>
+
+    <string name="v1020_versionupdate_dialog_text_newversion">检测到新版本，版本号为:</string>
+    <string name="v1020_versionupdate_dialog_text_update">是否更新</string>
+    <string name="v1020_versionupdate_dialog_btn_download">免费下载</string>
+    <string name="v1020_versionupdate_dialog_btn_nodownload">暂不下载</string>
+    <string name="v1020_versionupdate_text_already_newversion">当前已是最新版本</string>
+    <string name="v1020_versionupdate_dialog_text_install">新版本下载完成，是否立即安装</string>
+    <string name="v1020_versionupdate_dialog_btn_install">立即安装</string>
+    <string name="v1020_versionupdate_dialog_btn_update">立即更新</string>
+    <string name="v1020_versionupdate_text_download_success">下载成功</string>
+    <string name="v1020_versionupdate_text_download_fuilure">下载失败</string>
+    <string name="v1020_versionupdate_dialog_btn_noupdate">以后再说</string>
+    <string name="v1020_versionupdate_notification_ticker">版本更新通知</string>
+    <string name="v1020_versionupdate_dialog_notification_title">云差事</string>
+    <string name="v1020_versionupdate_dialog_notification_description">版本更新提醒！发现新版本啦，更新后享受更多功能。</string>
+    <string name="v1020_versionupdate_dialog_onmobile_remind">当前为2G/3G/4G环境，继续下载可能会耗费较多流量</string>
+    <string name="v1020_versionupdate_dialog_btn_cancel">取消</string>
+
+    <string name="sdcard_not_mounted">无法读取外部存储、部分功能受限</string>
+
+    <string name="v1022_dialog_permission_camera">暂无相机权限，请在权限管理中允许相机访问权限</string>
+    <string name="v1022_dialog_permission_sd">暂无存储读写权限，请在权限管理中允许存储访问权限</string>
+    <string name="v1022_dialog_permission_pbtn">去设置</string>
+    <string name="v1022_dialog_permission_nbtn">暂不设置</string>
+
+    <string name="v1030_notify_ticker">新通知</string>
+    <string name="title_activity_vso_activities">精彩活动</string>
+
+    <string name="v1041_default_demandinfo_knockdown_price">签约价:</string>
+
+    <string name="v1041_signagreement_text_not_sign">取消</string>
+    <string name="v1041_signagreement_text_confirm_sign">确认</string>
+
+    <string name="v1041_undertakeopenbid_text_otherprice_isempty">请输入您的报价</string>
+    <string name="v1041_dialog_content_undertakereview">该项目最终成交价%s元,是否确认签署协议?</string>
+    <string name="v1041_toast_undertake_retry">签署协议失败，请重试</string>
+    <string name="v1041_undertakeopenbid_toast_timecycle_out_of_range">工期不允许超过65535天</string>
+    <string name="v1041_undertakeopenbid_toast_timecycle_invalid">请输入合法工期</string>
+    <string name="v1041_undertakeopenbid_toast_price_invalid">请输入合法报价</string>
+
+    <string name="v1041_undertakeopenbid_text_ownerprice_isempty">甲方报价为空</string>
+
+    <string name="v1042_publishdemand_title_text_publish_demand">发布需求</string>
+    <string name="v1042_guide_title_text_enter_app">立即体验</string>
+    <string name="v1042_choosecategory_title_text_choose_category">选择分类</string>
+
+    <string name="v1042_demand_publish_hint_choose_category">请选择您的项目分类</string>
+    <string name="v1042_demand_publish_hint_demand_price">请输入您觉得合适的价格</string>
+    <string name="v1042_demand_publish_hint_contact_number">请输入您的联系方式</string>
+    <string name="v1042_demand_publish_toast_null_desc">请输入您的需求描述</string>
+    <string name="v1042_demand_publish_text_service">制片服务</string>
+    <string name="v1042_demand_publish_text_service_describe">专业制片全流程托管，为您的项目全程把关（收取最终成交价格的5%）</string>
+    <string name="v1042_demand_publish_text_demand_describe">请描述一下您的需求吧，如电视剧片头曲制作</string>
+
+    <string name="v1042_demand_publish_dialog_title">发布成功</string>
+    <string name="v1042_demand_publish_dialog_content">工作人员会尽快联系您，请保持手机畅通</string>
+    <string name="v1042_demand_publish_dialog_pbtn">知道了</string>
+
+</resources>

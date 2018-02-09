@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#f9f9f9</color>
+    <color name="line_gray_b2">#b2b2b2</color>
+    <color name="red">#ff5f5e</color>
+
+    <!-- gray -->
+    <color name="gray">#E0E0E0</color>
+    <color name="gray_ccc">#cccccc</color>
+    <color name="gray_333">#333333</color>
+    <color name="gray_777">#777777</color>
+    <color name="gray_999">#999999</color>
+    <color name="pitch_bg">#e9e9e9</color>
+    <color name="gray_dc">#dcdcdc</color>
+    <color name="gray_ed">#ededed</color>
+    <color name="gray_bf">#bfbfbf</color>
+    <color name="gray_b3">#b3b3b3</color>
+    <color name="gray_e4">#e4e4e4</color>
+    <color name="gray_f2">#f2f2f2</color>
+    <color name="disabled_bgc">#c2c2c2</color>
+
+    <!-- blue -->
+    <color name="blue">#42A2E9</color>
+    <color name="lightBlue">#d8edf8</color>
+    <color name="lightblue">#c2def4</color>
+
+    <!-- 透明度 -->
+    <color name="transparent">#ffffffff</color>
+    <color name="alpha_60">#99ffffff</color>
+
+    <!-- 主界面 -->
+    <color name="txt_blue_main">#0d6fb8</color>
+    <color name="preview_image_select">#2a2a2a</color>
+
+</resources>

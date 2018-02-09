@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.CommentActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/comment_rl_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <com.lht.cloudjob.customview.RoundImageView
+            android:id="@+id/comment_iv_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/v1010_drawable_avatar_default" />
+
+        <TextView
+            android:id="@+id/comment_tv_commentcompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/comment_iv_avatar"
+            android:text="@string/v1010_default_comment_company"
+            android:textSize="@dimen/info_text_size" />
+
+        <ImageView
+            android:id="@+id/comment_iv_golden_medal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignBottom="@id/comment_iv_avatar"
+            android:layout_below="@id/comment_tv_commentcompany"
+            android:layout_toRightOf="@id/comment_iv_avatar"
+            android:src="@drawable/v1010_drawable_icon_golden_medal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_rl_info"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_gray_1dp" />
+
+        <ListView
+            android:id="@+id/comment_lv_commentitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_gray_1dp" />
+
+        <EditText
+            android:id="@+id/comment_et_commentcontent"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/v1010_default_comment_comment_hintcontent"
+            android:maxLines="10"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <include layout="@layout/line_gray_1dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/comment_btn_submit"
+        style="@style/style_button.blue"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/v1010_default_bindphone_commit" />
+
+    <include layout="@layout/bar_title_simple" />
+
+</RelativeLayout>
+

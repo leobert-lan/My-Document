@@ -1,0 +1,121 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.lht.cloudjob"
+        minSdkVersion 16
+        targetSdkVersion 23
+
+        versionCode 1050
+        versionName "1.0.50"
+
+        multiDexEnabled true
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+
+                JPUSH_APPKEY : "59139e3630d3cf913d693ab3", //JPush上注册的包名对应的appkey. 1.0.40已换新
+
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+    }
+    //配置keystore签名
+    signingConfigs {
+        //使用发布签名
+        debug {
+            storeFile file("lhtReleaseSignKey.jks")
+            storePassword 'lhtx_456'
+            keyAlias "lht"
+            keyPassword 'lhtx_456'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    //    compile fileTree(dir: 'libs', exclude: 'fastjson-custom.jar', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs',exclude: ['photoview.jar'])
+    compile(name: 'qrcodelib-release-1.1.0', ext: 'aar')
+    compile(name: 'ptrlib-release', ext: 'aar')
+    compile(name: 'WeiboSdk-release', ext: 'aar')
+    compile project(':lhtwebviewapi')
+    testCompile 'junit:junit:4.12'
+    compile project(':customwidgetlib')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    // eventbus
+    compile project(':materialintro')
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    //umeng
+    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'individual.leobert.libs:pvselectorlib:1.0.4' //photo、video selector
+    //    compile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //    androidTestCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'com.anthonycr.grant:permissions:1.1.2'
+    compile 'me.leolin:ShortcutBadger:1.1.11@aar'
+    //桌面角标
+    android {
+        productFlavors {
+            fortest {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "test"]
+            }
+            VSO_SOFTWARE_CENTER {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "VSO_SOFTWARE_CENTER"]
+            }
+            HUAWEI {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "HUAWEI"]
+            }
+            XIAOMI {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "XIAOMI"]
+            }
+            qh360 {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360"]
+            }
+            BAIDU {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "BAIDU"]
+            }
+            WANDOUJIA {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "WANDOUJIA"]
+            }
+            TENCENT {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "TENCENT"]
+            }
+            ANZHI {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "ANZHI"]
+            }
+        }
+    }
+}
+
+
+
+
+

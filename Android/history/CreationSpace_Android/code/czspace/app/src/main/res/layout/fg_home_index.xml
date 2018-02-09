@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layer_list_statusbar"
+    android:paddingTop="@dimen/status_bar_height">
+
+    <!--<include layout="@layout/bar_home_theme1" />-->
+    <com.lht.creationspace.customview.toolBar.msg.ToolbarTheme8
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/cyy_h9"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/fgindex_rb_recommend"
+                style="@style/style_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="推荐"
+                android:textSize="@dimen/fs_content" />
+
+            <View
+                android:id="@+id/fgindex_indicator1"
+                style="@style/homeindextab" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/fgindex_rb_attention"
+                style="@style/style_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="关注"
+                android:textSize="@dimen/fs_content" />
+
+            <View
+                android:id="@+id/fgindex_indicator2"
+                style="@style/homeindextab"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1">
+
+
+            <RadioButton
+                android:id="@+id/fgindex_rb_square"
+                style="@style/style_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="项目更新"
+                android:textSize="@dimen/fs_content" />
+
+            <View
+                android:id="@+id/fgindex_indicator3"
+                style="@style/homeindextab"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!--第一期不包含招募-->
+        <!--<FrameLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="28dp"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/fgindex_rb_recruit"-->
+        <!--style="@style/style_rb"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:text="招募"-->
+        <!--android:textSize="@dimen/fs_content" />-->
+
+        <!--<View-->
+        <!--android:id="@+id/fgindex_indicator4"-->
+        <!--style="@style/homeindextab"-->
+        <!--android:visibility="gone" />-->
+        <!--</FrameLayout>-->
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/ll"
+        android:background="@color/gray_divider" />
+
+    <FrameLayout
+        android:id="@+id/childfragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider" />
+
+</RelativeLayout>
+

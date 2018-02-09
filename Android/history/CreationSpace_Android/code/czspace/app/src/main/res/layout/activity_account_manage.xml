@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_account_manage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".module.user.info.ui.ac.AccountManageActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="54dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_gray_10dp" />
+
+        <LinearLayout
+            android:id="@+id/accountmanage_ll_loginpwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="20dp"
+                android:text="@string/v1000_default_accountmanage_text_loginpwd" />
+
+            <TextView
+                android:id="@+id/accountmanage_tv_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/v1000_default_accountmanage_text_to_modify"
+                android:textColor="@color/main_green_dark"
+                android:textSize="@dimen/fs_content" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_1px_margin5dp" />
+
+        <LinearLayout
+            android:id="@+id/accountmanage_ll_phonebind"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="20dp"
+                android:text="@string/v1000_default_accountmanage_text_mobile_bind" />
+
+            <TextView
+                android:id="@+id/accountmanage_tv_phonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/v1000_drawable_xuanz" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_1px_margin5dp" />
+
+        <LinearLayout
+            android:id="@+id/accountmanage_ll_threeaccount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="20dp"
+                android:text="@string/v1000_default_accountmanage_text_three_account" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/v1000_drawable_xuanz" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_1px_margin5dp" />
+
+        <LinearLayout
+            android:id="@+id/accountmanage_ll_authentication"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setting_item_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="20dp"
+                android:text="@string/v1000_default_accountmanage_text_realname_authentication" />
+
+            <TextView
+                android:id="@+id/accountmanage_tv_authentication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/v1000_default_accountmanage_text_realname_to_authentication"
+                android:textColor="#00ff00"
+                android:textSize="@dimen/fs_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<include layout="@layout/bar_title_simple" />-->
+    <include layout="@layout/toolbar_title_theme1" />
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corners_bg_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/share_user_info_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/share_sharetothose" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/gray" />
+
+        <com.lht.pan_android.view.ObservableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:padding="3dp" >
+
+            <LinearLayout
+                android:id="@+id/share_user_info_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <com.lht.pan_android.view.AutoArrangeCardLayout
+                    android:id="@+id/share_user_info_path_aacl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </com.lht.pan_android.view.AutoArrangeCardLayout>
+            </LinearLayout>
+        </com.lht.pan_android.view.ObservableScrollView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/share_user_info_cancel"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/corners_bg_blue"
+                android:text="@string/string_close"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/share_user_info_ok"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/corners_bg_blue"
+                android:text="编辑"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_preview_file_selector"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/iv_file_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/text_padding_default"
+        android:src="@drawable/v1020_drawable_file_link"/>
+
+    <TextView
+        android:id="@+id/tv_file_attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/text_padding_5dp"
+        android:layout_toRightOf="@+id/iv_file_link"
+        android:ellipsize="middle"
+        android:maxWidth="220dp"
+        android:singleLine="true"
+        android:textColor="@color/attachment_filename_color"
+        android:textSize="@dimen/fontsize_content_small"/>
+
+    <TextView
+        android:id="@+id/tv_file_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_toRightOf="@+id/tv_file_attachment"
+        android:textColor="@color/h8_text_gray_666"
+        android:textSize="@dimen/fontsize_content_small"/>
+</RelativeLayout>

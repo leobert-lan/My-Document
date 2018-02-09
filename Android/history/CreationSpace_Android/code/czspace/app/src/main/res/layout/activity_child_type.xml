@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background">
+
+    <ListView
+        android:id="@+id/lv_child_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:background="@color/bg_white"
+        android:divider="@color/gray_divider"
+        android:dividerHeight="1px" />
+
+    <!--<include layout="@layout/bar_title_simple" />-->
+    <include layout="@layout/toolbar_title_theme1" />
+</RelativeLayout>

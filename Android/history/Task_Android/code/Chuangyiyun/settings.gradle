@@ -1,0 +1,3 @@
+include ':app', ':lhtwebviewlib', ':lhtwebviewapi', ':customwidgetlib', ':materialintro'
+
+//, ':codescanlib', ':jsbridge_lib', ':ptrlib', ':WeiboSdk'

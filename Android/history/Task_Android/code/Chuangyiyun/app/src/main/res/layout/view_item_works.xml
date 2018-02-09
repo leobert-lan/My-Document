@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white">
+
+    <ImageView
+        android:id="@+id/worksitem_img_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin" />
+
+    <RelativeLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <com.lht.cloudjob.customview.RoundImageView
+            android:id="@+id/worksitem_img_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/v1010_drawable_avatar_default" />
+
+        <TextView
+            android:id="@+id/worksitem_tv_name"
+            style="@style/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/worksitem_img_avatar"
+            android:layout_toRightOf="@+id/worksitem_img_avatar"
+            android:paddingTop="2dp"
+            android:textColor="@color/h1_text_gray_content" />
+
+        <TextView
+            android:id="@+id/worksitem_tv_time"
+            style="@style/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/worksitem_img_avatar"
+            android:layout_toRightOf="@+id/worksitem_img_avatar"
+            android:paddingBottom="2dp"
+            android:textColor="@color/h3_text_gray_hint"
+            android:textSize="@dimen/fontsize_content_slim" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/worksitem_ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row1"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/worksitem_tv_info"
+            style="@style/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:background="@drawable/bg_conner_2dp_orange"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:textColor="@color/sub_strong_orange" />
+
+        <TextView
+            android:id="@+id/worksitem_tv_description"
+            style="@style/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_worksitem_hintAttachment"
+            style="@style/style_textview"
+            android:layout_width="match_parent"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="@string/v1020_default_demandinfo_worksitem_text_hintaccachment"
+            android:textColor="@color/h1_text_gray_content"
+            android:textSize="@dimen/fontsize_content_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/worksitem_img_work"
+                android:layout_width="66dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_conner_2dp_gray_border1px2"
+                android:padding="1px"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/rl_files"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/text_padding_default"
+                android:background="@drawable/bg_preview_file_selector"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_worksitem_file_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/v1020_drawable_file_link" />
+
+                <TextView
+                    android:id="@+id/tv_worksitem_file_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_padding_5dp"
+                    android:layout_toRightOf="@+id/iv_worksitem_file_link"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:maxWidth="220dp"
+                    android:textColor="@color/attachment_filename_color"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <TextView
+                    android:id="@+id/tv_worksitem_file_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_padding_5dp"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_toRightOf="@+id/tv_worksitem_file_work"
+                    android:textColor="@color/h8_text_gray_666"
+                    android:textSize="@dimen/fontsize_content_small" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <CheckBox
+            android:id="@+id/worksitem_cb_more"
+            style="@style/style_rb"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/cb_arrow_selector" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/worksitem_cover_hidden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row1"
+        android:layout_centerHorizontal="true"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/v1010_drawable_icon_hide" />
+
+        <TextView
+            style="@style/style_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/v1010_default_demandinfo_cover_hidden" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

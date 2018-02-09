@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".module.user.security.ui.BindPhoneActivity">
+
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/content_topmargin" />
+
+    <!--手机号-->
+    <LinearLayout
+        android:id="@+id/bindphone_ll_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/bg_white">
+
+        <EditText
+            android:id="@+id/bindphone_et_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/v1010_default_empty_phonenumber"
+            android:inputType="number"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:textSize="@dimen/fs_content" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/bindphone_ll_account" />
+
+
+    <!--验证码-->
+    <LinearLayout
+        android:id="@+id/bindphone_ll_verifycode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bindphone_ll_account"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/bindphone_et_verifycode"
+            style="@style/style_edittext"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:hint="@string/v1000_default_register_hint_verifycode"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/bindphone_btn_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:paddingRight="@dimen/text_padding_default"
+            android:text="@string/v1000_default_register_btn_getverify"
+            android:textColor="@color/main_green_dark" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/bindphone_ll_verifycode" />
+
+
+    <Button
+        android:id="@+id/bindphone_btn_submit"
+        style="@style/style_button.green"
+        android:layout_below="@+id/bindphone_ll_verifycode"
+        android:layout_marginTop="35dp"
+        android:text="@string/v1000_default_bindphone_text_commit" />
+
+    <!--<include layout="@layout/bar_title_simple" />-->
+    <include layout="@layout/toolbar_title_theme1" />
+</RelativeLayout>

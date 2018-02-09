@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".module.user.info.ui.ac.PersonalInfoActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_gray_10dp" />
+        <!--头像-->
+        <LinearLayout
+            android:id="@+id/personalinfo_ll_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/setting_item_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.lht.creationspace.customview.RoundImageView
+                android:id="@+id/personalinfo_img_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/v1000_drawable_avatar_default" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/personalinfo_tv_headnickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="米田的天空"
+                    android:textColor="@color/cyy_h5"
+                    android:textSize="@dimen/fs_title_big" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/v1000_default_pinfo_text_modifyavatar"
+                    android:textColor="@color/cyy_h12"
+                    android:textSize="@dimen/fs_hint_special" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/v1000_drawable_xuanz" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_10dp" />
+
+        <!--昵称-->
+        <LinearLayout
+            android:id="@+id/personalinfo_ll_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/setting_item_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="@string/v1000_default_pinfo_text_nickname"
+                android:textColor="@color/cyy_h4"
+                android:textSize="@dimen/fs_content" />
+
+            <TextView
+                android:id="@+id/personalinfo_tv_nickname"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/cyy_h12"
+                android:textSize="@dimen/fs_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/v1000_drawable_xuanz" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_1px_margin5dp" />
+
+        <!--性别-->
+        <LinearLayout
+            android:id="@+id/personalinfo_ll_sex"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/setting_item_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="20dp"
+                android:text="@string/v1000_default_pinfo_text_sex"
+                android:textColor="@color/cyy_h4"
+                android:textSize="@dimen/fs_content" />
+
+            <TextView
+                android:id="@+id/personalinfo_tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/cyy_h12"
+                android:textSize="@dimen/fs_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@drawable/v1000_drawable_xuanz" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/bg_white"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/v1000_default_personalinfo_introduce"
+                android:textSize="@dimen/fs_content" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_gray_1px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+
+            <EditText
+                android:id="@+id/personalinfo_et_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/v1000_default_personalinfo_hint_introduce_remind"
+                android:imeOptions="actionNone"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin"
+                android:paddingTop="@dimen/fab_margin"
+                android:textSize="@dimen/fs_content" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="/30"
+                android:textColor="@color/cyy_h3"
+                android:textSize="@dimen/fs_hint_special" />
+
+            <TextView
+                android:id="@+id/tv_current_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_toLeftOf="@+id/tv_total"
+                android:text="0"
+                android:textColor="@color/cyy_h3"
+                android:textSize="@dimen/fs_hint_special" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--<include layout="@layout/bar_title_theme6" />-->
+    <com.lht.creationspace.customview.toolBar.navigation.ToolbarTheme7
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

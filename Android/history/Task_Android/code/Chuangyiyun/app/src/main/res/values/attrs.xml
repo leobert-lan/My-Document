@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自动排列布局自定义属性-->
+    <declare-styleable name="AutoArrangeCardLayout">
+        <attr name="horizontal_spacing" format="dimension" />
+        <attr name="vertical_spacing" format="dimension" />
+    </declare-styleable>
+
+    <!--圆形ImageView自定义属性-->
+    <declare-styleable name="roundedimageview">
+        <attr name="border_outthickness" format="dimension" />
+        <attr name="border_innerthickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="ScrimInsetsView2">
+        <attr name="minsetForeground" format="reference|color" />
+    </declare-styleable>
+</resources>

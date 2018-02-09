@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.lht.pan_android.activity.selectItem.SelectImageGroupActivity" >
+
+    <RelativeLayout
+        android:id="@+id/image_group_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="@string/upload_choose_catalog"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title_very_large" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+
+        <ImageView
+            android:id="@+id/group_select_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:src="@drawable/fanh" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/select_image_group_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_group_title" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="theme1">@color/main_green_light</color>-->
+    <!--<color name="theme1_dark">@color/main_green_dark</color>-->
+
+    <color name="bg_black_90alpha">#DC000000</color>
+
+    <!--bg_dark 图片预览暂时使用中-->
+    <color name="bg_dark">#0c0c0c</color>
+    <color name="bg_white">#FFFFFF</color>
+
+    <!--主色-->
+
+    <!--<color name="main_green_light">#ffe2efff</color>-->
+    <!--&lt;!&ndash;todo&ndash;&gt;-->
+    <!--用于按钮-->
+
+    <color name="main_green_dark">#ff01c77b</color>
+
+
+    <color name="main_green_dark_alpha80">#cc01c77b</color>
+    <!--基础色-->
+
+    <!--辅色-->
+    <!--主要用于提示的强调色-->
+    <color name="sub_strong_orange">#ff660a</color>
+
+    <!--主色的触摸反馈-->
+    <color name="sub_pressed_green">#00d885</color>
+
+    <color name="sub_hint_green">#a2edc7</color>
+
+
+    <!--主要用于删除等危险行为-->
+
+    <!--用于登录部分-->
+    <color name="sub_f3_gray">#8e909d</color>
+
+
+    <!--灰阶-->
+    <!--输入框76不透明-->
+    <color name="cyy_h1">#c15e5858</color>
+
+    <!--顶部下拉背景-->
+    <color name="cyy_h2">#b6b6ba</color>
+
+    <!--提示文字-->
+    <color name="cyy_h3">#aaaaaa</color>
+
+    <!--正文-->
+    <color name="cyy_h4">#666666</color>
+
+    <!--标题-->
+    <color name="cyy_h5">#333333</color>
+
+    <!--边线、分隔线-->
+    <color name="cyy_h6">#e0e0e0</color>
+
+    <!--底色-->
+    <color name="cyy_h7">#efeff4</color>
+
+    <!--头部色-->
+    <color name="cyy_h8">#000000</color>
+
+    <!--主导航栏底色-->
+    <color name="cyy_h9">#f8f8f8</color>
+
+
+    <!--评论字体-->
+    <color name="cyy_h10">#c7c7c7</color>
+
+    <!--评论边线-->
+
+    <color name="cyy_h12">#999999</color>
+
+    <color name="cyy_h13">@color/text_white</color>
+
+    <color name="primary_background">@color/cyy_h7</color>
+
+    <color name="text_gray_hint">@color/cyy_h3</color>
+
+    <color name="text_gray_content">@color/cyy_h4</color>
+
+    <color name="gray_divider">@color/cyy_h6</color>
+    <!-- ........................................................  -->
+
+    <color name="text_white">#FFFFFFFF</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="alpha20">#33000000</color>
+
+
+    <color name="myPrimaryColor">@color/main_green_dark</color>
+    <color name="myPrimaryDarkColor">@color/sub_pressed_green</color>
+    <color name="myAccentColor">@color/main_green_dark</color>
+    <color name="myTextPrimaryColor">@color/text_gray_content</color>
+    <color name="myWindowBackground">#DEDEDE</color>
+
+    <color name="cyy_h2_alpha35">#89b6b6ba</color>
+    <color name="cyy_h2_alpha15">#38b6b6ba</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <!--<color name="black_alpha">#33000000</color>-->
+
+    <color name="base_success_tick">#A5DC86</color>
+
+    <!--<color name="temp_fast_register_btn_text_normal">#00ff00</color>-->
+    <!--<color name="temp_fast_register_btn_text_pressed">#ffff00</color>-->
+</resources>

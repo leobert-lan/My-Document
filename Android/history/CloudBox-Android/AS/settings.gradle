@@ -1,0 +1,3 @@
+include ':weiboSDK'
+include ':library'
+include ':pan_Android'

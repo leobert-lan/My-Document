@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/top_btn_shape_light" android:state_pressed="false"/>
+    <item android:drawable="@drawable/top_btn_shape_light_clicked" android:state_pressed="true"/>
+
+</selector>

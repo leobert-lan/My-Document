@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".module.user.security.ui.ResetPwdActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/content_topmargin" />
+
+    <RelativeLayout
+        android:id="@+id/rl_resetpwd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/content_topmargin"
+        android:background="@color/bg_white">
+
+        <TextView
+            android:id="@+id/resetpwd_tv_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="密码"
+            android:textSize="@dimen/fs_content" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/resetpwd_tv_pwd"
+            android:background="@color/gray_divider" />
+
+        <EditText
+            android:id="@+id/resetpwd_et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/line2"
+            android:textSize="@dimen/fs_content"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:hint="请设置6-20位登录密码" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/resetpwd_btn_restpwd"
+        style="@style/style_button.green"
+        android:layout_below="@+id/rl_resetpwd"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+
+        android:text="下一步" />
+
+    <!--<include layout="@layout/bar_title_simple" />-->
+    <include layout="@layout/toolbar_title_theme1" />
+</RelativeLayout>

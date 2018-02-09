@@ -1,0 +1,134 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        applicationId "com.lht.creationspace"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1014
+        versionName "1.0.14"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "todo", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+    }
+    //配置keystore签名
+    signingConfigs {
+        //使用发布签名
+        debug {
+            storeFile file("lhtReleaseSignKey.jks")
+            storePassword 'lhtx_456'
+            keyAlias "lht"
+            keyPassword 'lhtx_456'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false //no zuo no die
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter {
+            url "http://jcenter.bintray.com/"
+        }
+    }
+}
+
+
+
+
+
+dependencies {
+    //    compile fileTree(dir: 'libs', exclude: 'fastjson-custom.jar', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile(name: 'WeiboSdk-release', ext: 'aar')
+    compile project(':lhtwebviewapi')
+
+
+    android {
+        productFlavors {
+            fortest {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "test"]
+            }
+            VSO_SOFTWARE_CENTER {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "VSO_SOFTWARE_CENTER"]
+            }
+            HUAWEI {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "HUAWEI"]
+            }
+            XIAOMI {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "XIAOMI"]
+            }
+            qh360 {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360"]
+            }
+            BAIDU {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "BAIDU"]
+            }
+            WANDOUJIA {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "WANDOUJIA"]
+            }
+            TENCENT {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "TENCENT"]
+            }
+            ANZHI {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "ANZHI"]
+            }
+        }
+    }
+    //photo、video selector
+
+    //    compile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //    androidTestCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+//    compile('com.alibaba.android:vlayout:1.0.6@aar') {
+//        transitive = true
+//    }
+    compile 'individual.leobert.libs:actionsheet:1.0.0'
+    compile 'individual.leobert.libs:numbadge:1.0.0'
+    compile 'individual.leobert.libs:ptrlib:1.0.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    //compile 'individual.leobert.libs:qrcodelib:1.1.2' 暂时不用扫码
+    compile 'individual.leobert.libs:pvselectorlib:1.0.6'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.umeng.analytics:analytics:6.0.9'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'com.anthonycr.grant:permissions:1.1.2'
+    compile 'me.leolin:ShortcutBadger:1.1.11@aar'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile 'individual.leobert.libs:vlayoutext:1.0.5' 暂不使用native改版
+    testCompile 'junit:junit:4.12'
+}

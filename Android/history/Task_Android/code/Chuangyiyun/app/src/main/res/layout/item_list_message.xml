@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/message_item_rl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:background="@color/bg_white">
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentTop="true"/>
+
+    <CheckBox
+        android:id="@+id/message_cb_select"
+        style="@style/style_rb"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:button="@drawable/cbselector_listitem"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/message_cb_select"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.lht.cloudjob.customview.RoundImageView
+                android:id="@+id/message_item_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/v1010_drawable_avatar_default"/>
+
+            <ImageView
+                android:id="@+id/message_item_unreadtag"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="50dp"
+                android:visibility="invisible"
+                android:background="@drawable/bg_8dp_round"/>
+
+            <TextView
+                android:id="@+id/message_item_tv_title"
+                style="@style/style_textview.tpstrong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/message_item_img"/>
+
+
+            <TextView
+                android:id="@+id/message_item_tv_time"
+                style="@style/style_textview.sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/message_item_img"
+                android:layout_marginBottom="2dp"
+                android:layout_toRightOf="@+id/message_item_img"
+                android:singleLine="true"
+                android:textSize="@dimen/fontsize_content_slim"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/message_item_tv_content"
+            style="@style/style_textview.tpstrong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/h8_text_gray_666"/>
+
+        <include
+            android:id="@+id/line"
+            layout="@layout/line_gray_1px"/>
+
+        <TextView
+            android:id="@+id/message_item_seedetail"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="@dimen/text_padding_default"
+            android:text="@string/v1010_default_message_more"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

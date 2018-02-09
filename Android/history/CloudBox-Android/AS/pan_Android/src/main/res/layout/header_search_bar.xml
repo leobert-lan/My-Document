@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@android:color/transparent"
+    android:padding="8dp" >
+
+    <RelativeLayout
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:focusable="true"
+        android:background="@drawable/corners_bg_white_2" >
+
+        <TextView
+            android:id="@+id/searchbar_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toLeftOf="@+id/searchbar_search"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/search_hint"
+            android:paddingLeft="7dp"
+            android:textColor="@color/gray_999"
+            android:textSize="13sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/searchbar_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/search" />
+    </RelativeLayout>
+
+</RelativeLayout>

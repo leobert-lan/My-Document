@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/content_topmargin"
+        android:text="@string/v1010_default_guide_four_text1"
+        android:textColor="@color/main_green_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/guide_page_detail_margin"
+        android:layout_marginRight="@dimen/guide_page_detail_margin"
+        android:layout_marginTop="@dimen/text_padding_default"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:text="@string/v1010_default_guide_four_text2"
+        android:textColor="@color/sub_hint_green"
+        android:textSize="@dimen/fs_content" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:src="@drawable/guide_p4"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"/>
+
+
+    <Button
+        android:id="@+id/guide_btn_start"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/guide_start_bg_selector"
+        android:gravity="center"
+        android:text="@string/v1010_default_guide_start"
+        android:textColor="@color/csl_green_white_light"
+        android:textSize="18sp" />
+
+</RelativeLayout>

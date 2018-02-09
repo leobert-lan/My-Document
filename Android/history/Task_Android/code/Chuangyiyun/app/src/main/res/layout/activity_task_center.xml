@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.TaskCenterActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/taskcenter_ll_operations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/taskcenter_cb_type"
+                style="@style/style_rb"
+                android:layout_gravity="center"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/cb_arrow_selector"
+                android:padding="5dp"
+                android:text="@string/v1010_default_search_cb_type" />
+        </FrameLayout>
+
+        <include
+            layout="@layout/line_gray_1px"
+            android:layout_width="1dp"
+            android:layout_height="20dp" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/taskcenter_cb_filter"
+                style="@style/style_rb"
+                android:layout_gravity="center"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/cb_arrow_selector"
+                android:padding="5dp"
+                android:text="@string/v1010_default_search_cb_filter" />
+        </FrameLayout>
+
+        <include
+            layout="@layout/line_gray_1px"
+            android:layout_width="1dp"
+            android:layout_height="20dp" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/taskcenter_cb_sort"
+                style="@style/style_rb"
+                android:layout_gravity="center"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/cb_arrow_selector"
+                android:padding="5dp"
+                android:text="@string/v1010_default_search_cb_sort" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/taskcenter_rl_pannel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/taskcenter_ll_operations"
+        android:layout_marginTop="1dp">
+
+        <com.lht.cloudjob.customview.TypeSheet
+            android:id="@+id/taskcenter_typesheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.lht.cloudjob.customview.FilterSheet
+            android:id="@+id/taskcenter_filtersheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.lht.cloudjob.customview.SortSheet
+            android:id="@+id/taskcenter_sortsheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <com.lht.cloudjob.customview.MaskView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:visibility="invisible" />
+
+    <com.lht.ptrlib.library.PullToRefreshListView
+        android:id="@+id/taskcenter_list_tasks"
+        style="@style/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        app:ptrAnimationStyle="flip"
+        app:ptrHeaderSubTextColor="@color/h3_text_gray_hint"
+        app:ptrHeaderTextColor="@color/h8_text_gray_666"
+        app:ptrListViewExtrasEnabled="true"
+        app:ptrRefreshableViewBackground="@color/transparent" />
+
+    <include layout="@layout/bar_tool_search" />
+</RelativeLayout>

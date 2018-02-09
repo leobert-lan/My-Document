@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.SearchActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/search_ll_operations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/search_cb_type"
+                style="@style/style_rb"
+                android:layout_gravity="center"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/cb_arrow_selector"
+                android:padding="5dp"
+                android:text="@string/v1010_default_search_cb_type"/>
+        </FrameLayout>
+
+        <include
+            layout="@layout/line_gray_1px"
+            android:layout_width="1dp"
+            android:layout_height="20dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/search_cb_filter"
+                style="@style/style_rb"
+                android:layout_gravity="center"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/cb_arrow_selector"
+                android:padding="5dp"
+                android:text="@string/v1010_default_search_cb_filter"/>
+        </FrameLayout>
+
+        <include
+            layout="@layout/line_gray_1px"
+            android:layout_width="1dp"
+            android:layout_height="20dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/search_cb_sort"
+                style="@style/style_rb"
+                android:layout_gravity="center"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/cb_arrow_selector"
+                android:padding="5dp"
+                android:text="@string/v1010_default_search_cb_sort"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_rl_pannel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_ll_operations"
+        android:layout_marginTop="1dp">
+
+        <com.lht.cloudjob.customview.TypeSheet
+            android:id="@+id/search_typesheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.lht.cloudjob.customview.FilterSheet
+            android:id="@+id/search_filtersheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.lht.cloudjob.customview.SortSheet
+            android:id="@+id/search_sortsheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/line_gray_1px"
+             android:layout_width="match_parent"
+             android:layout_height="1px"
+             android:layout_below="@+id/search_rl_pannel"/>
+
+    <com.lht.cloudjob.customview.MaskView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:visibility="gone"/>
+
+    <com.lht.ptrlib.library.PullToRefreshListView
+        android:id="@+id/search_list_tasks"
+        style="@style/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:background="@color/bg_white"
+        app:ptrAnimationStyle="flip"
+        app:ptrHeaderSubTextColor="@color/h3_text_gray_hint"
+        app:ptrHeaderTextColor="@color/h8_text_gray_666"
+        app:ptrListViewExtrasEnabled="true"/>
+
+    <include layout="@layout/bar_tool_search"/>
+
+</RelativeLayout>

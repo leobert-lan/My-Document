@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/myPrimaryDarkColor"
+    android:gravity="center_vertical">
+
+    <!--<com.andexert.library.RippleView-->
+        <!--android:id="@+id/toolbar_left"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="20dp"-->
+        <!--app:rv_centered="true"-->
+        <!--app:rv_color="@color/rippelColor"-->
+        <!--app:rv_rippleDuration="150">-->
+
+        <FrameLayout
+            android:id="@+id/toolbar_left"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true">
+
+            <com.lht.cloudjob.customview.RoundImageView
+                android:id="@+id/toolbar_avatar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/v1010_drawable_avatar_default" />
+
+            <ImageView
+                android:id="@+id/toolbar_notify"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_gravity="right"
+                android:background="@drawable/shape_notify"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    <!--</com.andexert.library.RippleView>-->
+
+
+    <RadioGroup
+        android:id="@+id/fgdemand_tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_conner_2dp_white_border1px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1px">
+
+        <RadioButton
+            android:id="@+id/fgdemand_rb_ordered"
+            style="@style/style_rb.intoolbar"
+            android:background="@drawable/bgselector_leftcorner2dp_blue_cb"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/v1010_default_demandmanager_rb_ordered" />
+
+        <RadioButton
+            android:id="@+id/fgdemand_rb_collected"
+            style="@style/style_rb.intoolbar"
+            android:background="@drawable/bgselector_rightcorner2dp_blue_cb"
+            android:checked="false"
+            android:text="@string/v1010_default_demandmanager_rb_collected" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/fgdemand_bar_rightop"
+        style="@style/style_textview.titleop"
+        android:layout_alignParentRight="true"
+        android:button="@null"
+        android:checked="false"
+        android:text="@string/v1010_default_demandmanager_text_modify" />
+
+    <CheckBox
+        android:id="@+id/fgdemand_bar_leftop"
+        style="@style/style_textview.titleop"
+        android:layout_alignParentLeft="true"
+        android:button="@null"
+        android:checked="false"
+        android:text="@string/v1010_default_demandmanager_text_selectall" />
+
+</RelativeLayout>

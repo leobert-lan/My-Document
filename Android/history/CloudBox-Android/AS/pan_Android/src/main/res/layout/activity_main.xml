@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_ll_bottombar"
+        android:background="@null"
+        android:overScrollMode="never" />
+
+    <ProgressBar
+        android:id="@+id/main_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:indeterminateDrawable="@anim/progress_rotate"
+        android:indeterminateDuration="700"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/main_ll_bottombar"
+        android:src="@color/line_gray_b2" />
+
+    <LinearLayout
+        android:id="@+id/main_ll_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="horizontal" >
+
+        <!-- 1 -->
+
+        <com.lht.pan_android.view.TabView
+            android:id="@+id/main_bottombar_cloudbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.lht.pan_android.view.TabView>
+
+        <!-- 2 -->
+
+        <com.lht.pan_android.view.TabView
+            android:id="@+id/main_bottombar_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.lht.pan_android.view.TabView>
+
+        <!-- 圆形图片 -->
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" />
+
+        <!-- 3 -->
+
+        <com.lht.pan_android.view.TabView
+            android:id="@+id/main_bottombar_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.lht.pan_android.view.TabView>
+
+        <!-- 4 -->
+
+        <com.lht.pan_android.view.TabView
+            android:id="@+id/main_bottombar_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.lht.pan_android.view.TabView>
+    </LinearLayout>
+
+    <!-- 传输管理的多选控制视图部分 -->
+
+    <LinearLayout
+        android:id="@+id/main_ll_transControl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/main_ll_bottombar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/main_ll_bottombar"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/main_trans_multicontrol_delete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_btn_bg"
+            android:gravity="center"
+            android:text="@string/string_delete"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/main_ll_cloudboxControl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/main_ll_bottombar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/main_ll_bottombar"
+        layout="@layout/cloudbox_multi_control"
+        android:gravity="center"
+        android:padding="3dp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/main_superbtn"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:button="@drawable/main_superbtn_check" />
+
+</RelativeLayout>

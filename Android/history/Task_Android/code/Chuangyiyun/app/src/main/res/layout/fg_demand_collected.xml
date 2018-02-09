@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lht.cloudjob.fragment.FgDemandCollected">
+
+    <com.lht.cloudjob.customview.MaskView
+        android:id="@+id/fgdc_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <com.lht.ptrlib.library.PullToRefreshListView
+        android:id="@+id/fgdc_list_tasks"
+        style="@style/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fgdc_btn_delete"
+        android:background="@color/bg_white"
+        app:ptrAnimationStyle="flip"
+        app:ptrHeaderSubTextColor="@color/h3_text_gray_hint"
+        app:ptrHeaderTextColor="@color/h8_text_gray_666"
+        app:ptrListViewExtrasEnabled="true"
+        app:ptrRefreshableViewBackground="@color/transparent" />
+
+    <Button
+        android:id="@+id/fgdc_btn_delete"
+        style="@style/style_button.rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/v1010_default_demandmanager_text_delete"
+        android:visibility="gone" />
+
+    <com.lht.ptrlib.library.PullToRefreshListView
+        android:id="@+id/emptyr_list_recommend"
+        style="@style/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptrAnimationStyle="flip"
+        app:ptrHeaderSubTextColor="@color/h3_text_gray_hint"
+        app:ptrHeaderTextColor="@color/h8_text_gray_666"
+        app:ptrListViewExtrasEnabled="true"
+        app:ptrRefreshableViewBackground="@color/transparent" />
+
+</RelativeLayout>

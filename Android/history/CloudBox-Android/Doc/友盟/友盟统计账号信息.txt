@@ -1,0 +1,32 @@
+###########################################################
+# 网盘移动端-友盟统计关键信息备份
+###########################################################
+
+错误统计网址：
+http://www.umeng.com/apps/ac6100604ae85e76f3b5c965/error_types/trend
+
+账号：
+zhwwang@landhightech.com
+
+密码：
+LCloud160118
+
+Android 唯一Appkey为：
+569c7b7767e58e0928000a28
+
+
+商架	渠道名
+软件中心	VSO_SOFTWARE_CENTER
+豌豆荚	WANDOUJIA
+腾讯应用宝	TENCENT
+360	360
+安智	ANZHI
+
+
+http://open.weibo.com/
+landhightech01@163.com
+vsochinaLH456
+
+App Key：535673299
+App Secret：57187e986afd826a8ee27b58d6c85c08
+

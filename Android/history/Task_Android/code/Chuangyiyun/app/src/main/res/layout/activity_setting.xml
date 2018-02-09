@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.SettingActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/absbar_height">
+
+        <!--TODO define at all strings and replace it-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+            <!--清除缓存-->
+            <!--<com.andexert.library.RippleView-->
+            <!--app:rv_centered="true"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp">-->
+
+            <LinearLayout
+                android:id="@+id/setting_ll_cleancache"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_setting_text_clean" />
+
+                <TextView
+                    android:id="@+id/setting_txt_cachesize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/v1010_drawable_icon_enter" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--意见反馈-->
+            <LinearLayout
+                android:id="@+id/setting_ll_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_setting_text_feedback" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line2"
+                layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--关于我们-->
+            <LinearLayout
+                android:id="@+id/setting_ll_aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="@string/title_activity_aboutus" />
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+            <!--版本更新-->
+            <LinearLayout
+                android:id="@+id/setting_ll_checkupdate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_item_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="@string/v1010_default_setting_text_update" />
+            </LinearLayout>
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+            <!--logout-->
+            <include
+                android:id="@+id/line4"
+                style="@style/line_5dpmargin"
+                layout="@layout/line_gray_1px_margin5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px" />
+
+            <Button
+                android:id="@+id/setting_btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/setting_item_bg"
+                android:text="@string/v1010_default_setting_text_logout"
+
+                android:textColor="@color/csl_blue_gray" />
+
+            <include layout="@layout/line_gray_1px_margin5dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bar_title_simple" />
+
+</RelativeLayout>

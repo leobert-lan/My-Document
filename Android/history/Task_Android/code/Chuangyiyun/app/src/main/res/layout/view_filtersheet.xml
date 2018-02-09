@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/content"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/filter_ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_background"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:text="@string/v1010_default_search_hint_ftype" />
+
+        <com.lht.cloudjob.customview.ConflictGridView
+            android:id="@+id/filter_grid_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:numColumns="3" />
+
+        <include layout="@layout/line_gray_1px_margin5dp" />
+
+        <TextView
+            style="@style/style_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:text="@string/v1010_default_search_hint_fdelegate" />
+
+        <com.lht.cloudjob.customview.ConflictGridView
+            android:id="@+id/filter_grid_delegate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:numColumns="3" />
+
+        <include layout="@layout/line_gray_1px_margin5dp" />
+
+        <TextView
+            style="@style/style_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:background="@color/transparent"
+            android:text="@string/v1010_default_search_hint_fauth" />
+
+        <com.lht.cloudjob.customview.ConflictGridView
+            android:id="@+id/filter_grid_auth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:numColumns="3" />
+
+        <!--<include layout="@layout/line_gray_1dp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:background="@color/bg_white"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/searchfilter_btn_reset"
+                style="@style/style_button.blue"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_conner_2dp_white_border1px2"
+                android:text="@string/v1010_default_search_btn_reset"
+                android:textColor="@color/h1_text_gray_content"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/searchfilter_btn_complete"
+                style="@style/style_button.blue"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/v1010_default_search_btn_complete"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.PublishDemandActivity">
+
+    <include layout="@layout/bar_title_simple" />
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/primary_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/bg_white"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <EditText
+                    android:id="@+id/et_demand_describe"
+                    style="@style/style_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/v1042_demand_publish_text_demand_describe"
+                    android:paddingLeft="@dimen/text_padding_default" />
+
+                <TextView
+                    android:id="@+id/tv_describe_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="@dimen/text_padding_default"
+                    android:text="0/100"
+                    android:textSize="@dimen/fontsize_content_normal" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_gray_1px" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white"
+                android:padding="15dp">
+
+                <com.lht.cloudjob.customview.AutoArrangeCardLayout
+                    android:id="@+id/demandpublish_choose_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_white" />
+            </FrameLayout>
+
+            <include layout="@layout/line_gray_1px" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/bg_white"
+                android:orientation="vertical">
+
+                <include layout="@layout/line_gray_1px" />
+
+                <RelativeLayout
+                    android:id="@+id/rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1px">
+
+                    <EditText
+                        android:id="@+id/et_demand_budget"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/activity_vertical_margin"
+                        android:background="@null"
+                        android:hint="@string/v1042_demand_publish_hint_demand_price"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:maxLines="1"
+                        android:textColor="@color/h1_text_gray_content"
+                        android:textSize="@dimen/fontsize_content_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:text="@string/v1010_default_undertake_text_price_units"
+                        android:textSize="@dimen/fontsize_content_normal" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/rl"
+                    android:background="@color/h6_divider" />
+
+                <EditText
+                    android:id="@+id/et_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/line1"
+                    android:background="@color/transparent"
+                    android:hint="@string/v1042_demand_publish_hint_contact_number"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/text_padding_default"
+                    android:textColor="@color/h1_text_gray_content"
+                    android:textColorHint="@color/h3_text_gray_hint"
+                    android:textSize="@dimen/fontsize_content_normal" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/et_contact_number"
+                    android:background="@color/h6_divider" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/v1042_demand_publish_text_service"
+                android:textColor="@color/sub_strong_yellow"
+                android:textSize="@dimen/fontsize_content_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="2dp"
+                android:text="@string/v1042_demand_publish_text_service_describe"
+                android:textColor="@color/sub_strong_yellow"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <Button
+                android:id="@+id/btn_publish_submit"
+                style="@style/style_button.blue"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/v1010_default_bindphone_commit" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

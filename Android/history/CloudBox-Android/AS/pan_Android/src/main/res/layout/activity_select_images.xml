@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.lht.pan_android.activity.selectItem.SelectUploadItemsActivity" >
+
+    <RelativeLayout
+        android:id="@+id/images_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="@string/string_choose_folds"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title_very_large" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+
+        <ImageView
+            android:id="@+id/image_select_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/fanh" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/select_images_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/images_title"
+        android:layout_marginBottom="90dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="110dip"
+        android:gravity="center"
+        android:horizontalSpacing="5dip"
+        android:verticalSpacing="5dip" 
+        android:listSelector="@android:color/transparent"
+        android:numColumns="auto_fit"
+        android:paddingTop="6dp"
+        android:scrollbarStyle="outsideOverlay"/>
+
+    <RelativeLayout
+        android:id="@+id/select_images_rl_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@+id/select_path_hint"
+            android:src="@color/gray" />
+
+        <TextView
+            android:id="@+id/select_path_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_above="@+id/select_ll"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/select_image_to" />
+
+        <TextView
+            android:id="@+id/linear_select_image_path"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/select_path_hint"
+            android:layout_toRightOf="@+id/select_path_hint"
+            android:ellipsize="start"
+            android:maxEms="10"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/select_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="5dp" >
+
+            <Button
+                android:id="@+id/select_images_bt_choose"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/corners_bg_white"
+                android:text="@string/choose_upload_path"
+                android:textColor="@color/gray_777"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/select_images_bt_upload"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:background="@drawable/blue_btn_bg_conner5dp"
+                android:text="@string/select_image_upload"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

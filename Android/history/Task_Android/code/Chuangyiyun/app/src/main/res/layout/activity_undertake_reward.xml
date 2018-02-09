@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_background">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/undertake_et_letter_describe"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/v1010_default_undertake_letter_describe"
+            android:imeOptions="actionNext"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:paddingRight="@dimen/text_padding_default"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/fontsize_content_small"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/toolbar_elevation">
+
+            <com.lht.cloudjob.customview.ImageWithDeleteView
+                android:id="@+id/undertake_img_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_add_accessory"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/undertake_img_work"
+                android:src="@drawable/v1010_drawable_add_attachment"/>
+
+            <TextView
+                android:id="@+id/undertake_tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="53dp"
+                android:text="@string/v1010_default_undertake_hint_work_reward"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin"
+            android:background="@color/h6_divider"/>
+
+        <RadioGroup
+            android:id="@+id/undertake_rg_ishideletter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/undertake_rb_hideletter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:checked="true"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:text="@string/v1010_default_undertake_hint_letter"/>
+
+            <include layout="@layout/line_gray_1dp"/>
+
+            <RadioButton
+                android:id="@+id/undertake_rb_nothideletter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:text="@string/v1010_default_undertake_not_hint_letter"/>
+        </RadioGroup>
+
+        <include layout="@layout/line_gray_1dp"/>
+
+        <Button
+            android:id="@+id/undertake_btn_submit"
+            style="@style/style_button.blue"
+            android:layout_marginTop="20dp"
+            android:text="@string/v1010_default_bindphone_commit"/>
+    </LinearLayout>
+
+    <include layout="@layout/bar_title_simple"/>
+</RelativeLayout>

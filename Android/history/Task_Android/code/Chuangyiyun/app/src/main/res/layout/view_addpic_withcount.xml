@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/ibtn_add_attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:src="@drawable/v1010_drawable_add_attachment" />
+
+    <TextView
+        android:id="@+id/tv_attachment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="3dp"
+        android:paddingLeft="@dimen/text_padding_5dp"
+        android:textColor="@color/h3_text_gray_hint" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context="com.lht.cloudjob.activity.asyncprotected.ResetNicknameActivity">
+
+    <include layout="@layout/bar_title_simple" />
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/resetnick_ll_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_topmargin"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/text_padding_default">
+
+        <EditText
+            android:id="@+id/resetnick_et_nickname"
+            style="@style/style_edittext"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/resetnick_img_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/v1010_drawable_icon_delete" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetnick_btn_submit"
+        style="@style/style_button.blue"
+        android:layout_below="@+id/resetnick_ll_nickname"
+        android:layout_marginTop="35dp"
+        android:text="@string/v1010_default_resetnick_btn_submit"
+        android:textSize="@dimen/fontsize_title_small" />
+
+
+</RelativeLayout>

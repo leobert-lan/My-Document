@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="@string/setting_activity_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title_very_large" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_line"
+                android:dividerPadding="0dp"
+                android:orientation="vertical"
+                android:showDividers="middle" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@drawable/divider_line"
+                    android:dividerPadding="0dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle" >
+
+                    <!-- 用户信息区 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <!-- 头像 -->
+
+                        <com.lht.pan_android.view.RoundImageView
+                            android:id="@+id/linear_image_heading"
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <!-- 用户昵称 -->
+
+                            <TextView
+                                android:id="@+id/linear_txt_username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:text="@string/setting_activity_username"
+                                android:textColor="@color/gray_333"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 用量显示区 -->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal" >
+
+                                <ProgressBar
+                                    android:id="@+id/linear_progressbar"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="140dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:progressDrawable="@drawable/progressbar_color" />
+
+                                <TextView
+                                    android:id="@+id/linear_txt_used"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="已用"
+                                    android:textColor="@color/gray_333"
+                                    android:textSize="@dimen/activity_title_very_small" />
+
+                                <TextView
+                                    android:id="@+id/linear_txt_line"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:text="/"
+                                    android:textColor="@color/gray_333"
+                                    android:textSize="@dimen/activity_title_very_small" />
+
+                                <TextView
+                                    android:id="@+id/linear_txt_all"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="总量"
+                                    android:textColor="@color/gray_333"
+                                    android:textSize="@dimen/activity_title_very_small" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 设置：仅限WiFi -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:orientation="horizontal"
+                        android:padding="1dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/setting_activity_uploading"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <ToggleButton
+                            android:id="@+id/setting_toggle_onlyWIFI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@android:color/transparent"
+                            android:button="@drawable/switch_toggle_btn"
+                            android:checked="true"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+
+                    <!-- 非1期 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/setting_activity_backup"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <ToggleButton
+                            android:id="@+id/linear_setting_backup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@android:color/transparent"
+                            android:button="@drawable/switch_toggle_btn"
+                            android:checked="false"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+
+                    <!-- 非1期 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/setting_activity_sync"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <ToggleButton
+                            android:id="@+id/linear_setting_sync"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@android:color/transparent"
+                            android:button="@drawable/switch_toggle_btn"
+                            android:checked="false"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/v280_wodjwgg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:divider="@drawable/divider_line"
+                    android:dividerPadding="0dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle" >
+
+                    <!-- 版本更新 -->
+
+                    <LinearLayout
+                        android:id="@+id/setting_ll_version"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@drawable/setting_item_click_bg" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/setting_check_update"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <TextView
+                            android:id="@+id/setting_tv_cversion"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/jinr" />
+                    </LinearLayout>
+
+                    <!-- 清理 -->
+
+                    <LinearLayout
+                        android:id="@+id/clean_ll_ccache"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/string_clean_cache"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <TextView
+                            android:id="@+id/clean_tv_cachesize"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text="@string/string_clean_cache"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/jinr" />
+                    </LinearLayout>
+
+                    <!-- 用户反馈 -->
+
+                    <LinearLayout
+                        android:id="@+id/setting_ll_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@drawable/setting_item_click_bg" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/setting_activity_advice"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/jinr" />
+                    </LinearLayout>
+
+                    <!-- 推荐应用 -->
+
+                    <LinearLayout
+                        android:id="@+id/setting_ll_share"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@drawable/setting_item_click_bg" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/setting_share_app"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/jinr" />
+                    </LinearLayout>
+
+                    <!-- 关于 -->
+
+                    <LinearLayout
+                        android:id="@+id/setting_ll_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@drawable/setting_item_click_bg" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="@string/setting_activity_about"
+                            android:textColor="@color/gray_333"
+                            android:textSize="@dimen/activity_title_normal" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/jinr" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/test_share"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="test share"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/linear_activity_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/corners_bg_red"
+                    android:text="@string/setting_activity_exit"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

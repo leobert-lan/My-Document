@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".activity.others.ShowPhoneActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/content_topmargin" />
+
+    <!--手机号-->
+    <LinearLayout
+        android:id="@+id/verifyphone_ll_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:background="@color/bg_white">
+
+        <TextView
+            android:id="@+id/verifyphone_tv_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/text_padding_default" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/verifyphone_ll_account" />
+
+
+    <!--验证码-->
+    <LinearLayout
+        android:id="@+id/verifyphone_ll_verifycode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verifyphone_ll_account"
+        android:layout_marginTop="1px"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/verifyphone_et_verifycode"
+            style="@style/style_edittext"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:hint="@string/v1010_default_register_hint_verifycode"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/verifyphone_btn_getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:background="@drawable/bgselector_conner2dp_blue"
+            android:paddingLeft="@dimen/text_padding_default"
+            android:paddingRight="@dimen/text_padding_default"
+            android:text="@string/v1010_default_register_btn_getverify"
+            android:textColor="@color/text_white" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/line_gray_1px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/verifyphone_ll_verifycode" />
+
+
+    <Button
+        android:id="@+id/verifyphone_btn_verify"
+        style="@style/style_button.blue"
+        android:layout_below="@+id/verifyphone_ll_verifycode"
+        android:layout_marginTop="35dp"
+        android:text="@string/v1010_default_bindphone_verify"
+        android:textSize="@dimen/fontsize_title_small" />
+
+    <TextView
+        android:id="@+id/verifyphone_tv_call_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifyphone_btn_verify"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/text_padding_default"
+        android:text="@string/view_bottom_line_call_service"
+        android:textColor="@color/sub_strong_red" />
+
+    <include layout="@layout/bar_title_simple" />
+
+</RelativeLayout>

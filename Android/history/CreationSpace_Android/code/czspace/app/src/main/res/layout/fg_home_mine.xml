@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_my_home_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_green_dark"
+        android:paddingTop="@dimen/status_bar_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/v1000_drawable_gerbj" />
+
+    <com.lht.creationspace.customview.toolBar.msg.ToolbarTheme4
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/absbar_height"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:background="@color/transparent" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_header"
+        android:layout_marginTop="28dp"
+        android:background="@color/gray_divider" />
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line1"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/ll_attention"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attention_num"
+                style="@style/mine_style2"
+                android:textSize="@dimen/fs_content" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/mine_style2"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/v1000_default_homepage_text_attention"
+                android:textSize="@dimen/font_size_lv5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fans"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fans_num"
+                style="@style/mine_style2"
+                android:textSize="@dimen/fs_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/mine_style2"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/v1000_default_homepage_text_fans"
+                android:textSize="@dimen/font_size_lv5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_collection"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_collection_num"
+                style="@style/mine_style2"
+                android:textSize="@dimen/fs_content" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/mine_style2"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="@string/v1000_default_homepage_text_collection"
+                    android:textSize="@dimen/font_size_lv5" />
+
+                <individual.leobert.uilib.numbadge.NumBadge
+                    android:id="@+id/unread_message_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="25dp"
+                    android:layout_gravity="right"
+                    app:backgroundShape="oval" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/ll1"
+        android:background="@color/primary_background" />
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line2"
+        android:layout_alignParentStart="true">
+
+        <com.lht.creationspace.customview.DrawableCenterTextView
+            android:id="@+id/fgmine_my_project"
+            style="@style/mine_style"
+            android:drawableTop="@drawable/v1000_drawable_wodxm"
+            android:text="@string/v1000_default_homepage_text_my_project" />
+
+        <com.lht.creationspace.customview.DrawableCenterTextView
+            android:id="@+id/fgmine_my_article"
+            style="@style/mine_style"
+            android:drawableTop="@drawable/v1000_drawable_wodwz"
+            android:text="@string/v1000_default_homepage_text_my_article" />
+
+        <com.lht.creationspace.customview.DrawableCenterTextView
+            android:id="@+id/fgmine_my_circle"
+            style="@style/mine_style"
+            android:drawableTop="@drawable/v1000_drawable_wodqz"
+            android:text="@string/v1000_default_homepage_text_my_circle" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/ll2"
+        android:background="@color/gray_divider" />
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/line3"
+        android:orientation="horizontal">
+
+
+        <com.lht.creationspace.customview.DrawableCenterTextView
+            android:id="@+id/fgmine_account_manage"
+            style="@style/mine_style"
+            android:drawableTop="@drawable/v1000_drawable_zhanghgl"
+            android:text="@string/v1000_default_homepage_text_account_manage" />
+
+
+        <com.lht.creationspace.customview.DrawableCenterTextView
+            android:id="@+id/fgmine_setting"
+            style="@style/mine_style"
+            android:drawableTop="@drawable/v1000_drawable_shez"
+            android:text="@string/v1000_default_homepage_text_setting" />
+
+        <com.lht.creationspace.customview.DrawableCenterTextView
+            android:id="@+id/fgmine_invite_friend"
+            style="@style/mine_style"
+            android:drawableTop="@drawable/v1000_drawable_yaoqhy"
+            android:text="@string/v1000_default_homepage_text_invite_friend" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/titlebar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:background="@color/transparent">
+
+        <com.lht.creationspace.customview.RoundImageView xmlns:riv="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rlv_avatar"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/v1000_drawable_avatar_default"
+            riv:border_innerthickness="3dp"
+            riv:border_inside_color="@color/cyy_h2_alpha35"
+            riv:border_outside_color="@color/cyy_h2_alpha15"
+            riv:border_outthickness="3dp" />
+
+        <TextView
+            android:id="@+id/tv_user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/rlv_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/cyy_h5"
+            android:textSize="@dimen/fs_title_big" />
+
+        <TextView
+            android:id="@+id/tv_user_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_nickname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:minHeight="20dp"
+            android:singleLine="true"
+            android:textColor="@color/cyy_h4"
+            android:textSize="@dimen/fs_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

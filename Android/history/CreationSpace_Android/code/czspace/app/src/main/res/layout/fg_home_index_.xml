@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lht.creationspace.customview.MaskView
+            android:id="@id/mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.lht.ptrlib.library.PtrBridgeWebView
+            android:id="@+id/ptr_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+    </RelativeLayout>
+
+
+    <!--<include layout="@layout/bar_home_theme1" />-->
+
+</RelativeLayout>

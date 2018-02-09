@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_background">
+
+
+    <ImageView
+        android:id="@+id/empty_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/v1011_drawable_mask_empty_search" />
+
+    <TextView
+        android:id="@+id/empty_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/empty_icon"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/v1010_default_demandmanager_hint_empty"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/h1_text_gray_content" />
+
+    <TextView
+        android:id="@+id/tv_recommend_foryou"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/child_expandable_list_group_padding_left"
+        android:layout_below="@+id/empty_hint"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="@string/v1010_default_demandmanager_recommend_foryou"
+        android:textColor="@color/black"
+        android:textSize="@dimen/info_text_size"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

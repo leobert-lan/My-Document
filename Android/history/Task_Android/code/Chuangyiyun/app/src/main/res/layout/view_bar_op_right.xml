@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/myPrimaryColor"
+    android:gravity="center">
+
+    <!--<com.andexert.library.RippleView-->
+    <!--android:id="@+id/nav_back"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:padding="10dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--app:rv_centered="true"-->
+    <!--app:rv_color="@color/rippelColor"-->
+    <!--app:rv_rippleDuration="150">-->
+
+    <ImageButton
+        android:id="@+id/nav_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/v1010_drawable_icon_back"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <!--</com.andexert.library.RippleView>-->
+
+
+    <TextView
+        android:id="@+id/nav_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontsize_title" />
+
+    <TextView
+        android:id="@+id/nav_sub"
+        style="@style/style_textview.titleop"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>

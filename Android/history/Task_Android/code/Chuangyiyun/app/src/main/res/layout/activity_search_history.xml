@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_background"
+                tools:context="com.lht.cloudjob.activity.asyncprotected.SearchHistoryActivity">
+
+    <include
+        layout="@layout/view_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/absbar_height"
+        android:background="@color/bg_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/searchhis_ll_his"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/searchhis_hint_history"
+                    style="@style/style_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/v1010_default_searchh_hint_history"
+                    android:textSize="@dimen/fontsize_title_small"/>
+
+                <com.lht.cloudjob.customview.ConflictListView
+                    android:id="@+id/searchhis_list_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_white"
+                    android:divider="@color/h6_divider"
+                    android:dividerHeight="1px"/>
+
+                <include
+                    layout="@layout/line_gray_1px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/searchhis_list_history"/>
+
+                <TextView
+                    android:id="@+id/searchhis_btn_clean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/searchhis_list_history"
+                    android:layout_marginTop="1px"
+                    android:background="@drawable/bgselector_rect_white"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/v1010_default_searchh_btn_clean"
+                    android:textColor="@color/sub_strong_yellow"
+                    android:textSize="@dimen/fontsize_content_normal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/searchhis_ll_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/searchhis_hint_hot"
+                    style="@style/style_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/v1010_default_searchh_hint_hot"
+                    android:textSize="@dimen/fontsize_title_small"/>
+
+                <com.lht.cloudjob.customview.ConflictGridView
+                    android:id="@+id/searchhis_grid_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_white"
+                    android:numColumns="3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bar_tool_search"/>
+
+</RelativeLayout>
